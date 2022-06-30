@@ -1,13 +1,13 @@
 import {Container, Card, CardHeader, Grid, CardContent, Stack, Typography, Paper} from '@mui/material';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-// interface EntireGreenBoxProps{
-//     title: string;
-//     body: string;
-//     num: string; 
-// }
+interface FullGreenBoxProps{
+    title: string;
+    body: string;
+    num: string; 
+}
 
-const EntireGreenBox = () => {
+const FullGreenBox = (props: FullGreenBoxProps) => {
     const theme = createTheme ({
         palette: {
             primary: {
@@ -26,7 +26,7 @@ const EntireGreenBox = () => {
 
                 <CardContent>
                     <Typography color = "#f5f5f5" variant = "h6" >
-                    {/* {props.title} */}<b>Title</b>
+                    {/* {props.title} */}<b>{props.title}</b>
                     </Typography>
                 </CardContent>
 
@@ -34,7 +34,7 @@ const EntireGreenBox = () => {
                     <Stack> 
                         <Stack direction = "row"  justifyContent="center">
                         <Typography color = "#f5f5f5" >
-                                Body
+                                {props.body}
                     </Typography>
                         </Stack>
                     </Stack>
@@ -47,4 +47,4 @@ const EntireGreenBox = () => {
         </Container>
     )
 }
-export default EntireGreenBox; 
+export default FullGreenBox; 
