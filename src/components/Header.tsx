@@ -1,6 +1,7 @@
 import { CardContent,Card, Typography} from '@mui/material';
 
 
+
 interface HeaderProps {
     header: string; 
 }

@@ -9,6 +9,8 @@ import GreenBox from './components/GreenBox';
 import Boxes from './components/Boxes';
 import FullGreenBox from './components/FullGreenBox';
 import GroupFullGreenBox from './components/GroupFullGreenBox';
+import UserInfo from './components/UserInfo';
+import NameHeader from './components/NameHeader';
 
 
 const content:any = {
@@ -25,7 +27,10 @@ const content:any = {
 
   title: "Total ",
   body:"230,827",
-  num: "+4"
+  num: "+4",
+
+  firstName: "Jane",
+  lastName: "Temple"
 }
 function App() {
   return (
@@ -48,6 +53,9 @@ function App() {
           </Stack>
 
           <GroupFullGreenBox {...content}></GroupFullGreenBox>
+          <NameHeader {...content} ></NameHeader>
+          <UserInfo></UserInfo>
+          
         </Container>
         
         
