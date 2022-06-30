@@ -19,7 +19,6 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
     return (
         <ThemeProvider theme={theme}>
         {/* //Remove mt in card content when using component on its own  */}
-        <CardContent sx = {{mt: 8,backgroundColor: "#9e9e9e", height: 150}}> 
         <Stack direction = "row" justifyContent="center" alignItems="center">
         
         <Stack direction="row" spacing={1}>
@@ -28,7 +27,7 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
             <Card  sx ={{ width: 166.5, height: 130, backgroundColor: "#4caf50"}}>
 
                 <CardContent>
-                    <Typography color = "#f5f5f5" variant = "h6" >
+                    <Typography noWrap color = "#f5f5f5" variant = "h6" >
                     <b>{props.title1}</b>
                     </Typography>
                 </CardContent>
@@ -36,7 +35,7 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
                 <CardContent sx ={{backgroundColor: "#4caf50"}}>  
                     <Stack> 
                         <Stack direction = "row"  justifyContent="center">
-                        <Typography color = "#f5f5f5" >
+                        <Typography noWrap color = "#f5f5f5" >
                                 {props.body1}
                         </Typography>
                         </Stack>
@@ -50,7 +49,7 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
             <Card  sx ={{ width: 166.5, height: 130, backgroundColor: "#4caf50"}}>
 
                 <CardContent >
-                    <Typography color = "#f5f5f5" variant = "h6" >
+                    <Typography noWrap color = "#f5f5f5" variant = "h6" >
                    <b>{props.title2}</b>
                     </Typography>
                 </CardContent>
@@ -72,7 +71,7 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
             <Card  sx ={{ width: 166.5, height: 130, backgroundColor: "#4caf50"}}>
 
                 <CardContent>
-                    <Typography color = "#f5f5f5" variant = "h6" >
+                    <Typography noWrap color = "#f5f5f5" variant = "h6" >
                  <b>{props.title3}</b>
                     </Typography>
                 </CardContent>
@@ -80,7 +79,7 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
                 <CardContent sx ={{backgroundColor: "#4caf50"}}>  
                     <Stack> 
                         <Stack direction = "row"  justifyContent="center">
-                        <Typography color = "#f5f5f5" >
+                        <Typography noWrap color = "#f5f5f5" >
                         {props.body1}
                     </Typography>
                         </Stack>
@@ -89,11 +88,8 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
 
             </Card>
             </Paper>
-
-       
         </Stack>
         </Stack>
-        </CardContent>
         </ThemeProvider>
         
     )

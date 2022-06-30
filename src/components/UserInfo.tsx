@@ -21,8 +21,8 @@ interface UserInfoProps  {
 const UserInfo = (props: UserInfoProps) => {
     return (
         //can remove mt 
-        <Box sx = {{mt:2, backgroundColor: "#9e9e9e", height: 300, width: 1069}}>
-                <Card sx = {{backgroundColor: "#212121"}}> 
+        <Box sx = {{mt:2, backgroundColor: "#9e9e9e", height: 300, width: 700}}>
+                <Card sx = {{backgroundColor: "#212121", mb: 1}}> 
                  <Typography variant = "h6"color = "white"> Member Information </Typography>
                 </Card>
 

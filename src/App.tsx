@@ -12,6 +12,7 @@ import UserInfo from './components/UserInfo';
 import NameHeader from './components/NameHeader';
 import Avatar from './components/avatar';
 import Search from './components/Search';
+import UserInfoSet from './componentSets/UserInfoSet';
 
 
 const content:any = {
@@ -59,7 +60,7 @@ function App() {
         {/* <FirstComponent {...content} ></FirstComponent> */}
         </Container>
 
-        <Container sx = {{mt: 7}}> 
+        <Box sx = {{mt: 7}}> 
           <Stack direction = "row">
             <SingleBox {...content}></SingleBox>
             <GreenBox {...content}></GreenBox>
@@ -70,8 +71,9 @@ function App() {
           <NameHeader {...content} ></NameHeader>
           <UserInfo {...content}></UserInfo>
           <Search></Search>
+          <UserInfoSet></UserInfoSet>
     
-        </Container>
+        </Box>
         
         
         

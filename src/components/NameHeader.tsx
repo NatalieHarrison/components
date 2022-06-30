@@ -6,9 +6,9 @@ interface NameHeaderProps{
 
 const NameHeader = (props: NameHeaderProps) => {
     return (
-        //can remove mt 
+        
             <Card sx = {{backgroundColor: "#212121"}}> 
-                <Typography variant = "h5"color = "white">
+                <Typography align = "left" variant = "h5"color = "white">
                     {props.lastName}, {props.firstName}
                 </Typography>
             </Card>
