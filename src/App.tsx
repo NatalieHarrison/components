@@ -11,6 +11,7 @@ import GroupFullGreenBox from './components/GroupFullGreenBox';
 import UserInfo from './components/UserInfo';
 import NameHeader from './components/NameHeader';
 import Avatar from './components/avatar';
+import Search from './components/Search';
 
 
 const content:any = {
@@ -68,7 +69,8 @@ function App() {
           <GroupFullGreenBox {...content}></GroupFullGreenBox>
           <NameHeader {...content} ></NameHeader>
           <UserInfo {...content}></UserInfo>
-          <Avatar></Avatar>
+          <Search></Search>
+    
         </Container>
         
         
