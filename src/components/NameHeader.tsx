@@ -8,7 +8,7 @@ const NameHeader = (props: NameHeaderProps) => {
     return (
         //can remove mt 
             <Card sx = {{backgroundColor: "#212121"}}> 
-                <Typography color = "white">
+                <Typography variant = "h5"color = "white">
                     {props.lastName}, {props.firstName}
                 </Typography>
             </Card>

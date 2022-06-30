@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import { Box, Container} from '@mui/system';
 import { Card, CardHeader, Grid, CardContent, Stack, Typography, Paper} from '@mui/material';
@@ -11,6 +10,7 @@ import FullGreenBox from './components/FullGreenBox';
 import GroupFullGreenBox from './components/GroupFullGreenBox';
 import UserInfo from './components/UserInfo';
 import NameHeader from './components/NameHeader';
+import Avatar from './components/avatar';
 
 
 const content:any = {
@@ -29,8 +29,21 @@ const content:any = {
   body:"230,827",
   num: "+4",
 
+  //name header
   firstName: "Jane",
-  lastName: "Temple"
+  lastName: "Temple",
+  //user info
+    openDate: "02/03/2021",
+    activeStatus: "Active", 
+    qualificationReason: "N/A",
+    location: "Seattle, WA",
+    generation: "Y",
+    gender: "Female",
+    memberType: "Gold",
+    preferredBranch: "N/A",
+    preferredATM: "N/A",
+    totLTProducts: "N/A",
+    openProducts: "N/A"
 }
 function App() {
   return (
@@ -54,8 +67,8 @@ function App() {
 
           <GroupFullGreenBox {...content}></GroupFullGreenBox>
           <NameHeader {...content} ></NameHeader>
-          <UserInfo></UserInfo>
-          
+          <UserInfo {...content}></UserInfo>
+          <Avatar></Avatar>
         </Container>
         
         
