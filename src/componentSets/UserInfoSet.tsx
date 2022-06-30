@@ -25,17 +25,18 @@ const content:any = {
     firstName: "Jane",
     lastName: "Temple",
     //user info
-      openDate: "02/03/2021",
-      activeStatus: "Active", 
-      qualificationReason: "N/A",
-      location: "Seattle, WA",
-      generation: "Y",
-      gender: "Female",
-      memberType: "Gold",
-      preferredBranch: "N/A",
-      preferredATM: "N/A",
-      totLTProducts: "N/A",
-      openProducts: "N/A"
+     //user info
+    openDate: "05/31/2007",
+    activeStatus: "True", 
+    qualificationReason: "SEG (IBM)",
+    location: "Chapel Hill, NC",
+    generation: "Y",
+    gender: "Male",
+    memberType: "Hybrid (Branch + Digital",
+    preferredBranch: "St. Alban's",
+    preferredATM: "St. Alban's",
+    totLTProducts: "7",
+    openProducts: "4"
   }
 
 const UserInfoSet = () => {
@@ -46,7 +47,7 @@ const UserInfoSet = () => {
             </Box>
 
             <Stack direction = "row">
-            <Box sx = {{backgroundColor: "black", height: 300, width: 300,ml:1, mr: 1}}>
+            <Box sx = {{backgroundColor: "black", height: 300, width: 300,ml:1, mr: 1, mt: 2}}>
                 Avatar profile
                 
             </Box>

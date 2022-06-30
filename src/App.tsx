@@ -35,17 +35,17 @@ const content:any = {
   firstName: "Jane",
   lastName: "Temple",
   //user info
-    openDate: "02/03/2021",
-    activeStatus: "Active", 
-    qualificationReason: "N/A",
-    location: "Seattle, WA",
+    openDate: "05/31/2007",
+    activeStatus: "True", 
+    qualificationReason: "SEG (IBM)",
+    location: "Chapel Hill, NC",
     generation: "Y",
-    gender: "Female",
-    memberType: "Gold",
-    preferredBranch: "N/A",
-    preferredATM: "N/A",
-    totLTProducts: "N/A",
-    openProducts: "N/A"
+    gender: "Male",
+    memberType: "Hybrid (Branch + Digital",
+    preferredBranch: "St. Alban's",
+    preferredATM: "St. Alban's",
+    totLTProducts: "7",
+    openProducts: "4"
 }
 function App() {
   return (
