@@ -1,6 +1,8 @@
 import { CardContent,Card, Typography, Stack, Paper} from '@mui/material';
+
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
+
 
 
 interface BoxesProps {
@@ -35,11 +37,11 @@ const Boxes = (props: BoxesProps) => {
                             <CardContent>  
                                 <Stack> 
                                     <Stack direction = "row"  justifyContent="center">
-                                    <Typography color = "#2e7d32"> {props.body1}
+                                    <Typography color = "#4caf50"> {props.body1}
                                     </Typography><ArrowDropUpIcon 
                                     color = "success"></ArrowDropUpIcon>
                                     </Stack>
-                                    <Typography color = "#2e7d32">
+                                    <Typography color = "#4caf50">
                                     ({props.num1}) </Typography>
                                 </Stack>
                             </CardContent>
@@ -79,11 +81,11 @@ const Boxes = (props: BoxesProps) => {
                             <CardContent>  
                                 <Stack> 
                                     <Stack direction = "row" justifyContent="center">
-                                    <Typography color = "#2e7d32"> {props.body3}
+                                    <Typography color = "#4caf50"> {props.body3}
                                     </Typography><ArrowDropUpIcon 
                                     color = "success"></ArrowDropUpIcon>
                                     </Stack>
-                                    <Typography color = "#2e7d32">
+                                    <Typography color = "#4caf50">
                                     ({props.num3}) </Typography>
                                 </Stack>
                             </CardContent>

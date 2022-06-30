@@ -3,9 +3,11 @@ import logo from './logo.svg';
 import './App.css';
 import { Box, Container} from '@mui/system';
 import { Card, CardHeader, Grid, CardContent, Stack, Typography, Paper} from '@mui/material';
-import BoxHB from './components/SingleBox';
+import SingleBox from './components/SingleBox';
 import Header from './components/Header';
 import Boxes from './components/Boxes';
+import GreenBox from './components/GreenBox';
+import EntireGreenBox from './components/EntireGreenBox';
 
 
 const content:any = {
@@ -18,7 +20,11 @@ const content:any = {
   num2: "+421",
   title3: "Acquisition to Churn Ratio",
   body3: "3.78",
-  num3: "+0.37"
+  num3: "+0.37",
+
+  title: "Total Members",
+  body:"230,827",
+  num: "+4"
 }
 function App() {
   return (
@@ -34,7 +40,11 @@ function App() {
         </Container>
 
         <Container sx = {{mt: 7}}> 
-          <BoxHB></BoxHB> 
+          <Stack direction = "row">
+            <SingleBox {...content}></SingleBox>
+            <GreenBox {...content}></GreenBox>
+            <EntireGreenBox></EntireGreenBox>
+          </Stack>
         </Container>
         
         
