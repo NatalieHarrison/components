@@ -51,29 +51,35 @@ function App() {
   return (
     <div className="App">
       <Box>
-        <Container>
-          <Card>
+
+        <Box sx = {{width: 700}}>
             <Header {...content}> </Header>
             <Boxes {...content}></Boxes>
-          </Card>
-        
-        {/* <FirstComponent {...content} ></FirstComponent> */}
-        </Container>
+        </Box>
 
-        <Box sx = {{mt: 7}}> 
+        <Box sx = {{mt: 7, width: 700}}> 
           <Stack direction = "row">
             <SingleBox {...content}></SingleBox>
             <GreenBox {...content}></GreenBox>
             <FullGreenBox {...content}></FullGreenBox>
           </Stack>
+        </Box>
 
-          <GroupFullGreenBox {...content}></GroupFullGreenBox>
+        <Box sx = {{mt: 7, width: 700}}>
+         <GroupFullGreenBox {...content}></GroupFullGreenBox>
+        </Box> 
+        
+        <Box sx = {{mt: 7, width: 700}}>
           <NameHeader {...content} ></NameHeader>
           <UserInfo {...content}></UserInfo>
           <Search></Search>
-          <UserInfoSet></UserInfoSet>
-    
         </Box>
+          
+        <Box sx = {{mt: 7}}>  
+          <UserInfoSet></UserInfoSet>
+        </Box>
+    
+        
         
         
         
