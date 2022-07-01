@@ -4,16 +4,17 @@ import NameHeader from '../components/NameHeader';
 import UserInfo from "../components/UserInfo";
 import FullGreenBox from "../components/FullGreenBox";
 import GroupFullGreenBox from '../components/GroupFullGreenBox';
+import SideBar from '../components/sidebar';
 
 const content:any = {
     header: "Products & Services that Delight" ,
-    title1: "Total Open Problems",
+    title1: "Total",
     body1: "329,778",
     num1: "+5,690",
-    title2: "Member Churn This Period",
+    title2: "Members ",
     body2: "1,291", 
     num2: "+421",
-    title3: "Acquisition to Churn Ratio",
+    title3: "Acquisition",
     body3: "3.78",
     num3: "+0.37",
   
@@ -41,8 +42,13 @@ const content:any = {
 
 const UserInfoSet = () => {
     return(
-        <Box sx = {{ml: 2,mb:2,backgroundColor: "#bdbdbd", height: 800, maxWidth: 1200}}>
-            <Box sx = {{ml: 36, width: 912}}> 
+        <Box sx = {{ml: 2,backgroundColor: "#bdbdbd", height: 650, maxWidth: 1300}}>
+            <Stack direction = "row" spacing = {1}> 
+            {/* This stack is used to put the sidebar on the side of everything to the right of it  */}
+                <SideBar></SideBar>
+            <Box>
+            <Box sx = {{ml: 39.5, width: 945}}> 
+            
                 <NameHeader {...content}></NameHeader>
             </Box>
 
@@ -70,7 +76,10 @@ const UserInfoSet = () => {
 
                     <GroupFullGreenBox {...content}></GroupFullGreenBox>
                 </Stack>
+            </Box> 
             </Box>     
+
+            </Stack>
         </Box>
     )
 }

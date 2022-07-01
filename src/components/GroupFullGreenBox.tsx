@@ -58,7 +58,7 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
                     <Stack> 
                         <Stack direction = "row"  justifyContent="center">
                         <Typography color = "#f5f5f5">
-                        {props.body1}
+                        {props.body2}
                     </Typography>
                         </Stack>
                     </Stack>
@@ -80,7 +80,7 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
                     <Stack> 
                         <Stack direction = "row"  justifyContent="center">
                         <Typography noWrap color = "#f5f5f5" >
-                        {props.body1}
+                        {props.body3}
                     </Typography>
                         </Stack>
                     </Stack>
