@@ -22,7 +22,7 @@ const Boxes = (props: BoxesProps) => {
     //Need to change color to green or red depending on if positive or negative 
 
     return (
-                <CardContent sx = {{backgroundColor: "#9e9e9e", height: 200}}> 
+                <CardContent sx = {{backgroundColor: "#9e9e9e", height: 130}}> 
                     <Stack direction = "row" justifyContent="center" alignItems="center">
                     
                     <Stack direction="row" spacing={1}>

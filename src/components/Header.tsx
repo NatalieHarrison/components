@@ -1,4 +1,4 @@
-import { CardContent, Typography} from '@mui/material';
+import { CardContent, CardHeader, Typography, Card} from '@mui/material';
 
 
 
@@ -7,9 +7,10 @@ interface HeaderProps {
 }
 const Header = (props: HeaderProps) => {
     return (
-        <CardContent sx = {{backgroundColor: "#424242"}}> 
-        <Typography variant = "h6"color = "#f5f5f5"> {props.header} </Typography>
-        </CardContent>
+        <Card sx = {{backgroundColor: "#424242", height: 50}}> 
+            <CardHeader title = {props.header} sx = {{color: "white", fontSize: "1"}}></CardHeader>
+    
+        </Card>
     )
 }
 export default Header; 

@@ -19,7 +19,7 @@ const UserInfo = (props: UserInfoProps) => {
         //can remove mt 
         <Box sx = {{mt:2, maxHeight: 300, maxWidth: 700}}>
                 <Card sx = {{backgroundColor: "#212121", mb: 1}}> 
-                 <Typography variant = "h6"color = "white"> Member Information </Typography>
+                 <Typography align = "left" variant = "h6"color = "white" sx  = {{ml:1}}> Member Information  </Typography>
                 </Card>
 
 
