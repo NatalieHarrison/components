@@ -53,7 +53,7 @@ const UserInfoSet = () => {
                         </Box> 
                     </Grid>
                     <Grid xs = {4}>
-                        <Box sx = {{width: 960}}>
+                        <Box sx = {{width: 946}}>
                             <NameHeader {...content}></NameHeader>
 
                             <Stack direction = "row">
