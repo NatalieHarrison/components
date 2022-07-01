@@ -1,10 +1,11 @@
-import { Box, Container, Stack } from '@mui/material';
+import { Box, Container, Stack, Grid} from '@mui/material';
 import GreenBox from '../components/GreenBox';
 import NameHeader from '../components/NameHeader';
 import UserInfo from "../components/UserInfo";
 import FullGreenBox from "../components/FullGreenBox";
 import GroupFullGreenBox from '../components/GroupFullGreenBox';
 import SideBar from '../components/sidebar';
+import { Group } from '@mui/icons-material';
 
 const content:any = {
     header: "Products & Services that Delight" ,
@@ -42,44 +43,82 @@ const content:any = {
 
 const UserInfoSet = () => {
     return(
-        <Box sx = {{ml: 2,backgroundColor: "#bdbdbd", height: 650, maxWidth: 1300}}>
-            <Stack direction = "row" spacing = {1}> 
-            {/* This stack is used to put the sidebar on the side of everything to the right of it  */}
-                <SideBar></SideBar>
+
+        <Box sx = {{ml: 2,backgroundColor: "#bdbdbd", height: 650, maxWidth: 1320}}>
             <Box>
-            <Box sx = {{ml: 39.5, width: 945}}> 
-            
-                <NameHeader {...content}></NameHeader>
-            </Box>
+                <Grid container spacing = {2}>
+                    <Grid item xs = {3.5}>
+                        <Box sx = {{backgroundColor: "black", height: 333, width: 350,ml:1, mr: 1}}>
+                                Avatar profile
+                        </Box> 
+                    </Grid>
+                    <Grid xs = {4}>
+                        <Box sx = {{width: 960}}>
+                            <NameHeader {...content}></NameHeader>
 
-            <Stack direction = "row">
-            <Box sx = {{backgroundColor: "black", height: 300, width: 300,ml:1, mr: 1, mt: 2}}>
-                Avatar profile
+                            <Stack direction = "row">
+                                <UserInfo {...content}></UserInfo>
+                                <Stack direction = "column">
+                                    <GreenBox {...content}></GreenBox>
+                                    <GreenBox {...content}></GreenBox>
+                                    <GreenBox {...content}></GreenBox>
+                                    
+                                    
+                                </Stack>
+                            </Stack>
+                            
+                        </Box>
+                    </Grid>
+
+                    <Grid xs ={5.2}>
+                        <GroupFullGreenBox {...content}></GroupFullGreenBox>
+                        <GroupFullGreenBox {...content}></GroupFullGreenBox>
+                    
+                  
+                            
+                            
+                        
+                    </Grid>
+
+
+
+
+
+                </Grid>
+
+
+                {/* <Stack direction = "row">
+                    <Box sx = {{backgroundColor: "black", height: 350, width: 350,ml:1, mr: 1}}>
+                        Avatar profile
+                    </Box> 
+
+                    <Box sx = {{width: 960}}>
+                        <NameHeader {...content}></NameHeader>
+                        <Stack direction = "row">
                 
-            </Box>
-            <Stack direction = "row"> 
-                <Box>
-                    <UserInfo {...content}></UserInfo>
-                </Box>
+                            <UserInfo {...content}></UserInfo>
+                    
 
-                <Box sx ={{ height: 330}}>
-                    <GreenBox {...content}></GreenBox>
-                    <GreenBox {...content}></GreenBox>
-                    <GreenBox {...content}></GreenBox>
-                </Box>
-            </Stack>
-            </Stack>
+                            <Stack direction = "column">
+                                <GreenBox {...content}></GreenBox>
+                                <GreenBox {...content}></GreenBox>
+                                <GreenBox {...content}></GreenBox>
+                            </Stack>
 
-            <Box sx = {{width: 529}}>
-                <Stack direction = "column" spacing = {2}>
-                    <GroupFullGreenBox {...content}></GroupFullGreenBox>
+                        </Stack>
+                        
+                    </Box>
+                </Stack> */}
 
-                    <GroupFullGreenBox {...content}></GroupFullGreenBox>
-                </Stack>
+     
+{/* 
+                    <GroupFullGreenBox {...content}></GroupFullGreenBox> */}
+            
+                
+
             </Box> 
-            </Box>     
-
-            </Stack>
+            
+          
         </Box>
     )
 }

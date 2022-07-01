@@ -1,4 +1,4 @@
-import {Container, Card, CardHeader, Grid, CardContent, Stack, Typography, Paper} from '@mui/material';
+import {Container, Card, CardHeader, Grid, CardContent, Stack, Typography, Paper, Box} from '@mui/material';
 import { createTheme, ThemeProvider, responsiveFontSizes } from '@mui/material/styles';
 
 
@@ -17,8 +17,8 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
     theme = responsiveFontSizes(theme);
     
     return (
+        <Box sx = {{mt: 1}}>
         <ThemeProvider theme={theme}>
-        {/* //Remove mt in card content when using component on its own  */}
         <Stack direction = "row" justifyContent="center" alignItems="center">
         
         <Stack direction="row" spacing={1}>
@@ -91,6 +91,7 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
         </Stack>
         </Stack>
         </ThemeProvider>
+        </Box>
         
     )
 }

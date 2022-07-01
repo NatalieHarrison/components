@@ -19,12 +19,12 @@ const GreenBox = (props: GreenBoxProps) => {
         <Container>
             <ThemeProvider theme = {theme}>  
        
-            <Grid container spacing = {0} direction = "row" sx = {{mt: 2}}> 
+            <Grid container spacing = {0} direction = "row" sx = {{mt:2}}> 
             
             <Paper  elevation = {4}> 
-            <Card  sx ={{ width: 166.5, height: 130}}>
+            <Card  sx ={{ width: 166.5, height: 90}}>
 
-                <CardContent sx ={{backgroundColor: "#4caf50"}}>
+                <CardContent sx ={{backgroundColor: "#4caf50", height: 10}}>
                     <Typography color = "#f5f5f5" >
                     {props.title}
                     </Typography>

@@ -10,7 +10,6 @@ import FullGreenBox from './components/FullGreenBox';
 import GroupFullGreenBox from './components/GroupFullGreenBox';
 import UserInfo from './components/UserInfo';
 import NameHeader from './components/NameHeader';
-import Avatar from './components/avatar';
 import Search from './components/Search';
 import UserInfoSet from './componentSets/UserInfoSet';
 import SideBar from './components/sidebar';
@@ -79,7 +78,7 @@ function App() {
         <Box sx = {{mt: 7}}>  
           <UserInfoSet></UserInfoSet>
         </Box>
-        
+
         <Box> 
           <SideBar></SideBar>
         </Box>
