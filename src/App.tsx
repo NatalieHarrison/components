@@ -60,7 +60,6 @@ function App() {
 
         <Box sx={{ mt: 7, width: 700 }}>
           <Stack direction="row">
-            <SingleBox {...content}></SingleBox>
             <GreenBox {...content}></GreenBox>
             <FullGreenBoxes {...content}></FullGreenBoxes>
           </Stack>
