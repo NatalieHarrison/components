@@ -8,7 +8,6 @@ import CheckBox from './components/CheckBox';
 import FullGreenBoxes from './components/FullGreenBox';
 import GreenBoxes from './components/GreenBox';
 import GreyBoxes from './components/GreyBox';
-import GroupFullGreenBox from './components/GroupFullGreenBox';
 import Header from './components/Header';
 import NameHeader from './components/NameHeader';
 import Search from './components/Search';
