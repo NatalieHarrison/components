@@ -1,13 +1,13 @@
 import React from 'react';
 
 import './App.css';
-import { Card, CardHeader, Grid, CardContent, Stack, Typography, Paper } from '@mui/material';
-import { Box, Container } from '@mui/system';
+import { Stack } from '@mui/material';
+import { Box } from '@mui/system';
 
-import GreyBoxes from './components/GreyBox';
 import CheckBox from './components/CheckBox';
-import FullGreenBox from './components/FullGreenBox';
+import FullGreenBoxes from './components/FullGreenBox';
 import GreenBox from './components/GreenBox';
+import GreyBoxes from './components/GreyBox';
 import GroupFullGreenBox from './components/GroupFullGreenBox';
 import Header from './components/Header';
 import NameHeader from './components/NameHeader';
@@ -17,16 +17,10 @@ import SingleBox from './components/SingleBox';
 import UserInfo from './components/UserInfo';
 import UserInfoSet from './componentSets/UserInfoSet';
 
-
 const content: any = {
   // header: 'Products & Services that Delight',
-  greyBoxItems: [
-  {title: 'Total Open Problems',
-  body: '329,778',
-  num: '+5,690'},
-  {title: 'Total Open Problems',
-  body: '329,778',
-  num: '+5,690'},
+  greyBoxItems: [{ title: 'Total Open Problems', body: '329,778', num: '+5,690' }],
+  fullGreenBoxItems: [{ title: 'Direct Deposit', body: 'Active', num: '' }],
 
   // title2: 'Member Churn This Period',
   // body2: '1,291',
@@ -41,7 +35,7 @@ const content: any = {
 
   // //name header
   // firstName: 'Jane',
-  // lastName: 'Temple',
+  // lastName: 'Anderson',
   // //user info
   // openDate: '05/31/2007',
   // activeStatus: 'True',
@@ -54,7 +48,6 @@ const content: any = {
   // preferredATM: "St. Alban's",
   // totLTProducts: '7',
   // openProducts: '4',
-  ]
 };
 function App() {
   return (
@@ -69,7 +62,7 @@ function App() {
           <Stack direction="row">
             <SingleBox {...content}></SingleBox>
             <GreenBox {...content}></GreenBox>
-            <FullGreenBox {...content}></FullGreenBox>
+            <FullGreenBoxes {...content}></FullGreenBoxes>
           </Stack>
         </Box>
 
