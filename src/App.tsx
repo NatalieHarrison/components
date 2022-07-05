@@ -62,7 +62,7 @@ function App() {
       <Box>
         <Box sx={{ width: 700 }}>
           <Header {...content}> </Header>
-          <Boxes {...content}></Boxes>
+          <GreyBoxes {...content}></GreyBoxes>
         </Box>
 
         <Box sx={{ mt: 7, width: 700 }}>
