@@ -2,29 +2,30 @@ import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
+import FullGreenBoxes from '../components/FullGreenBox';
 
-import GreenBox from '../components/GreenBox';
+import GreenBoxes from '../components/GreenBox';
 import NameHeader from '../components/NameHeader';
 import UserInfo from '../components/UserInfo';
 
 const content: any = {
-  header: 'Products & Services that Delight',
-  title1: 'Total',
-  body1: '329,778',
-  num1: '+5,690',
-  title2: 'Members ',
-  body2: '1,291',
-  num2: '+421',
-  title3: 'Acquisition',
-  body3: '3.78',
-  num3: '+0.37',
-  title: 'Total ',
-  body: '230,827',
-  num: '+4',
+  greenBoxItems: [
+    { title: 'Member Tenure', body: '14 Years', num: '' },
+    { title: 'Member Economic Participation', body: '$72,716', num: '' },
+    {title: 'Member FICO Score', body: '756',num: ''},
+  ],
+  fullGreenBoxItems: [
+    {title: 'Direct Deposit', body: 'Active', num:''},
+    {title: 'Go Green Checking', body: '$9,826.24', num: ''},
+    {title: '30 Year Fixed Mortgage', body: '($156,057.46)', num: ''},
+    {title: 'Bill Pay', body: 'Active', num: ''},
+    {title: '60 Month Auto Loan', body: '($13,216.90)', num: ''},
+    {title: 'Signature Rewards', body: '($748.44)', num: ''},
+  ],
+  
   //name header
   firstName: 'Jane',
-  lastName: 'Temple',
-  //user info
+  lastName: 'Anderson',
   //user info
   openDate: '05/31/2007',
   activeStatus: 'True',
@@ -41,29 +42,27 @@ const content: any = {
 
 const UserInfoSet = () => {
   return (
-    <Box sx={{ ml: 2, backgroundColor: '#bdbdbd', height: 650, maxWidth: 1320 }}>
+    <Box sx={{ ml: 2, backgroundColor: '#bdbdbd'}}>
       <Box>
         <Grid container spacing={2}>
-          <Grid item xs={3.5}>
+          <Grid item xs={3}>
             <Box sx={{ backgroundColor: 'black', height: 333, width: 350, ml: 1, mr: 1 }}>Avatar profile</Box>
           </Grid>
-          <Grid xs={4}>
-            <Box sx={{ width: 946 }}>
+
+          <Grid item xs={7}>
               <NameHeader {...content}></NameHeader>
-
-              <Stack direction="row">
-                <UserInfo {...content}></UserInfo>
-                <Stack direction="column">
-                  <GreenBox {...content}></GreenBox>
-                  <GreenBox {...content}></GreenBox>
-                  <GreenBox {...content}></GreenBox>
-                </Stack>
-              </Stack>
-            </Box>
+              <UserInfo {...content}></UserInfo>
           </Grid>
 
-          <Grid xs={5.2}>
+          <Grid item xs = {1}>
+            <GreenBoxes {...content}></GreenBoxes>
           </Grid>
+
+          <Grid item xs = {5}>
+            <FullGreenBoxes {...content}></FullGreenBoxes>
+          </Grid>
+
+
         </Grid>
 
         {/* <Stack direction = 'row'>

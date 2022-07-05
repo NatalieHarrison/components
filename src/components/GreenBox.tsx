@@ -20,9 +20,9 @@ interface GreenBoxesProps {
 }
 const GreenBox = (props: GreenBoxProps) => {
   return (
-    <Box sx = {{mt: 1, mb: 1}}> 
+    <Box sx={{ mt: 1, mb: 1 }}>
       <Paper elevation={4}>
-        <Card sx={{ width: 166.5, height: 90}}>
+        <Card sx={{ width: 166.5, height: 90 }}>
           <CardContent sx={{ backgroundColor: '#4caf50', height: 10 }}>
             <Typography color="#f5f5f5">{props.title}</Typography>
           </CardContent>
@@ -50,9 +50,9 @@ const GreenBoxes = (props: GreenBoxesProps) => {
   return (
     <Container>
       <ThemeProvider theme={theme}>
-        <Grid container spacing={0} direction="row" sx={{ mt: 2 }}>
+        <Stack direction = "column">
           {props.greenBoxItems && props.greenBoxItems.map((box) => <GreenBox {...box}> </GreenBox>)}
-        </Grid>
+          </Stack>
       </ThemeProvider>
     </Container>
   );

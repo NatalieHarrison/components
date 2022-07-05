@@ -17,10 +17,12 @@ import UserInfoSet from './componentSets/UserInfoSet';
 
 const content: any = {
   // header: 'Products & Services that Delight',
-  greyBoxItems: [{ title: 'Total Open Problems', body: '329,778', num: '+5,690' }],
+  greyBoxItems: [{ title: 'Total Open Problems ', body: '329,778', num: '+5,690' }],
   fullGreenBoxItems: [{ title: 'Direct Deposit', body: 'Active', num: '' }],
-  greenBoxItems: [{ title: 'Member Tenure', body: '14 Years', num: '' },
-  { title: 'Member Tenure', body: '14 Years', num: '' }],
+  greenBoxItems: [
+    { title: 'Member Tenure', body: '14 Years', num: '' },
+    { title: 'Member Tenure', body: '14 Years', num: '' },
+  ],
   // //name header
   firstName: 'Jane',
   lastName: 'Anderson',
@@ -48,8 +50,8 @@ function App() {
 
         <Box sx={{ mt: 7, width: 700 }}>
           <Stack direction="row">
-            <GreenBoxes {...content}></GreenBoxes>
-            <FullGreenBoxes {...content}></FullGreenBoxes>
+            {/* <GreenBoxes {...content}></GreenBoxes> */}
+            {/* <FullGreenBoxes {...content}></FullGreenBoxes> */}
           </Stack>
         </Box>
 

@@ -23,7 +23,7 @@ interface UserInfoProps {
 const UserInfo = (props: UserInfoProps) => {
   return (
     //can remove mt
-    <Box sx={{ mt: 2, maxHeight: 300, maxWidth: 700 }}>
+    <Box sx={{ mt: 2 }}>
       <Card sx={{ backgroundColor: '#212121', mb: 1 }}>
         <Typography align="left" variant="h6" color="white" sx={{ ml: 1 }}>
           {' '}
