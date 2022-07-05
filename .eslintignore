@@ -1,0 +1,8 @@
+amplify
+build
+dist
+node_modules
+
+src/API.ts
+src/graphql
+src/models
