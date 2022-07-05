@@ -6,17 +6,17 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-interface BoxProps {
+interface GreyBoxProps {
   title: string;
   body: string;
   num: string;
 }
 
-interface BoxesProps {
-  items: BoxProps[];
+interface GreyBoxesProps {
+  greyBoxItems: GreyBoxProps[];
 }
 
-const Box = (props: BoxProps) => {
+const GreyBox = (props: GreyBoxProps) => {
   return (
     <Paper elevation={4}>
       <Card sx={{ width: 166.5, height: 150 }}>
@@ -38,7 +38,7 @@ const Box = (props: BoxProps) => {
   );
 };
 
-const Boxes = (props: BoxesProps) => {
+const GreyBoxes = (props: GreyBoxesProps) => {
   //TODO
   //Need to change color to green or red depending on if positive or negative
 
@@ -47,10 +47,10 @@ const Boxes = (props: BoxesProps) => {
     <CardContent sx={{ backgroundColor: '#9e9e9e', height: 130 }}>
       <Stack direction="row" justifyContent="center" alignItems="center">
         <Stack direction="row" spacing={1}>
-          {props.items && props.items.map((box) => <Box {...box}> </Box>)}
+          {props.greyBoxItems && props.greyBoxItems.map((box) => <GreyBox {...box}> </GreyBox>)}
         </Stack>
       </Stack>
     </CardContent>
   );
 };
-export default Boxes;
+export default GreyBoxes;
