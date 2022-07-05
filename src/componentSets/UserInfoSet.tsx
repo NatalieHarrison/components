@@ -4,7 +4,6 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 
 import GreenBox from '../components/GreenBox';
-import GroupFullGreenBox from '../components/GroupFullGreenBox';
 import NameHeader from '../components/NameHeader';
 import UserInfo from '../components/UserInfo';
 
@@ -64,8 +63,6 @@ const UserInfoSet = () => {
           </Grid>
 
           <Grid xs={5.2}>
-            <GroupFullGreenBox {...content}></GroupFullGreenBox>
-            <GroupFullGreenBox {...content}></GroupFullGreenBox>
           </Grid>
         </Grid>
 
