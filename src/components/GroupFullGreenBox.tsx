@@ -16,6 +16,10 @@ const GroupFullGreenBox = (props: GroupFullGreenBoxProps) => {
     let theme = createTheme();
     theme = responsiveFontSizes(theme);
     
+    // SAT: Make another component e.g. Box (but use a better name) and then have the Card as that 
+    // base component. Then this component can take an array of descriptions and be more dynamic.
+    // This component then loops over the input array and creates N number of child Box components.
+
     return (
         <Box sx = {{mt: 1}}>
         <ThemeProvider theme={theme}>
