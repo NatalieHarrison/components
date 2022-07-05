@@ -1,4 +1,10 @@
-import { CardContent, Card, Typography, Box, Container, List, ListItem, Stack } from '@mui/material';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 interface UserInfoProps {
   openDate: string;

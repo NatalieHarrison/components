@@ -1,13 +1,10 @@
-// SAT: Prefer individual includes for @mui/material components e.g.
-// import CardContent from '@mui/material/CardContent';
-// import Card from '@mui/material/Card';
-// It's  style we use but sorts better in the UI for others to be aware
-// of what components are being used. Only for @mui/material. It's fine for
-// style imports.
-
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
-import { CardContent, Card, Typography, Stack, Paper } from '@mui/material';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
 
 interface BoxesProps {
   title1: string;

@@ -1,5 +1,12 @@
-import { Container, Card, CardHeader, Grid, CardContent, Stack, Typography, Paper } from '@mui/material';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardHeader from '@mui/material/CardHeader';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
 interface FullGreenBoxProps {
   title: string;
@@ -23,7 +30,6 @@ const FullGreenBox = (props: FullGreenBoxProps) => {
             <Card sx={{ width: 166.5, height: 130, backgroundColor: '#4caf50' }}>
               <CardContent>
                 <Typography color="#f5f5f5" variant="h6">
-                  {/* {props.title} */}
                   <b>{props.title}</b>
                 </Typography>
               </CardContent>

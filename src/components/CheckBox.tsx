@@ -1,19 +1,15 @@
 import { useState } from 'react';
 
-import { Check } from '@mui/icons-material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import {
-  Box,
-  Card,
-  CardActions,
-  Collapse,
-  IconButtonProps,
-  IconButton,
-  styled,
-  Typography,
-  CardContent,
-  Checkbox,
-} from '@mui/material';
+import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
+import CardActions from '@mui/material/CardActions';
+import CardContent from '@mui/material/CardContent';
+import Checkbox from '@mui/material/Checkbox';
+import Collapse from '@mui/material/Collapse';
+import IconButton, { IconButtonProps } from '@mui/material/IconButton';
+import { styled } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
 interface ExpandMoreProps extends IconButtonProps {
   expand: boolean;

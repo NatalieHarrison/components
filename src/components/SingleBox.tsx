@@ -1,8 +1,12 @@
-import { stringify } from 'querystring';
-
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
-import { Container, Card, CardHeader, Grid, CardContent, Stack, Typography, Paper } from '@mui/material';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
 interface SingleBoxProps {
   title: string;

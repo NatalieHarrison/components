@@ -1,4 +1,6 @@
-import { CardContent, Card, Typography, Box, Container } from '@mui/material';
+import Card from '@mui/material/Card';
+import Typography from '@mui/material/Typography';
+
 interface NameHeaderProps {
   lastName: string;
   firstName: string;

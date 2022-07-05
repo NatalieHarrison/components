@@ -1,11 +1,11 @@
-import { Group } from '@mui/icons-material';
-import { Box, Container, Stack, Grid } from '@mui/material';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Stack from '@mui/material/Stack';
 
-import FullGreenBox from '../components/FullGreenBox';
 import GreenBox from '../components/GreenBox';
 import GroupFullGreenBox from '../components/GroupFullGreenBox';
 import NameHeader from '../components/NameHeader';
-import SideBar from '../components/sidebar';
 import UserInfo from '../components/UserInfo';
 
 const content: any = {
@@ -19,11 +19,9 @@ const content: any = {
   title3: 'Acquisition',
   body3: '3.78',
   num3: '+0.37',
-
   title: 'Total ',
   body: '230,827',
   num: '+4',
-
   //name header
   firstName: 'Jane',
   lastName: 'Temple',
@@ -36,8 +34,8 @@ const content: any = {
   generation: 'Y',
   gender: 'Male',
   memberType: 'Hybrid (Branch + Digital',
-  preferredBranch: "St. Alban's",
-  preferredATM: "St. Alban's",
+  preferredBranch: 'St. Albans',
+  preferredATM: 'St. Albans',
   totLTProducts: '7',
   openProducts: '4',
 };
@@ -71,19 +69,19 @@ const UserInfoSet = () => {
           </Grid>
         </Grid>
 
-        {/* <Stack direction = "row">
-                    <Box sx = {{backgroundColor: "black", height: 350, width: 350,ml:1, mr: 1}}>
+        {/* <Stack direction = 'row'>
+                    <Box sx = {{backgroundColor: 'black', height: 350, width: 350,ml:1, mr: 1}}>
                         Avatar profile
                     </Box> 
 
                     <Box sx = {{width: 960}}>
                         <NameHeader {...content}></NameHeader>
-                        <Stack direction = "row">
+                        <Stack direction = 'row'>
                 
                             <UserInfo {...content}></UserInfo>
                     
 
-                            <Stack direction = "column">
+                            <Stack direction = 'column'>
                                 <GreenBox {...content}></GreenBox>
                                 <GreenBox {...content}></GreenBox>
                                 <GreenBox {...content}></GreenBox>

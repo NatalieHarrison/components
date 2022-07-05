@@ -1,4 +1,5 @@
-import { CardContent, CardHeader, Typography, Card } from '@mui/material';
+import Card from '@mui/material/Card';
+import CardHeader from '@mui/material/CardHeader';
 
 interface HeaderProps {
   header: string;
