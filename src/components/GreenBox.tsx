@@ -1,3 +1,4 @@
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardHeader from '@mui/material/CardHeader';
@@ -19,21 +20,23 @@ interface GreenBoxesProps {
 }
 const GreenBox = (props: GreenBoxProps) => {
   return (
-    <Paper elevation={4}>
-      <Card sx={{ width: 166.5, height: 90 }}>
-        <CardContent sx={{ backgroundColor: '#4caf50', height: 10 }}>
-          <Typography color="#f5f5f5">{props.title}</Typography>
-        </CardContent>
+    <Box sx = {{mt: 1, mb: 1}}> 
+      <Paper elevation={4}>
+        <Card sx={{ width: 166.5, height: 90}}>
+          <CardContent sx={{ backgroundColor: '#4caf50', height: 10 }}>
+            <Typography color="#f5f5f5">{props.title}</Typography>
+          </CardContent>
 
-        <CardContent>
-          <Stack>
-            <Stack direction="row" justifyContent="center">
-              <Typography color="primary"> {props.body}</Typography>
+          <CardContent>
+            <Stack>
+              <Stack direction="row" justifyContent="center">
+                <Typography color="primary"> {props.body}</Typography>
+              </Stack>
             </Stack>
-          </Stack>
-        </CardContent>
-      </Card>
-    </Paper>
+          </CardContent>
+        </Card>
+      </Paper>
+    </Box>
   );
 };
 const GreenBoxes = (props: GreenBoxesProps) => {
