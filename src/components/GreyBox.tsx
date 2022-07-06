@@ -1,5 +1,6 @@
 import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowDropUpIcon from '@mui/icons-material/ArrowDropUp';
+import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Paper from '@mui/material/Paper';
@@ -44,7 +45,7 @@ const GreyBoxes = (props: GreyBoxesProps) => {
 
   // SAT
   return (
-    <CardContent sx={{ backgroundColor: '#9e9e9e', height: 130 }}>
+    <CardContent sx={{ backgroundColor: '#9e9e9e', mb: 1 }}>
       <Stack direction="row" justifyContent="center" alignItems="center">
         <Stack direction="row" spacing={1}>
           {props.greyBoxItems && props.greyBoxItems.map((box) => <GreyBox {...box}> </GreyBox>)}

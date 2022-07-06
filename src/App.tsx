@@ -17,6 +17,8 @@ import NameHeader from './components/NameHeader';
 import Search from './components/Search';
 import SideBar from './components/sidebar';
 import UserInfo from './components/UserInfo';
+import boxComboSet from './componentSets/boxComboSet';
+import BoxComboSet from './componentSets/boxComboSet';
 import UserInfoSet from './componentSets/UserInfoSet';
 
 const content: any = {
@@ -75,6 +77,10 @@ const content: any = {
 function App() {
   return (
     <div className="App">
+      <Box>
+        <BoxComboSet></BoxComboSet>
+      </Box>
+
       <Box>
         <ButtonsBar></ButtonsBar>
       </Box>
