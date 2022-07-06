@@ -10,6 +10,7 @@ import FullGreenBoxes from './components/FullGreenBox';
 import GreenBoxes from './components/GreenBox';
 import GreyBoxes from './components/GreyBox';
 import Header from './components/Header';
+import LogoBar from './components/LogoBar';
 import NameHeader from './components/NameHeader';
 import Search from './components/Search';
 import SideBar from './components/sidebar';
@@ -39,6 +40,8 @@ const content: any = {
   preferredATM: "St. Alban's",
   totLTProducts: '7',
   openProducts: '4',
+
+  //Box with check boxes
   boxChecksItems: [
     {
       categoryTitle1: 'SEG NAME',
@@ -98,6 +101,10 @@ function App() {
 
         <Box>
           <BoxesChecks {...content}></BoxesChecks>
+        </Box>
+
+        <Box>
+          <LogoBar></LogoBar>
         </Box>
       </Box>
     </div>

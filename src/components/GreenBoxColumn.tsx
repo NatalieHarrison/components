@@ -39,7 +39,7 @@ const GreenBox = (props: GreenBoxProps) => {
     </Box>
   );
 };
-const GreenBoxes = (props: GreenBoxesProps) => {
+const GreenBoxesColumn = (props: GreenBoxesProps) => {
   const theme = createTheme({
     palette: {
       primary: {
@@ -57,4 +57,4 @@ const GreenBoxes = (props: GreenBoxesProps) => {
     </Container>
   );
 };
-export default GreenBoxes;
+export default GreenBoxesColumn;

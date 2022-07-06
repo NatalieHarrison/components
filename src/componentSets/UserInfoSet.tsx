@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 
 import FullGreenBoxes from '../components/FullGreenBox';
-import GreenBoxes from '../components/GreenBox';
+import GreenBoxesColumn from '../components/GreenBoxColumn';
 import NameHeader from '../components/NameHeader';
 import UserInfo from '../components/UserInfo';
 
@@ -54,45 +54,15 @@ const UserInfoSet = () => {
             <Stack direction="row">
               <UserInfo {...content}></UserInfo>
               <Grid item xs={2}>
-                <GreenBoxes {...content}></GreenBoxes>
+                <GreenBoxesColumn {...content}></GreenBoxesColumn>
               </Grid>
             </Stack>
           </Grid>
-
-          {/* <Grid item xs={1}>
-            <GreenBoxes {...content}></GreenBoxes>
-          </Grid> */}
 
           <Grid item xs={4.5}>
             <FullGreenBoxes {...content}></FullGreenBoxes>
           </Grid>
         </Grid>
-
-        {/* <Stack direction = 'row'>
-                    <Box sx = {{backgroundColor: 'black', height: 350, width: 350,ml:1, mr: 1}}>
-                        Avatar profile
-                    </Box> 
-
-                    <Box sx = {{width: 960}}>
-                        <NameHeader {...content}></NameHeader>
-                        <Stack direction = 'row'>
-                
-                            <UserInfo {...content}></UserInfo>
-                    
-
-                            <Stack direction = 'column'>
-                                <GreenBox {...content}></GreenBox>
-                                <GreenBox {...content}></GreenBox>
-                                <GreenBox {...content}></GreenBox>
-                            </Stack>
-
-                        </Stack>
-                        
-                    </Box>
-                </Stack> */}
-
-        {/* 
-                    <GroupFullGreenBox {...content}></GroupFullGreenBox> */}
       </Box>
     </Box>
   );
