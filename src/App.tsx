@@ -7,7 +7,8 @@ import { Box } from '@mui/system';
 import CheckBox from './components/BoxChecks';
 import BoxesChecks from './components/BoxChecks';
 import FullGreenBoxes from './components/FullGreenBox';
-import GreenBoxes from './components/GreenBox';
+import GraphBar from './components/GraphBar';
+import GreenBoxes from './components/GreenBoxColumn';
 import GreyBoxes from './components/GreyBox';
 import Header from './components/Header';
 import LogoBar from './components/LogoBar';
@@ -73,6 +74,10 @@ const content: any = {
 function App() {
   return (
     <div className="App">
+      <Box>
+        <GraphBar></GraphBar>
+      </Box>
+
       <Box>
         <Box sx={{ width: 700 }}>
           <Header {...content}> </Header>
