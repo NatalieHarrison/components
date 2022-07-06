@@ -6,6 +6,7 @@ import { Box } from '@mui/system';
 
 import CheckBox from './components/BoxChecks';
 import BoxesChecks from './components/BoxChecks';
+import ButtonsBar from './components/ButtonsBar';
 import FullGreenBoxes from './components/FullGreenBox';
 import GraphBar from './components/GraphBar';
 import GreenBoxes from './components/GreenBoxColumn';
@@ -74,6 +75,9 @@ const content: any = {
 function App() {
   return (
     <div className="App">
+      <Box>
+        <ButtonsBar></ButtonsBar>
+      </Box>
       <Box>
         <GraphBar></GraphBar>
       </Box>
