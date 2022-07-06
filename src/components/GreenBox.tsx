@@ -50,9 +50,9 @@ const GreenBoxes = (props: GreenBoxesProps) => {
   return (
     <Container>
       <ThemeProvider theme={theme}>
-        <Stack direction = "column">
+        <Stack direction="column">
           {props.greenBoxItems && props.greenBoxItems.map((box) => <GreenBox {...box}> </GreenBox>)}
-          </Stack>
+        </Stack>
       </ThemeProvider>
     </Container>
   );

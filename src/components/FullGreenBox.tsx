@@ -1,5 +1,5 @@
-import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
+import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
@@ -19,9 +19,9 @@ interface FullGreenBoxesProps {
 }
 const FullGreenBox = (props: FullGreenBoxProps) => {
   return (
-    <Box sx = {{mr: 1, mb: 1}}>
+    <Box sx={{ mr: 1, mb: 1 }}>
       <Paper elevation={4}>
-        <Card sx={{ width: 166.5, height: 130, backgroundColor: '#4caf50'}}>
+        <Card sx={{ width: 166.5, height: 130, backgroundColor: '#4caf50' }}>
           <CardContent>
             <Typography color="#f5f5f5" variant="h6">
               <b>{props.title}</b>
@@ -37,7 +37,7 @@ const FullGreenBox = (props: FullGreenBoxProps) => {
           </CardContent>
         </Card>
       </Paper>
-    </Box> 
+    </Box>
   );
 };
 
