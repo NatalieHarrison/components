@@ -19,6 +19,7 @@ import SideBar from './components/sidebar';
 import UserInfo from './components/UserInfo';
 import boxComboSet from './componentSets/boxComboSet';
 import BoxComboSet from './componentSets/boxComboSet';
+import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import UserInfoSet from './componentSets/UserInfoSet';
 
 const content: any = {
@@ -78,6 +79,10 @@ function App() {
   return (
     <div className="App">
       <Box>
+        <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
+      </Box>
+
+      <Box sx={{ mt: 2, mb: 2 }}>
         <BoxComboSet></BoxComboSet>
       </Box>
 
