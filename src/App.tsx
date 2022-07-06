@@ -5,6 +5,7 @@ import { Stack } from '@mui/material';
 import { Box } from '@mui/system';
 
 import CheckBox from './components/BoxChecks';
+import BoxesChecks from './components/BoxChecks';
 import FullGreenBoxes from './components/FullGreenBox';
 import GreenBoxes from './components/GreenBox';
 import GreyBoxes from './components/GreyBox';
@@ -14,7 +15,6 @@ import Search from './components/Search';
 import SideBar from './components/sidebar';
 import UserInfo from './components/UserInfo';
 import UserInfoSet from './componentSets/UserInfoSet';
-import BoxesChecks from './components/BoxChecks';
 
 const content: any = {
   // header: 'Products & Services that Delight',
@@ -39,35 +39,33 @@ const content: any = {
   preferredATM: "St. Alban's",
   totLTProducts: '7',
   openProducts: '4',
-  boxChecksItems:[{
-  categoryTitle1: 'SEG NAME',
-  c1checkBox1: 'IBM',
-  c1checkBox2: 'Lenovo',
-  c1checkBox3: 'Cisco',
-  c1checkBox4: 'SAS',
-  c1checkBox5: 'BlueCross',
-  categoryTitle2:'GENERATION CATEGORYY',
-  c2checkBox1:'Boomers I',
-  c2checkBox2:'Boomers II',
-  c2checkBox3:'Gen X',
-  c2checkBox4:'Millenials',
-  c2checkBox5:'Gen Z',
-  categoryTitle3:'FICO SCORE CATEGORY',
-  c3checkBox1: 'Super Prime (740-850)',
-  c3checkBox2:'Prime (680-739)',
-  c3checkBox3:'Nonprime (620-679)',
-  c3checkBox4:'Subprime(501-620)',
-  categoryTitle4: 'NUMBER OF CCU PRODUCTS',
-  c4checkBox1:'1',
-  c4checkBox2:'2',
-  c4checkBox3:'3',
-  c4checkBox4:'4',
-  c4checkBox5:'5+',
-  
-
-
-}],
-
+  boxChecksItems: [
+    {
+      categoryTitle1: 'SEG NAME',
+      c1checkBox1: 'IBM',
+      c1checkBox2: 'Lenovo',
+      c1checkBox3: 'Cisco',
+      c1checkBox4: 'SAS',
+      c1checkBox5: 'BlueCross',
+      categoryTitle2: 'GENERATION CATEGORYY',
+      c2checkBox1: 'Boomers I',
+      c2checkBox2: 'Boomers II',
+      c2checkBox3: 'Gen X',
+      c2checkBox4: 'Millenials',
+      c2checkBox5: 'Gen Z',
+      categoryTitle3: 'FICO SCORE CATEGORY',
+      c3checkBox1: 'Super Prime (740-850)',
+      c3checkBox2: 'Prime (680-739)',
+      c3checkBox3: 'Nonprime (620-679)',
+      c3checkBox4: 'Subprime(501-620)',
+      categoryTitle4: 'NUMBER OF CCU PRODUCTS',
+      c4checkBox1: '1',
+      c4checkBox2: '2',
+      c4checkBox3: '3',
+      c4checkBox4: '4',
+      c4checkBox5: '5+',
+    },
+  ],
 };
 function App() {
   return (
@@ -95,16 +93,12 @@ function App() {
           <Stack direction="row">
             <SideBar></SideBar>
             <UserInfoSet></UserInfoSet>
-            
           </Stack>
-          
-        </Box> 
- 
+        </Box>
 
         <Box>
           <BoxesChecks {...content}></BoxesChecks>
         </Box>
-
       </Box>
     </div>
   );
