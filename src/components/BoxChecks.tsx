@@ -60,10 +60,10 @@ const BoxChecks = (props: BoxChecksProps) => {
       duration: theme.transitions.duration.shortest,
     }),
   }));
-  const [expanded, setExpanded] = useState(true);
+  const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
-    setExpanded(false);
+    setExpanded(!expanded);
   };
   return (
     <Card sx={{ maxWidth: 300, backgroundColor: '#e0e0e0' }}>
