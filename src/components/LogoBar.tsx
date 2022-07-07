@@ -13,7 +13,7 @@ const content: any = {
 
 const LogoBar = () => {
   return (
-    <Box maxWidth="xl" sx={{ backgroundColor: '#212121' }}>
+    <Box  sx={{ backgroundColor: '#212121', mb: 1 }}>
       <Grid container direction="row" justifyContent="flex-end" alignItems="center">
         <Grid item>
           <GreenBoxesRow {...content}></GreenBoxesRow>
