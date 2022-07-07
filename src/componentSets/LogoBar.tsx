@@ -1,7 +1,7 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 
-import GreenBoxesRow from './GreenBoxRow';
+import GreenBoxesRow from '../components/GreenBoxRow';
 
 const content: any = {
   greenBoxItems: [
