@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
+import Card from '@mui/material/Card';
 
 import HeaderAndBoxes from './HeaderAndBoxes';
 import LogoBar from './LogoBar';
@@ -16,17 +17,21 @@ const ChartAndBoxes = (content) => {
       <Grid>
         <Stack direction="row">
           <SideBar></SideBar>
-          <Grid item xs>
-            <Box sx={{ ml: 1, mt: 1 }}>
+          <Grid item xs sx={{ ml: 1, mt: 1, mr:1 }}>
+          
               <HeaderAndBoxes {...content}></HeaderAndBoxes>
               <HeaderAndBoxes {...content}></HeaderAndBoxes>
               <HeaderAndBoxes {...content}></HeaderAndBoxes>
               <HeaderAndBoxes {...content}></HeaderAndBoxes>
-            </Box>
+       
+
           </Grid>
 
           <Grid item xs>
-            <GraphBar></GraphBar>
+            <Stack direction='column'>
+              <GraphBar></GraphBar>
+              <Card> Chart will go here</Card>
+            </Stack>
           </Grid>
         </Stack>
       </Grid>

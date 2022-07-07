@@ -85,9 +85,7 @@ const content: any = {
 function App() {
   return (
     <div className="App">
-      <Box>
-        <GraphBar></GraphBar>
-      </Box>
+     
       <ChartAndBoxes {...content}></ChartAndBoxes>
 
       <Box>
