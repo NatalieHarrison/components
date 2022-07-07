@@ -23,6 +23,7 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderAndBoxes from './componentSets/HeaderAndBoxes';
 import LogoBar from './componentSets/LogoBar';
 import UserInfoSet from './componentSets/UserInfoSet';
+import Chart from './componentSets/Chart';
 
 const content: any = {
   header: 'Products & Services that Delight',
@@ -85,8 +86,15 @@ const content: any = {
 function App() {
   return (
     <div className="App">
-     
+      <b>Slide 1</b>
       <ChartAndBoxes {...content}></ChartAndBoxes>
+
+      <b>Slide 3</b>
+      <Chart></Chart>
+      
+
+
+
 
       <Box>
         <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
@@ -104,7 +112,7 @@ function App() {
 
         <Box sx={{ mt: 7, width: 700 }}>
           <Stack direction="row">
-            {/* <GreenBoxes {...content}></GreenBoxes> */}
+            {/* <GreenBoxes {...content}></GreenBvfoxes> */}
             {/* <FullGreenBoxes {...content}></FullGreenBoxes> */}
           </Stack>
         </Box>
