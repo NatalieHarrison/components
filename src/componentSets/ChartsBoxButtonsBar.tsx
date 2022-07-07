@@ -4,9 +4,10 @@ import CardContent from '@mui/material/CardContent';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 
+import LogoBar from './LogoBar';
+
 import ButtonsBar from '../components/ButtonsBar';
 import GreenBoxesRow from '../components/GreenBoxRow';
-import LogoBar from './LogoBar';
 const content: any = {
   b1Title: 'Demographics',
   b2Title: 'Channels',

@@ -12,21 +12,25 @@ import GraphBar from './components/GraphBar';
 import GreenBoxes from './components/GreenBoxColumn';
 import GreyBoxes from './components/GreyBox';
 import Header from './components/Header';
-import LogoBar from './componentSets/LogoBar';
 import NameHeader from './components/NameHeader';
 import Search from './components/Search';
 import SideBar from './components/sidebar';
 import UserInfo from './components/UserInfo';
 import boxComboSet from './componentSets/boxComboSet';
 import BoxComboSet from './componentSets/boxComboSet';
-import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
-import UserInfoSet from './componentSets/UserInfoSet';
-import HeaderAndBoxes from './componentSets/HeaderAndBoxes';
 import ChartAndBoxes from './componentSets/ChartAndBoxes';
+import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
+import HeaderAndBoxes from './componentSets/HeaderAndBoxes';
+import LogoBar from './componentSets/LogoBar';
+import UserInfoSet from './componentSets/UserInfoSet';
 
 const content: any = {
   header: 'Products & Services that Delight',
-  greyBoxItems: [{ title: 'Total Open Problems ', body: '329,778', num: '+5,690' }, {title: 'Member Churn This Period', body: '1,291', num: '+421'}, {title: 'Acquisition to Churn Ratio', body: '3.78', num: '+0.37'}],
+  greyBoxItems: [
+    { title: 'Total Open Problems ', body: '329,778', num: '+5,690' },
+    { title: 'Member Churn This Period', body: '1,291', num: '+421' },
+    { title: 'Acquisition to Churn Ratio', body: '3.78', num: '+0.37' },
+  ],
   fullGreenBoxItems: [{ title: 'Direct Deposit', body: 'Active', num: '' }],
   greenBoxItems: [
     { title: 'Member Tenure', body: '14 Years', num: '' },
@@ -81,11 +85,10 @@ const content: any = {
 function App() {
   return (
     <div className="App">
-       <Box>
+      <Box>
         <GraphBar></GraphBar>
       </Box>
       <ChartAndBoxes {...content}></ChartAndBoxes>
-      
 
       <Box>
         <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
@@ -94,9 +97,6 @@ function App() {
       <Box sx={{ mt: 2, mb: 2 }}>
         <BoxComboSet></BoxComboSet>
       </Box>
-
-  
-  
 
       <Box>
         <Box sx={{ width: 700 }}>
