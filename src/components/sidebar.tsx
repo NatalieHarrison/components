@@ -8,7 +8,7 @@ import Box from '@mui/material/Box';
 import Stack from '@mui/material/Stack';
 const SideBar = () => {
   return (
-    <Box sx={{ backgroundColor: '#212121', width: 40, height: 650 }}>
+    <Box sx={{ backgroundColor: '#212121' }}>
       <Stack direction="column" spacing={1.5}>
         <HomeIcon fontSize="large" sx={{ color: '#e0e0e0' }}></HomeIcon>
         <PersonIcon fontSize="large" sx={{ color: '#e0e0e0' }}></PersonIcon>

@@ -21,15 +21,18 @@ import boxComboSet from './componentSets/boxComboSet';
 import BoxComboSet from './componentSets/boxComboSet';
 import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import UserInfoSet from './componentSets/UserInfoSet';
+import HeaderAndBoxes from './componentSets/HeaderAndBoxes';
+import ChartAndBoxes from './componentSets/ChartAndBoxes';
 
 const content: any = {
-  // header: 'Products & Services that Delight',
-  greyBoxItems: [{ title: 'Total Open Problems ', body: '329,778', num: '+5,690' }],
+  header: 'Products & Services that Delight',
+  greyBoxItems: [{ title: 'Total Open Problems ', body: '329,778', num: '+5,690' }, {title: 'Member Churn This Period', body: '1,291', num: '+421'}, {title: 'Acquisition to Churn Ratio', body: '3.78', num: '+0.37'}],
   fullGreenBoxItems: [{ title: 'Direct Deposit', body: 'Active', num: '' }],
   greenBoxItems: [
     { title: 'Member Tenure', body: '14 Years', num: '' },
     { title: 'Member Tenure', body: '14 Years', num: '' },
   ],
+
   // //name header
   firstName: 'Jane',
   lastName: 'Anderson',
@@ -78,6 +81,12 @@ const content: any = {
 function App() {
   return (
     <div className="App">
+       <Box>
+        <GraphBar></GraphBar>
+      </Box>
+      <ChartAndBoxes {...content}></ChartAndBoxes>
+      
+
       <Box>
         <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
       </Box>
@@ -87,9 +96,7 @@ function App() {
       </Box>
 
   
-      <Box>
-        <GraphBar></GraphBar>
-      </Box>
+  
 
       <Box>
         <Box sx={{ width: 700 }}>

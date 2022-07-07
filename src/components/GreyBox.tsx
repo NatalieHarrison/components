@@ -20,7 +20,7 @@ interface GreyBoxesProps {
 const GreyBox = (props: GreyBoxProps) => {
   return (
     <Paper elevation={4}>
-      <Card sx={{ width: 166.5, height: 150 }}>
+      <Card>
         <CardContent sx={{ backgroundColor: '#424242' }}>
           <Typography color="#f5f5f5">{props.title}</Typography>
         </CardContent>
