@@ -60,13 +60,13 @@ const BoxChecks = (props: BoxChecksProps) => {
       duration: theme.transitions.duration.shortest,
     }),
   }));
-  const [expanded, setExpanded] = useState(false);
+  const [expanded, setExpanded] = useState(true);
 
   const handleExpandClick = () => {
-    setExpanded(!expanded);
+    setExpanded(false);
   };
   return (
-    <Card sx={{ width: 300, backgroundColor: '#e0e0e0' }}>
+    <Card sx={{ maxWidth: 300, backgroundColor: '#e0e0e0' }}>
       <CardActions>
         <ExpandMore expand={expanded} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
           <ExpandMoreIcon></ExpandMoreIcon>

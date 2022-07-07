@@ -36,7 +36,7 @@ const GraphBar = () => {
           <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1}>
             <Typography sx={{ color: 'white' }}> Period: </Typography>
             <FormControl sx={{ m: 1, minWidth: 70 }} size="small">
-              <Select value={period} onChange={handleClick} sx={{ backgroundColor: 'white' }} >
+              <Select value={period} onChange={handleClick} sx={{ backgroundColor: 'white' }}>
                 <MenuItem>WTD</MenuItem>
                 <MenuItem>MTD</MenuItem>
                 <MenuItem>YTD</MenuItem>
