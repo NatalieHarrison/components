@@ -5,10 +5,14 @@ import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 
 import ButtonsBar from '../components/ButtonsBar';
-import GraphBar from '../components/GraphBar';
 import GreenBoxesRow from '../components/GreenBoxRow';
 import LogoBar from '../components/LogoBar';
 const content: any = {
+  b1Title: 'Demographics',
+  b2Title: 'Channels',
+  b3Title: 'Products/Services',
+  b4Title: 'Money',
+  b5Title: 'Loyalty',
   greenBoxItems: [
     { title: 'Secure Messages', body: '1,187' },
     { title: 'Call Center Calls', body: '3,891' },
@@ -25,7 +29,7 @@ const ChartsBoxButtonsBar = () => {
     <Box>
       <Stack direction="column">
         <LogoBar></LogoBar>
-        <ButtonsBar></ButtonsBar>
+        <ButtonsBar {...content}></ButtonsBar>
         <GreenBoxesRow {...content}></GreenBoxesRow>
       </Stack>
 

@@ -6,7 +6,16 @@ import Grid from '@mui/material/Grid';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
-const ButtonsBar = () => {
+interface ButtonsBarProps{
+  b1Title: string;
+  b2Title: string; 
+  b3Title: string;
+  b4Title: string; 
+  b5Title: string; 
+}
+
+
+const ButtonsBar = (props: ButtonsBarProps) => {
   const theme = createTheme({
     palette: {
       primary: {
@@ -35,7 +44,7 @@ const ButtonsBar = () => {
               variant="contained"
               color={button1Clicked ? 'primary' : 'secondary'}
             >
-              <Typography color={button1Clicked ? 'secondary' : 'primary'}> Demographics</Typography>
+              <Typography color={button1Clicked ? 'secondary' : 'primary'}> {props.b1Title}</Typography>
             </Button>
           </Grid>
 
@@ -47,7 +56,7 @@ const ButtonsBar = () => {
               variant="contained"
               color={button2Clicked ? 'primary' : 'secondary'}
             >
-              <Typography color={button2Clicked ? 'secondary' : 'primary'}> Channels</Typography>
+              <Typography color={button2Clicked ? 'secondary' : 'primary'}> {props.b2Title}</Typography>
             </Button>
           </Grid>
 
@@ -59,7 +68,7 @@ const ButtonsBar = () => {
               variant="contained"
               color={button3Clicked ? 'primary' : 'secondary'}
             >
-              <Typography color={button3Clicked ? 'secondary' : 'primary'}> Products/Services </Typography>
+              <Typography color={button3Clicked ? 'secondary' : 'primary'}> {props.b3Title} </Typography>
             </Button>
           </Grid>
 
@@ -71,7 +80,7 @@ const ButtonsBar = () => {
               variant="contained"
               color={button4Clicked ? 'primary' : 'secondary'}
             >
-              <Typography color={button4Clicked ? 'secondary' : 'primary'}> Money </Typography>
+              <Typography color={button4Clicked ? 'secondary' : 'primary'}> {props.b4Title} </Typography>
             </Button>
           </Grid>
 
@@ -83,7 +92,7 @@ const ButtonsBar = () => {
               variant="contained"
               color={button5Clicked ? 'primary' : 'secondary'}
             >
-              <Typography color={button5Clicked ? 'secondary' : 'primary'}> Loyalty </Typography>
+              <Typography color={button5Clicked ? 'secondary' : 'primary'}>{props.b5Title} </Typography>
             </Button>
           </Grid>
         </Grid>

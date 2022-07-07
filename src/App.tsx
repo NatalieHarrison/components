@@ -23,6 +23,9 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import UserInfoSet from './componentSets/UserInfoSet';
 
 const content: any = {
+  //Buttons Bar
+  b1Title: 'Demographicsss',
+
   // header: 'Products & Services that Delight',
   greyBoxItems: [{ title: 'Total Open Problems ', body: '329,778', num: '+5,690' }],
   fullGreenBoxItems: [{ title: 'Direct Deposit', body: 'Active', num: '' }],
@@ -86,9 +89,7 @@ function App() {
         <BoxComboSet></BoxComboSet>
       </Box>
 
-      <Box>
-        <ButtonsBar></ButtonsBar>
-      </Box>
+  
       <Box>
         <GraphBar></GraphBar>
       </Box>
