@@ -89,7 +89,6 @@ function App() {
         <BoxComboSet></BoxComboSet>
       </Box>
 
-  
       <Box>
         <GraphBar></GraphBar>
       </Box>
