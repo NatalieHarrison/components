@@ -25,7 +25,7 @@ const ChartAndBoxes = (content) => {
           </Grid>
 
           <Grid item xs>
-            <Stack direction="column">
+            <Stack direction="column" sx={{ mt: 1, mr: 1 }}>
               <GraphBar></GraphBar>
               <Card> Chart will go here</Card>
             </Stack>

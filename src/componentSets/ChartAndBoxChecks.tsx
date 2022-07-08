@@ -16,7 +16,7 @@ const ChartAndBoxChecks = (content) => {
       <Stack direction="row">
         <SideBar></SideBar>
         <Grid xs sx={{ ml: 1 }}>
-          <Stack direction="column">
+          <Stack direction="column" sx={{ mt: 1, mr: 1 }}>
             <GraphBar></GraphBar>
             <Grid direction="row">
               <Grid item xs={3}>

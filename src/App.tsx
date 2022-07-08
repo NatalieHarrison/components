@@ -89,9 +89,6 @@ const content: any = {
 function App() {
   return (
     <div className="App">
-      <b>Slide 16</b>
-      <MultiChartsBoxesBar {...content}></MultiChartsBoxesBar>
-
       <b>Slide 1</b>
       <ChartAndBoxes {...content}></ChartAndBoxes>
 
@@ -103,6 +100,9 @@ function App() {
 
       <b>Slide 7</b>
       <HeaderBoxesAndChart {...content}></HeaderBoxesAndChart>
+
+      <b>Slide 16</b>
+      <MultiChartsBoxesBar {...content}></MultiChartsBoxesBar>
 
       <b> Slide 17</b>
       <ChartsBoxButtonsBar></ChartsBoxButtonsBar>

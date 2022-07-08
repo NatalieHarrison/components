@@ -15,7 +15,7 @@ const Chart = () => {
       <Stack direction="row">
         <SideBar></SideBar>
         <Grid xs sx={{ ml: 1 }}>
-          <Stack direction="column">
+          <Stack direction="column" sx={{ mt: 1, mr: 1 }}>
             <GraphBar></GraphBar>
             <Card> Chart will go here</Card>
           </Stack>
