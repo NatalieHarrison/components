@@ -10,7 +10,7 @@ import ButtonsBar from '../components/ButtonsBar';
 import GreenBoxesRow from '../components/GreenBoxRow';
 import SideBar from '../components/sidebar';
 
-const ChartsBoxButtonsBar = () => {
+const ChartsBoxButtonsBar = (content) => {
   return (
     <Box>
       <LogoBar></LogoBar>
