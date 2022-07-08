@@ -19,7 +19,7 @@ const GraphBar = () => {
 
   return (
     <Box>
-      <Grid container direction="row" alignItems="center" sx={{ backgroundColor: '#212121', mt: 1, height: 60 }}>
+      <Grid container direction="row" alignItems="center" sx={{ backgroundColor: '#212121', height: 60 }}>
         <Grid item xs={6}>
           <Stack direction="row">
             <Button sx={{ color: '#9e9e9e' }}>

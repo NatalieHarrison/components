@@ -25,6 +25,7 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderAndBoxes from './componentSets/HeaderAndBoxes';
 import LogoBar from './componentSets/LogoBar';
 import UserInfoSet from './componentSets/UserInfoSet';
+import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 
 const content: any = {
   header: 'Products & Services that Delight',
@@ -87,14 +88,17 @@ const content: any = {
 function App() {
   return (
     <div className="App">
-      <b>Slide 5</b>
-      <ChartAndBoxChecks {...content}></ChartAndBoxChecks>
+      <b>Slide 7</b>
+      <HeaderBoxesAndChart {...content}></HeaderBoxesAndChart>
 
       <b>Slide 1</b>
       <ChartAndBoxes {...content}></ChartAndBoxes>
 
       <b>Slide 3</b>
       <Chart></Chart>
+
+      <b>Slide 5</b>
+      <ChartAndBoxChecks {...content}></ChartAndBoxChecks>
 
       <Box>
         <ChartsBoxButtonsBar></ChartsBoxButtonsBar>

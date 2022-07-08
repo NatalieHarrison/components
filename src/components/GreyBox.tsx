@@ -45,7 +45,7 @@ const GreyBoxes = (props: GreyBoxesProps) => {
 
   // SAT
   return (
-    <CardContent sx={{ backgroundColor: '#9e9e9e', mb: 1 }}>
+    <CardContent sx={{ backgroundColor: '#9e9e9e', }}>
       <Stack direction="row" justifyContent="center" alignItems="center">
         <Stack direction="row" spacing={1}>
           {props.greyBoxItems && props.greyBoxItems.map((box) => <GreyBox {...box}> </GreyBox>)}
