@@ -50,6 +50,18 @@ const MultiChartsBoxesBar = () => {
           <Grid item xs={5}>
             <GreenBoxesRow {...content}></GreenBoxesRow>
           </Grid>
+
+          <Grid item xs={4}>
+            <Card> Members by SEG (bar graph)</Card>
+          </Grid>
+
+          <Grid item xs={4}>
+            <Card> Members by FICO Score Categroy (bar graph)</Card>
+          </Grid>
+          
+          <Grid item xs={4}>
+            <Card> Members by FICO Score Category (pie chart)</Card>
+          </Grid>
         </Grid>
       </Stack>
     </Box>
