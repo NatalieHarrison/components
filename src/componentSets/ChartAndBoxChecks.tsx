@@ -15,22 +15,20 @@ const ChartAndBoxChecks = (content) => {
       <LogoBar></LogoBar>
       <Stack direction="row">
         <SideBar></SideBar>
-        <BoxesChecks {...content}></BoxesChecks>
+        <Grid xs sx={{ ml: 1 }}>
+          <Stack direction="column">
+            <GraphBar></GraphBar>
+            <Grid direction="row">
+              <Grid item xs={3}>
+                <BoxesChecks {...content}></BoxesChecks>
+              </Grid>
 
-        
-
-        <Grid xs sx = {{ml: 1}}>
-      
-   
-      <Stack direction= "column">
-        
-        <GraphBar></GraphBar>
-        
-        <Card> Chart will go here</Card>
-        
-        
-      </Stack>
-      </Grid>
+              <Grid item xs>
+                <Card>Chart will go here</Card>
+              </Grid>
+            </Grid>
+          </Stack>
+        </Grid>
       </Stack>
     </Box>
   );
