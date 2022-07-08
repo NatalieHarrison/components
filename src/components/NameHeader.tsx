@@ -8,7 +8,7 @@ interface NameHeaderProps {
 
 const NameHeader = (props: NameHeaderProps) => {
   return (
-    <Card sx={{ backgroundColor: '#212121', maxHeight:50 }}>
+    <Card sx={{ backgroundColor: '#212121', maxHeight: 50 }}>
       <Typography sx={{ ml: 2 }} align="left" variant="h5" color="white">
         {props.lastName}, {props.firstName}
       </Typography>

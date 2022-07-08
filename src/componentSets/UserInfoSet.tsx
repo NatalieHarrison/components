@@ -3,13 +3,14 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 
+import BarSearch from './BarSearch';
+import LogoBar from './LogoBar';
+
 import FullGreenBoxes from '../components/FullGreenBox';
 import GreenBoxesColumn from '../components/GreenBoxColumn';
 import NameHeader from '../components/NameHeader';
 import SideBar from '../components/sidebar';
 import UserInfo from '../components/UserInfo';
-import BarSearch from './BarSearch';
-import LogoBar from './LogoBar';
 
 const content: any = {
   greenBoxItems: [
@@ -46,42 +47,34 @@ const content: any = {
 const UserInfoSet = () => {
   return (
     <Box>
-        <LogoBar></LogoBar>
-        <Stack direction ="row">
+      <LogoBar></LogoBar>
+      <Stack direction="row">
         <SideBar></SideBar>
-          <Grid container spacing={2} sx ={{mt:1}}>
-            <Grid item xs={12}>
-              <BarSearch></BarSearch>
+        <Grid container spacing={2} sx={{ mt: 1 }}>
+          <Grid item xs={12}>
+            <BarSearch></BarSearch>
+          </Grid>
+
+          <Grid item xs={2.3}>
+            <Box sx={{ backgroundColor: 'black', height: 333, width: 350, ml: 1, mr: 1 }}>Avatar profile</Box>
+          </Grid>
+
+          <Grid item xs={9.7}>
+            <NameHeader {...content}></NameHeader>
+
+            <Grid item xs={9}>
+              <UserInfo {...content}></UserInfo>
             </Grid>
-            
-            <Grid item xs ={2.3}>
-
-                <Box sx={{ backgroundColor: 'black', height: 333, width: 350, ml: 1, mr: 1 }}>Avatar profile</Box>
-       
-            </Grid>
-
-            <Grid item xs={9.7}>
-              <NameHeader {...content}></NameHeader>
-
-              <Grid item xs={9}>
-              
-                  <UserInfo {...content}></UserInfo>
-              
-              </Grid>
-              <Grid item xs ={1}>
+            <Grid item xs={1}>
               <GreenBoxesColumn {...content}></GreenBoxesColumn>
-              </Grid>
             </Grid>
+          </Grid>
 
           <Grid item xs={4.5}>
-              <FullGreenBoxes {...content}></FullGreenBoxes>
-            </Grid>
-
-          
-
-            
+            <FullGreenBoxes {...content}></FullGreenBoxes>
           </Grid>
-        </Stack>
+        </Grid>
+      </Stack>
     </Box>
   );
 };

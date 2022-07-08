@@ -89,7 +89,6 @@ const content: any = {
 function App() {
   return (
     <div className="App">
-    
       <b>Slide 1</b>
       <ChartAndBoxes {...content}></ChartAndBoxes>
 
