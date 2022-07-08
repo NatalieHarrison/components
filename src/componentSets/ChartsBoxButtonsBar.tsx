@@ -22,7 +22,7 @@ const content: any = {
     { title: 'ATM Visits', body: '9,102' },
     { title: 'PTM Visits', body: '3,441' },
     { title: 'Branch Visits', body: '6,712' },
-    { title: 'Digital Banking Visits', body: '213,213' },
+   
   ],
 };
 
@@ -32,10 +32,12 @@ const ChartsBoxButtonsBar = () => {
       <LogoBar></LogoBar>
       <Stack direction="row">
         <SideBar></SideBar>
-        <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ mt: 1, mb: 1, mr: 1, ml: 1 }}>
-          <Grid item xs>
-            <ButtonsBar {...content}></ButtonsBar>
+        <Grid container direction="row" sx={{ mt: 1, mb: 1, mr: 1, ml: 1 }}>
+          <Grid item xs ={12}>
+            <ButtonsBar {...content}></ButtonsBar>   
+          </Grid>
 
+          <Grid item xs ={12}>
             <GreenBoxesRow {...content}></GreenBoxesRow>
           </Grid>
 

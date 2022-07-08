@@ -49,7 +49,7 @@ const GreenBoxesRow = (props: GreenBoxesProps) => {
   return (
     <Container>
       <ThemeProvider theme={theme}>
-        <Grid container spacing={0} direction="row" sx={{ mt: 2 }}>
+        <Grid container  direction="row" sx={{ mt: 2 }}>
           {props.greenBoxItems && props.greenBoxItems.map((box) => <GreenBox {...box}> </GreenBox>)}
         </Grid>
       </ThemeProvider>
