@@ -8,6 +8,7 @@ import GreenBoxesColumn from '../components/GreenBoxColumn';
 import NameHeader from '../components/NameHeader';
 import SideBar from '../components/sidebar';
 import UserInfo from '../components/UserInfo';
+import BarSearch from './BarSearch';
 import LogoBar from './LogoBar';
 
 const content: any = {
@@ -44,28 +45,41 @@ const content: any = {
 
 const UserInfoSet = () => {
   return (
-    <Box sx={{ ml: 2, backgroundColor: '#bdbdbd' }}>
+    <Box>
         <LogoBar></LogoBar>
         <Stack direction ="row">
         <SideBar></SideBar>
           <Grid container spacing={2} sx ={{mt:1}}>
-            <Grid item xs={2.4}>
-              <Box sx={{ backgroundColor: 'black', height: 333, width: 350, ml: 1, mr: 1 }}>Avatar profile</Box>
+            <Grid item xs={12}>
+              <BarSearch></BarSearch>
+            </Grid>
+            
+            <Grid item xs ={2.3}>
+
+                <Box sx={{ backgroundColor: 'black', height: 333, width: 350, ml: 1, mr: 1 }}>Avatar profile</Box>
+       
             </Grid>
 
-            <Grid item xs={5.6}>
+            <Grid item xs={9.7}>
               <NameHeader {...content}></NameHeader>
-              <Stack direction="row">
-                <UserInfo {...content}></UserInfo>
-                <Grid item xs={2}>
-                  <GreenBoxesColumn {...content}></GreenBoxesColumn>
-                </Grid>
-              </Stack>
+
+              <Grid item xs={9}>
+              
+                  <UserInfo {...content}></UserInfo>
+              
+              </Grid>
+              <Grid item xs ={1}>
+              <GreenBoxesColumn {...content}></GreenBoxesColumn>
+              </Grid>
             </Grid>
 
-            <Grid item xs={4.5}>
+          <Grid item xs={4.5}>
               <FullGreenBoxes {...content}></FullGreenBoxes>
             </Grid>
+
+          
+
+            
           </Grid>
         </Stack>
     </Box>

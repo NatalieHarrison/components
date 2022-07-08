@@ -23,7 +23,7 @@ interface UserInfoProps {
 const UserInfo = (props: UserInfoProps) => {
   return (
     //can remove mt
-    <Box sx={{ mt: 2 }}>
+    <Box sx={{ mt: 2}}>
       <Card sx={{ backgroundColor: '#212121', mb: 1 }}>
         <Typography align="left" variant="h6" color="white" sx={{ ml: 1 }}>
           {' '}
@@ -33,7 +33,7 @@ const UserInfo = (props: UserInfoProps) => {
 
       <Card sx={{ backgroundColor: '#white', maxHeight: 260 }}>
         <Stack direction="row">
-          <CardContent sx={{ width: 300 }}>
+          <CardContent>
             <List>
               <ListItem>
                 <b>Open Date: </b>
