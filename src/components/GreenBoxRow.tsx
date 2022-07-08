@@ -2,6 +2,7 @@ import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
@@ -48,9 +49,9 @@ const GreenBoxesRow = (props: GreenBoxesProps) => {
   return (
     <Container>
       <ThemeProvider theme={theme}>
-        <Stack direction="row">
+        <Grid container spacing={0} direction="row" sx={{ mt: 2 }}>
           {props.greenBoxItems && props.greenBoxItems.map((box) => <GreenBox {...box}> </GreenBox>)}
-        </Stack>
+        </Grid>
       </ThemeProvider>
     </Container>
   );

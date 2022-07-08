@@ -25,6 +25,7 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderAndBoxes from './componentSets/HeaderAndBoxes';
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import LogoBar from './componentSets/LogoBar';
+import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
 
 const content: any = {
@@ -88,9 +89,8 @@ const content: any = {
 function App() {
   return (
     <div className="App">
-   
-      
-      
+      <b>Slide 16</b>
+      <MultiChartsBoxesBar {...content}></MultiChartsBoxesBar>
 
       <b>Slide 1</b>
       <ChartAndBoxes {...content}></ChartAndBoxes>
@@ -106,8 +106,6 @@ function App() {
 
       <b> Slide 17</b>
       <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
-
-      
 
       <Box sx={{ mt: 2, mb: 2 }}>
         <BoxComboSet></BoxComboSet>
