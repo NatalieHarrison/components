@@ -8,6 +8,7 @@ import LogoBar from './LogoBar';
 
 import ButtonsBar from '../components/ButtonsBar';
 import GreenBoxesRow from '../components/GreenBoxRow';
+import SideBar from '../components/sidebar';
 const content: any = {
   b1Title: 'Demographics',
   b2Title: 'Channels',
@@ -28,35 +29,39 @@ const content: any = {
 const ChartsBoxButtonsBar = () => {
   return (
     <Box>
-      <Stack direction="column">
-        <LogoBar></LogoBar>
-        <ButtonsBar {...content}></ButtonsBar>
-        <GreenBoxesRow {...content}></GreenBoxesRow>
+      <LogoBar></LogoBar>
+      <Stack direction="row">
+        <SideBar></SideBar>
+        <Grid container direction="row" justifyContent="center" alignItems="center" sx={{ mt: 1, mb: 1, mr: 1, ml: 1 }}>
+          <Grid item xs>
+            <ButtonsBar {...content}></ButtonsBar>
+
+            <GreenBoxesRow {...content}></GreenBoxesRow>
+          </Grid>
+
+          <Grid item xs={6}>
+            <Stack direction="column">
+              <Card>
+                <CardContent>Service Events Initiated by Secure Messages</CardContent>
+              </Card>
+
+              <Card>
+                <CardContent>Secure Messages by Day (Graph)</CardContent>
+              </Card>
+
+              <Card>
+                <CardContent>Secure Messages by Time of Day</CardContent>
+              </Card>
+            </Stack>
+          </Grid>
+
+          <Grid item xs={6}>
+            <Card>
+              <CardContent>Secure Messages by Month (Blown up graph)</CardContent>
+            </Card>
+          </Grid>
+        </Grid>
       </Stack>
-
-      <Grid container direction="row" justifyContent="center" alignItems="center">
-        <Grid item xs={6}>
-          <Stack direction="column">
-            <Card>
-              <CardContent>Service Events Initiated by Secure Messages</CardContent>
-            </Card>
-
-            <Card>
-              <CardContent>Secure Messages by Day (Graph)</CardContent>
-            </Card>
-
-            <Card>
-              <CardContent>Secure Messages by Time of Day</CardContent>
-            </Card>
-          </Stack>
-        </Grid>
-
-        <Grid item xs={6}>
-          <Card>
-            <CardContent>Secure Messages by Month (Blown up graph)</CardContent>
-          </Card>
-        </Grid>
-      </Grid>
     </Box>
   );
 };

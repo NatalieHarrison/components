@@ -34,59 +34,57 @@ const ButtonsBar = (props: ButtonsBarProps) => {
 
   return (
     <ThemeProvider theme={theme}>
-      <Box sx={{ backgroundColor: '#212121' }}>
-        <ButtonGroup fullWidth={true}>
-          <Button
-            size="small"
-            disableElevation
-            onClick={() => setButton1Clicked(!button1Clicked)}
-            variant="contained"
-            color={button1Clicked ? 'primary' : 'secondary'}
-          >
-            <Typography color={button1Clicked ? 'secondary' : 'primary'}> {props.b1Title}</Typography>
-          </Button>
+      <ButtonGroup fullWidth={true} sx={{ backgroundColor: '#212121', maxHeight: 40 }}>
+        <Button
+          size="small"
+          disableElevation
+          onClick={() => setButton1Clicked(!button1Clicked)}
+          variant="contained"
+          color={button1Clicked ? 'primary' : 'secondary'}
+        >
+          <Typography color={button1Clicked ? 'secondary' : 'primary'}> {props.b1Title}</Typography>
+        </Button>
 
-          <Button
-            size="small"
-            disableElevation
-            onClick={() => setButton2Clicked(!button2Clicked)}
-            variant="contained"
-            color={button2Clicked ? 'primary' : 'secondary'}
-          >
-            <Typography color={button2Clicked ? 'secondary' : 'primary'}> {props.b2Title}</Typography>
-          </Button>
+        <Button
+          size="small"
+          disableElevation
+          onClick={() => setButton2Clicked(!button2Clicked)}
+          variant="contained"
+          color={button2Clicked ? 'primary' : 'secondary'}
+        >
+          <Typography color={button2Clicked ? 'secondary' : 'primary'}> {props.b2Title}</Typography>
+        </Button>
 
-          <Button
-            size="small"
-            disableElevation
-            onClick={() => setButton3Clicked(!button3Clicked)}
-            variant="contained"
-            color={button3Clicked ? 'primary' : 'secondary'}
-          >
-            <Typography color={button3Clicked ? 'secondary' : 'primary'}> {props.b3Title} </Typography>
-          </Button>
+        <Button
+          size="small"
+          disableElevation
+          onClick={() => setButton3Clicked(!button3Clicked)}
+          variant="contained"
+          color={button3Clicked ? 'primary' : 'secondary'}
+        >
+          <Typography color={button3Clicked ? 'secondary' : 'primary'}> {props.b3Title} </Typography>
+        </Button>
 
-          <Button
-            size="small"
-            disableElevation
-            onClick={() => setButton4Clicked(!button4Clicked)}
-            variant="contained"
-            color={button4Clicked ? 'primary' : 'secondary'}
-          >
-            <Typography color={button4Clicked ? 'secondary' : 'primary'}> {props.b4Title} </Typography>
-          </Button>
+        <Button
+          size="small"
+          disableElevation
+          onClick={() => setButton4Clicked(!button4Clicked)}
+          variant="contained"
+          color={button4Clicked ? 'primary' : 'secondary'}
+        >
+          <Typography color={button4Clicked ? 'secondary' : 'primary'}> {props.b4Title} </Typography>
+        </Button>
 
-          <Button
-            size="small"
-            disableElevation
-            onClick={() => setButton5Clicked(!button5Clicked)}
-            variant="contained"
-            color={button5Clicked ? 'primary' : 'secondary'}
-          >
-            <Typography color={button5Clicked ? 'secondary' : 'primary'}>{props.b5Title} </Typography>
-          </Button>
-        </ButtonGroup>
-      </Box>
+        <Button
+          size="small"
+          disableElevation
+          onClick={() => setButton5Clicked(!button5Clicked)}
+          variant="contained"
+          color={button5Clicked ? 'primary' : 'secondary'}
+        >
+          <Typography color={button5Clicked ? 'secondary' : 'primary'}>{props.b5Title} </Typography>
+        </Button>
+      </ButtonGroup>
     </ThemeProvider>
   );
 };

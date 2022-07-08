@@ -23,9 +23,9 @@ import ChartAndBoxChecks from './componentSets/ChartAndBoxChecks';
 import ChartAndBoxes from './componentSets/ChartAndBoxes';
 import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderAndBoxes from './componentSets/HeaderAndBoxes';
+import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import LogoBar from './componentSets/LogoBar';
 import UserInfoSet from './componentSets/UserInfoSet';
-import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 
 const content: any = {
   header: 'Products & Services that Delight',
@@ -88,8 +88,9 @@ const content: any = {
 function App() {
   return (
     <div className="App">
-      <b>Slide 7</b>
-      <HeaderBoxesAndChart {...content}></HeaderBoxesAndChart>
+   
+      
+      
 
       <b>Slide 1</b>
       <ChartAndBoxes {...content}></ChartAndBoxes>
@@ -100,9 +101,13 @@ function App() {
       <b>Slide 5</b>
       <ChartAndBoxChecks {...content}></ChartAndBoxChecks>
 
-      <Box>
-        <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
-      </Box>
+      <b>Slide 7</b>
+      <HeaderBoxesAndChart {...content}></HeaderBoxesAndChart>
+
+      <b> Slide 17</b>
+      <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
+
+      
 
       <Box sx={{ mt: 2, mb: 2 }}>
         <BoxComboSet></BoxComboSet>
