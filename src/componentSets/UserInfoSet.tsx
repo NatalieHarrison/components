@@ -6,7 +6,9 @@ import Stack from '@mui/material/Stack';
 import FullGreenBoxes from '../components/FullGreenBox';
 import GreenBoxesColumn from '../components/GreenBoxColumn';
 import NameHeader from '../components/NameHeader';
+import SideBar from '../components/sidebar';
 import UserInfo from '../components/UserInfo';
+import LogoBar from './LogoBar';
 
 const content: any = {
   greenBoxItems: [
@@ -43,27 +45,29 @@ const content: any = {
 const UserInfoSet = () => {
   return (
     <Box sx={{ ml: 2, backgroundColor: '#bdbdbd' }}>
-      <Box>
-        <Grid container spacing={2}>
-          <Grid item xs={2.4}>
-            <Box sx={{ backgroundColor: 'black', height: 333, width: 350, ml: 1, mr: 1 }}>Avatar profile</Box>
-          </Grid>
+        <LogoBar></LogoBar>
+        <Stack direction ="row">
+        <SideBar></SideBar>
+          <Grid container spacing={2} sx ={{mt:1}}>
+            <Grid item xs={2.4}>
+              <Box sx={{ backgroundColor: 'black', height: 333, width: 350, ml: 1, mr: 1 }}>Avatar profile</Box>
+            </Grid>
 
-          <Grid item xs={5.6}>
-            <NameHeader {...content}></NameHeader>
-            <Stack direction="row">
-              <UserInfo {...content}></UserInfo>
-              <Grid item xs={2}>
-                <GreenBoxesColumn {...content}></GreenBoxesColumn>
-              </Grid>
-            </Stack>
-          </Grid>
+            <Grid item xs={5.6}>
+              <NameHeader {...content}></NameHeader>
+              <Stack direction="row">
+                <UserInfo {...content}></UserInfo>
+                <Grid item xs={2}>
+                  <GreenBoxesColumn {...content}></GreenBoxesColumn>
+                </Grid>
+              </Stack>
+            </Grid>
 
-          <Grid item xs={4.5}>
-            <FullGreenBoxes {...content}></FullGreenBoxes>
+            <Grid item xs={4.5}>
+              <FullGreenBoxes {...content}></FullGreenBoxes>
+            </Grid>
           </Grid>
-        </Grid>
-      </Box>
+        </Stack>
     </Box>
   );
 };
