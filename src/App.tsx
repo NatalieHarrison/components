@@ -26,7 +26,7 @@ import HeaderAndBoxes from './componentSets/HeaderAndBoxes';
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import LogoBar from './componentSets/LogoBar';
 import UserInfoSet from './componentSets/UserInfoSet';
-
+import MultiChartsBoxButtonBar from './componentSets/MultiChartsBoxButtonBar';
 
 const content: any = {
   header: 'Products & Services that Delight',
@@ -40,12 +40,6 @@ const content: any = {
     { title: 'Member Tenure', body: '14 Years', num: '' },
     { title: 'Member Tenure', body: '14 Years', num: '' },
   ],
-  //Button Bar
-  b1Title:'Demographics',
-  b2Title: 'Channels',
-  b3Title: 'Products/Services',
-  b4Title: 'Money',
-  b5Title: 'Loyalty',
 
   // //name header
   firstName: 'Jane',
@@ -96,7 +90,8 @@ function App() {
   return (
     <div className="App">
        <b>Slide 16</b>
-       
+       <MultiChartsBoxButtonBar></MultiChartsBoxButtonBar>
+
       <b>Slide 1</b>
       <ChartAndBoxes {...content}></ChartAndBoxes>
 
