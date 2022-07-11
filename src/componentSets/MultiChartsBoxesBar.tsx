@@ -6,7 +6,6 @@ import Stack from '@mui/material/Stack';
 import LogoBar from './LogoBar';
 
 import ButtonsBar from '../components/ButtonsBar';
-import GraphBar from '../components/GraphBar';
 import GreenBoxesRow from '../components/GreenBoxRow';
 import SideBar from '../components/sidebar';
 const content: any = {

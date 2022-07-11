@@ -1,11 +1,8 @@
 import Box from '@mui/material/Box';
-import Stack from '@mui/material/Stack';
 
-import LogoBar from './LogoBar';
 
 import GreyBoxes from '../components/GreyBox';
 import Header from '../components/Header';
-import SideBar from '../components/sidebar';
 
 const HeaderAndBoxes = (content) => {
   return (

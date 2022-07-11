@@ -1,30 +1,12 @@
-import React from 'react';
 
 import './App.css';
-import { Stack } from '@mui/material';
-import { Box } from '@mui/system';
-
-import CheckBox from './components/BoxChecks';
-import BoxesChecks from './components/BoxChecks';
-import ButtonsBar from './components/ButtonsBar';
-import FullGreenBoxes from './components/FullGreenBox';
-import GraphBar from './components/GraphBar';
-import GreenBoxes from './components/GreenBoxColumn';
-import GreyBoxes from './components/GreyBox';
-import Header from './components/Header';
-import NameHeader from './components/NameHeader';
-import Search from './components/Search';
-import SideBar from './components/sidebar';
-import UserInfo from './components/UserInfo';
-import boxComboSet from './componentSets/boxComboSet';
-import BoxComboSet from './componentSets/boxComboSet';
 import Chart from './componentSets/Chart';
 import ChartAndBoxChecks from './componentSets/ChartAndBoxChecks';
 import ChartAndBoxes from './componentSets/ChartAndBoxes';
 import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
-import HeaderAndBoxes from './componentSets/HeaderAndBoxes';
+
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
-import LogoBar from './componentSets/LogoBar';
+
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
 
@@ -109,41 +91,6 @@ function App() {
 
       <b> Slide 17</b>
       <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
-
-      <Box sx={{ mt: 2, mb: 2 }}>
-        <BoxComboSet></BoxComboSet>
-      </Box>
-
-      <Box>
-        <Box sx={{ width: 700 }}>
-          <Header {...content}> </Header>
-          <GreyBoxes {...content}></GreyBoxes>
-        </Box>
-
-        <Box sx={{ mt: 7, width: 700 }}>
-          <Stack direction="row">
-            {/* <GreenBoxes {...content}></GreenBvfoxes> */}
-            {/* <FullGreenBoxes {...content}></FullGreenBoxes> */}
-          </Stack>
-        </Box>
-
-        <Box sx={{ mt: 7, width: 700 }}>
-          <NameHeader {...content}></NameHeader>
-          <UserInfo {...content}></UserInfo>
-          <Search></Search>
-        </Box>
-
-        <Box sx={{ mt: 7 }}>
-          <Stack direction="row">
-            <SideBar></SideBar>
-            <UserInfoSet></UserInfoSet>
-          </Stack>
-        </Box>
-
-        <Box>
-          <LogoBar></LogoBar>
-        </Box>
-      </Box>
     </div>
   );
 }
