@@ -7,6 +7,8 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import appTheme from '../theme';
+
 
 interface GreenBoxProps {
   title: string;
@@ -29,7 +31,7 @@ const GreenBox = (props: GreenBoxProps) => {
           <CardContent>
             <Stack>
               <Stack direction="row" justifyContent="center">
-                <Typography color="primary"> {props.body}</Typography>
+                <Typography color="secondary"> {props.body}</Typography>
               </Stack>
             </Stack>
           </CardContent>
@@ -39,16 +41,9 @@ const GreenBox = (props: GreenBoxProps) => {
   );
 };
 const GreenBoxesRow = (props: GreenBoxesProps) => {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: '#4caf50', //green
-      },
-    },
-  });
   return (
     <Container>
-      <ThemeProvider theme={theme}>
+      <ThemeProvider theme={appTheme}>
         <Grid container direction="row" sx={{ mt: 2 }}>
           {props.greenBoxItems && props.greenBoxItems.map((box) => <GreenBox {...box}> </GreenBox>)}
         </Grid>

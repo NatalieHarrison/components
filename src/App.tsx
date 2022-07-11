@@ -10,6 +10,9 @@ import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
 
+import { ThemeProvider } from '@mui/material/styles';
+
+
 const content: any = {
   header: 'Products & Services that Delight',
   greyBoxItems: [
