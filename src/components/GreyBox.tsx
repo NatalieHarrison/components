@@ -5,6 +5,8 @@ import CardContent from '@mui/material/CardContent';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { ThemeProvider } from '@mui/material/styles';
+import appTheme from '../theme';
 
 interface GreyBoxProps {
   title: string;
@@ -21,16 +23,16 @@ const GreyBox = (props: GreyBoxProps) => {
     <Paper elevation={4}>
       <Card>
         <CardContent sx={{ backgroundColor: '#424242' }}>
-          <Typography color="#f5f5f5">{props.title}</Typography>
+          <Typography color="secondary.main">{props.title}</Typography>
         </CardContent>
 
         <CardContent>
           <Stack>
             <Stack direction="row" justifyContent="center">
-              <Typography color="#4caf50"> {props.body}</Typography>
+              <Typography color="success.main"> {props.body}</Typography>
               <ArrowDropUpIcon color="success"></ArrowDropUpIcon>
             </Stack>
-            <Typography color="#4caf50">({props.num}) </Typography>
+            <Typography color="success.main">({props.num}) </Typography>
           </Stack>
         </CardContent>
       </Card>
@@ -44,6 +46,7 @@ const GreyBoxes = (props: GreyBoxesProps) => {
 
   // SAT
   return (
+    <ThemeProvider theme={appTheme}>
     <CardContent sx={{ backgroundColor: '#9e9e9e' }}>
       <Stack direction="row" justifyContent="center" alignItems="center">
         <Stack direction="row" spacing={1}>
@@ -51,6 +54,7 @@ const GreyBoxes = (props: GreyBoxesProps) => {
         </Stack>
       </Stack>
     </CardContent>
+    </ThemeProvider>
   );
 };
 export default GreyBoxes;

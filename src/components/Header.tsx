@@ -1,14 +1,18 @@
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
+import appTheme from '../theme';
+import { ThemeProvider } from '@mui/material/styles';
 
 interface HeaderProps {
   header: string;
 }
 const Header = (props: HeaderProps) => {
   return (
-    <Card sx={{ backgroundColor: '#424242', height: 50 }}>
-      <CardHeader title={props.header} sx={{ color: 'white', fontSize: '1' }}></CardHeader>
+    <ThemeProvider theme={appTheme}>
+    <Card sx={{ backgroundColor: 'primary.main', maxHeight: 50 }}>
+      <CardHeader title={props.header} sx={{ color: 'secondary.main', fontSize: '1' }}></CardHeader>
     </Card>
+    </ThemeProvider>
   );
 };
 export default Header;

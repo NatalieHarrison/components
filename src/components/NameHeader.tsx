@@ -1,5 +1,7 @@
 import Card from '@mui/material/Card';
 import Typography from '@mui/material/Typography';
+import appTheme from '../theme';
+import { ThemeProvider } from '@mui/material/styles';
 
 interface NameHeaderProps {
   lastName: string;
@@ -8,11 +10,13 @@ interface NameHeaderProps {
 
 const NameHeader = (props: NameHeaderProps) => {
   return (
-    <Card sx={{ backgroundColor: '#212121', maxHeight: 50 }}>
-      <Typography sx={{ ml: 2 }} align="left" variant="h5" color="white">
+    <ThemeProvider theme={appTheme}>
+    <Card sx={{ backgroundColor: 'primary.main', maxHeight: 50 }}>
+      <Typography sx={{ ml: 2 }} align="left" variant="h5" color="secondary.main">
         {props.lastName}, {props.firstName}
       </Typography>
     </Card>
+    </ThemeProvider>
   );
 };
 export default NameHeader;

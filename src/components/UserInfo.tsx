@@ -5,6 +5,8 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import appTheme from '../theme';
+import { ThemeProvider } from '@mui/material/styles';
 
 interface UserInfoProps {
   openDate: string;
@@ -22,16 +24,16 @@ interface UserInfoProps {
 
 const UserInfo = (props: UserInfoProps) => {
   return (
-    //can remove mt
+    <ThemeProvider theme={appTheme}>
     <Box sx={{ mt: 2 }}>
-      <Card sx={{ backgroundColor: '#212121', mb: 1 }}>
-        <Typography align="left" variant="h6" color="white" sx={{ ml: 1 }}>
+      <Card sx={{ backgroundColor: 'primary.main', mb: 1 }}>
+        <Typography align="left" variant="h6" color="secondary.main" sx={{ ml: 1 }}>
           {' '}
           Member Information{' '}
         </Typography>
       </Card>
 
-      <Card sx={{ backgroundColor: '#white', maxHeight: 260 }}>
+      <Card sx={{ backgroundColor: 'secondary.main', maxHeight: 260 }}>
         <Stack direction="row">
           <CardContent>
             <List>
@@ -98,6 +100,7 @@ const UserInfo = (props: UserInfoProps) => {
         </Stack>
       </Card>
     </Box>
+    </ThemeProvider>
   );
 };
 export default UserInfo;

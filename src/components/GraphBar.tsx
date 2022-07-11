@@ -9,6 +9,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import { ThemeProvider } from '@mui/material/styles';
+import appTheme from '../theme';
 const GraphBar = () => {
   const [period, setPeriod] = React.useState('');
 
@@ -18,13 +20,14 @@ const GraphBar = () => {
 
   return (
     <Box>
-      <Grid container direction="row" alignItems="center" sx={{ backgroundColor: '#212121', height: 60 }}>
+      <ThemeProvider theme={appTheme}>
+      <Grid container direction="row" alignItems="center" sx={{ backgroundColor: 'primary.main', maxHeight: 60 }}>
         <Grid item xs={6}>
           <Stack direction="row">
-            <Button sx={{ color: '#9e9e9e' }}>
+            <Button sx={{ color: 'secondary.main' }}>
               <FilterAltIcon />
             </Button>
-            <Typography variant="h6" sx={{ color: 'white' }}>
+            <Typography variant="h6"  color= 'secondary.main'>
               {' '}
               Total Members{' '}
             </Typography>
@@ -33,30 +36,27 @@ const GraphBar = () => {
 
         <Grid item xs={6}>
           <Stack direction="row" alignItems="center" justifyContent="flex-end" spacing={1}>
-            <Typography sx={{ color: 'white' }}> Period: </Typography>
+            <Typography color= 'secondary.main'> Period: </Typography>
             <FormControl sx={{ m: 1, minWidth: 70 }} size="small">
-              <Select value={period} onChange={handleClick} sx={{ backgroundColor: 'white' }}>
+              <Select value={period} onChange={handleClick} sx={{ backgroundColor: 'secondary.main' }}>
                 <MenuItem>WTD</MenuItem>
                 <MenuItem>MTD</MenuItem>
                 <MenuItem>YTD</MenuItem>
               </Select>
             </FormControl>
 
-            {/* <Button onClick={handleClick} size = "medium" variant="contained" sx={{backgroundColor: "white"}} >
-            <Typography sx={{color: "black"}}>YTD </Typography>
-            <FilterListIcon fontSize="small" sx={{color:"black"}}/>
-          </Button> */}
-
-            <Button size="medium" variant="contained" sx={{ backgroundColor: 'white', mt: 1 }}>
-              <Typography sx={{ color: 'black' }}> # </Typography>
+            <Button size="medium" variant="contained" sx={{ backgroundColor: 'secondary.main', mt: 1 }}>
+              <Typography color = 'primary'> # </Typography>
             </Button>
-            <Button size="medium" variant="contained" sx={{ backgroundColor: 'white', mt: 1 }}>
-              <Typography sx={{ color: 'black' }}> % </Typography>
+            <Button size="medium" variant="contained" sx={{ backgroundColor: 'secondary.main', mt: 1 }}>
+              <Typography color= 'primary'> % </Typography>
             </Button>
           </Stack>
         </Grid>
       </Grid>
+      </ThemeProvider>
     </Box>
+    
   );
 };
 export default GraphBar;

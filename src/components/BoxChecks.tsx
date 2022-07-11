@@ -12,6 +12,8 @@ import FormGroup from '@mui/material/FormGroup';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import appTheme from '../theme';
+import { ThemeProvider } from '@mui/material/styles';
 
 interface BoxChecksProps {
   categoryTitle1: string;
@@ -65,7 +67,8 @@ const BoxChecks = (props: BoxChecksProps) => {
     setExpanded(!expanded);
   };
   return (
-    <Card sx={{ maxWidth: 300, backgroundColor: '#e0e0e0' }}>
+    <ThemeProvider theme={appTheme}>
+    <Card sx={{ maxWidth: 300, backgroundColor: 'secondary.main' }}>
       <CardActions>
         <ExpandMore expand={expanded} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
           <ExpandMoreIcon></ExpandMoreIcon>
@@ -124,6 +127,7 @@ const BoxChecks = (props: BoxChecksProps) => {
         </CardContent>
       </Collapse>
     </Card>
+    </ThemeProvider>
   );
 };
 

@@ -5,10 +5,11 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
 
+import Typography from '@mui/material/Typography';
+import { ThemeProvider } from '@mui/material/styles';
 import appTheme from '../theme';
+
 
 interface GreenBoxProps {
   title: string;
@@ -24,14 +25,14 @@ const GreenBox = (props: GreenBoxProps) => {
     <Box sx={{ mt: 1, mb: 1, mr: 2 }}>
       <Paper elevation={4}>
         <Card sx={{ width: 166.5, height: 90 }}>
-          <CardContent sx={{ backgroundColor: '#4caf50', height: 10 }}>
-            <Typography color="#f5f5f5">{props.title}</Typography>
+          <CardContent sx={{ backgroundColor: 'success.main', height: 10 }}>
+            <Typography color="secondary.main">{props.title}</Typography>
           </CardContent>
 
           <CardContent>
             <Stack>
               <Stack direction="row" justifyContent="center">
-                <Typography color="secondary"> {props.body}</Typography>
+                <Typography color="success.main"> {props.body}</Typography>
               </Stack>
             </Stack>
           </CardContent>

@@ -5,8 +5,10 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { createTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+import appTheme from '../theme';
+import { ThemeProvider } from '@mui/material/styles';
 
 interface FullGreenBoxProps {
   title: string;
@@ -19,25 +21,27 @@ interface FullGreenBoxesProps {
 }
 const FullGreenBox = (props: FullGreenBoxProps) => {
   return (
+    <ThemeProvider theme={appTheme}>
     <Box sx={{ mr: 1, mb: 1 }}>
       <Paper elevation={4}>
-        <Card sx={{ width: 166.5, height: 130, backgroundColor: '#4caf50' }}>
+        <Card sx={{ width: 166.5, height: 130, backgroundColor: 'success.main' }}>
           <CardContent>
-            <Typography color="#f5f5f5" variant="h6">
+            <Typography color="secondary.main" variant="h6">
               <b>{props.title}</b>
             </Typography>
           </CardContent>
 
-          <CardContent sx={{ backgroundColor: '#4caf50' }}>
+          <CardContent sx={{ backgroundColor: 'success.main' }}>
             <Stack>
               <Stack direction="row" justifyContent="center">
-                <Typography color="#f5f5f5">{props.body}</Typography>
+                <Typography color="secondary.main">{props.body}</Typography>
               </Stack>
             </Stack>
           </CardContent>
         </Card>
       </Paper>
     </Box>
+    </ThemeProvider>
   );
 };
 
