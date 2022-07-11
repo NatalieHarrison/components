@@ -7,8 +7,8 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
-import appTheme from '../theme';
 
+import appTheme from '../theme';
 
 interface GreenBoxProps {
   title: string;

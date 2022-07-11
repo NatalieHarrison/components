@@ -1,17 +1,13 @@
-
 import './App.css';
+import { ThemeProvider } from '@mui/material/styles';
+
 import Chart from './componentSets/Chart';
 import ChartAndBoxChecks from './componentSets/ChartAndBoxChecks';
 import ChartAndBoxes from './componentSets/ChartAndBoxes';
 import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
-
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
-
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
-
-import { ThemeProvider } from '@mui/material/styles';
-
 
 const content: any = {
   header: 'Products & Services that Delight',

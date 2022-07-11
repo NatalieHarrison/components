@@ -1,17 +1,19 @@
-import { createTheme, PaletteColorOptions } from "@mui/material/styles";
-import {green, grey, deepPurple} from "@mui/material/colors";
+import { green, grey, red, yellow } from '@mui/material/colors';
+import { createTheme, PaletteColorOptions } from '@mui/material/styles';
 
-
-interface PaletteOptions {
-  primary?: PaletteColorOptions;
-}
 const appTheme = createTheme({
   palette: {
     primary: {
-      main: grey[900]
+      main: grey[900],
     },
     secondary: {
-      main: green[500]
+      main: grey[50],
+    },
+    error: {
+      main: red[500],
+    },
+    success: {
+      main: green[500],
     },
   },
 });

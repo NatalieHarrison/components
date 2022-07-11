@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-
 import Button from '@mui/material/Button';
 import ButtonGroup from '@mui/material/ButtonGroup';
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+
+import appTheme from '../theme';
 
 interface ButtonsBarProps {
   b1Title: string;
@@ -16,16 +16,6 @@ interface ButtonsBarProps {
 }
 
 const ButtonsBar = (props: ButtonsBarProps) => {
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: '#212121',
-      },
-      secondary: {
-        main: '#fafafa',
-      },
-    },
-  });
   const [button1Clicked, setButton1Clicked] = useState(true);
   const [button2Clicked, setButton2Clicked] = useState(true);
   const [button3Clicked, setButton3Clicked] = useState(true);
@@ -33,8 +23,8 @@ const ButtonsBar = (props: ButtonsBarProps) => {
   const [button5Clicked, setButton5Clicked] = useState(true);
 
   return (
-    <ThemeProvider theme={theme}>
-      <ButtonGroup fullWidth={true} sx={{ backgroundColor: '#212121', maxHeight: 40 }}>
+    <ThemeProvider theme={appTheme}>
+      <ButtonGroup fullWidth={true} sx={{ backgroundColor: 'primary', maxHeight: 40 }}>
         <Button
           size="small"
           disableElevation
