@@ -10,10 +10,10 @@ import Collapse from '@mui/material/Collapse';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormGroup from '@mui/material/FormGroup';
 import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-import { styled } from '@mui/material/styles';
+import { styled, ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
+
 import appTheme from '../theme';
-import { ThemeProvider } from '@mui/material/styles';
 
 interface BoxChecksProps {
   categoryTitle1: string;
@@ -68,65 +68,65 @@ const BoxChecks = (props: BoxChecksProps) => {
   };
   return (
     <ThemeProvider theme={appTheme}>
-    <Card sx={{ maxWidth: 300, backgroundColor: 'secondary.main' }}>
-      <CardActions>
-        <ExpandMore expand={expanded} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
-          <ExpandMoreIcon></ExpandMoreIcon>
-        </ExpandMore>
-      </CardActions>
+      <Card sx={{ maxWidth: 300, backgroundColor: 'secondary.main' }}>
+        <CardActions>
+          <ExpandMore expand={expanded} onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
+            <ExpandMoreIcon></ExpandMoreIcon>
+          </ExpandMore>
+        </CardActions>
 
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography align="left">
-            {' '}
-            <b> {props.categoryTitle1}</b>
-          </Typography>
-          <FormGroup>
-            <FormControlLabel control={<Checkbox />} label={props.c1checkBox1} />
-            <FormControlLabel control={<Checkbox />} label={props.c1checkBox2} />
-            <FormControlLabel control={<Checkbox />} label={props.c1checkBox3} />
-            <FormControlLabel control={<Checkbox />} label={props.c1checkBox4} />
-            <FormControlLabel control={<Checkbox />} label={props.c1checkBox5} />
-          </FormGroup>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>
+            <Typography align="left">
+              {' '}
+              <b> {props.categoryTitle1}</b>
+            </Typography>
+            <FormGroup>
+              <FormControlLabel control={<Checkbox />} label={props.c1checkBox1} />
+              <FormControlLabel control={<Checkbox />} label={props.c1checkBox2} />
+              <FormControlLabel control={<Checkbox />} label={props.c1checkBox3} />
+              <FormControlLabel control={<Checkbox />} label={props.c1checkBox4} />
+              <FormControlLabel control={<Checkbox />} label={props.c1checkBox5} />
+            </FormGroup>
 
-          <Typography align="left">
-            {' '}
-            <b>{props.categoryTitle2}</b>
-          </Typography>
-          <FormGroup>
-            <FormControlLabel control={<Checkbox />} label={props.c2checkBox1} />
-            <FormControlLabel control={<Checkbox />} label={props.c2checkBox2} />
-            <FormControlLabel control={<Checkbox />} label={props.c2checkBox3} />
-            <FormControlLabel control={<Checkbox />} label={props.c2checkBox4} />
-            <FormControlLabel control={<Checkbox />} label={props.c2checkBox5} />
-          </FormGroup>
+            <Typography align="left">
+              {' '}
+              <b>{props.categoryTitle2}</b>
+            </Typography>
+            <FormGroup>
+              <FormControlLabel control={<Checkbox />} label={props.c2checkBox1} />
+              <FormControlLabel control={<Checkbox />} label={props.c2checkBox2} />
+              <FormControlLabel control={<Checkbox />} label={props.c2checkBox3} />
+              <FormControlLabel control={<Checkbox />} label={props.c2checkBox4} />
+              <FormControlLabel control={<Checkbox />} label={props.c2checkBox5} />
+            </FormGroup>
 
-          <Typography align="left">
-            {' '}
-            <b> {props.categoryTitle3}</b>
-          </Typography>
-          <FormGroup>
-            <FormControlLabel control={<Checkbox />} label={props.c3checkBox1} />
-            <FormControlLabel control={<Checkbox />} label={props.c3checkBox2} />
-            <FormControlLabel control={<Checkbox />} label={props.c3checkBox3} />
-            <FormControlLabel control={<Checkbox />} label={props.c3checkBox4} />
-            {/* <FormControlLabel control={<Checkbox/>} label={props.c3checkBox5} /> */}
-          </FormGroup>
+            <Typography align="left">
+              {' '}
+              <b> {props.categoryTitle3}</b>
+            </Typography>
+            <FormGroup>
+              <FormControlLabel control={<Checkbox />} label={props.c3checkBox1} />
+              <FormControlLabel control={<Checkbox />} label={props.c3checkBox2} />
+              <FormControlLabel control={<Checkbox />} label={props.c3checkBox3} />
+              <FormControlLabel control={<Checkbox />} label={props.c3checkBox4} />
+              {/* <FormControlLabel control={<Checkbox/>} label={props.c3checkBox5} /> */}
+            </FormGroup>
 
-          <Typography align="left">
-            {' '}
-            <b> {props.categoryTitle4}</b>
-          </Typography>
-          <FormGroup>
-            <FormControlLabel control={<Checkbox />} label={props.c4checkBox1} />
-            <FormControlLabel control={<Checkbox />} label={props.c4checkBox2} />
-            <FormControlLabel control={<Checkbox />} label={props.c4checkBox3} />
-            <FormControlLabel control={<Checkbox />} label={props.c4checkBox4} />
-            <FormControlLabel control={<Checkbox />} label={props.c4checkBox5} />
-          </FormGroup>
-        </CardContent>
-      </Collapse>
-    </Card>
+            <Typography align="left">
+              {' '}
+              <b> {props.categoryTitle4}</b>
+            </Typography>
+            <FormGroup>
+              <FormControlLabel control={<Checkbox />} label={props.c4checkBox1} />
+              <FormControlLabel control={<Checkbox />} label={props.c4checkBox2} />
+              <FormControlLabel control={<Checkbox />} label={props.c4checkBox3} />
+              <FormControlLabel control={<Checkbox />} label={props.c4checkBox4} />
+              <FormControlLabel control={<Checkbox />} label={props.c4checkBox5} />
+            </FormGroup>
+          </CardContent>
+        </Collapse>
+      </Card>
     </ThemeProvider>
   );
 };

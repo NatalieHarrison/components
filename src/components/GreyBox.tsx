@@ -4,8 +4,9 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
 import { ThemeProvider } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+
 import appTheme from '../theme';
 
 interface GreyBoxProps {
@@ -47,13 +48,13 @@ const GreyBoxes = (props: GreyBoxesProps) => {
   // SAT
   return (
     <ThemeProvider theme={appTheme}>
-    <CardContent sx={{ backgroundColor: '#9e9e9e' }}>
-      <Stack direction="row" justifyContent="center" alignItems="center">
-        <Stack direction="row" spacing={1}>
-          {props.greyBoxItems && props.greyBoxItems.map((box) => <GreyBox {...box}> </GreyBox>)}
+      <CardContent sx={{ backgroundColor: '#9e9e9e' }}>
+        <Stack direction="row" justifyContent="center" alignItems="center">
+          <Stack direction="row" spacing={1}>
+            {props.greyBoxItems && props.greyBoxItems.map((box) => <GreyBox {...box}> </GreyBox>)}
+          </Stack>
         </Stack>
-      </Stack>
-    </CardContent>
+      </CardContent>
     </ThemeProvider>
   );
 };

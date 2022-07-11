@@ -5,11 +5,10 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-
-import Typography from '@mui/material/Typography';
 import { ThemeProvider } from '@mui/material/styles';
-import appTheme from '../theme';
+import Typography from '@mui/material/Typography';
 
+import appTheme from '../theme';
 
 interface GreenBoxProps {
   title: string;

@@ -4,8 +4,9 @@ import CardContent from '@mui/material/CardContent';
 import Container from '@mui/material/Container';
 import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
 import { ThemeProvider } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
+
 import appTheme from '../theme';
 
 interface GreenBoxProps {

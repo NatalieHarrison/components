@@ -4,10 +4,10 @@ import { createTheme } from '@mui/material/styles';
 const appTheme = createTheme({
   palette: {
     primary: {
-      main: grey[900],
+      main: grey[900], //dark grey for background color
     },
     secondary: {
-      main: grey[50],
+      main: grey[50], //white
     },
     error: {
       main: red[500],
