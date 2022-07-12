@@ -9,7 +9,16 @@ import LogoBar from './LogoBar';
 import GraphBar from '../components/GraphBar';
 import SideBar from '../components/sidebar';
 
-const HeaderBoxesAndChart = (content) => {
+const content:any = {
+  header: 'Products & Services that Delight',
+  greyBoxItems: [
+    { title: 'Total Open Problems ', body: '329,778', num: '+5,690' },
+    { title: 'Member Churn This Period', body: '1,291', num: '+421' },
+    { title: 'Acquisition to Churn Ratio', body: '3.78', num: '+0.37' },
+  ],
+}
+
+const HeaderBoxesAndChart = () => {
   return (
     <Box>
       <LogoBar></LogoBar>
