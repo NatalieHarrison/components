@@ -14,7 +14,7 @@ function App() {
     <div className="App">
       <b> Math input</b>
       <MathInput></MathInput>
-      
+
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
 
