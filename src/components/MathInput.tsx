@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 import { create, all } from 'mathjs';
 
-import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import TextField from '@mui/material/TextField';
@@ -22,11 +21,11 @@ const MathInput = () => {
 
   return (
     <ThemeProvider theme={appTheme}>
-      {answer}
+      
       <Stack direction="row" justifyContent="center" alignItems="center" spacing={2} >
         <TextField value={input} onChange={(e) => setInput(e.target.value)}></TextField>
         <Button variant = "contained" onClick={handleClick} sx={{backgroundColor: 'success.main'}}>Evaluate</Button>
-        
+        {answer}
       </Stack>
     </ThemeProvider>
   );
