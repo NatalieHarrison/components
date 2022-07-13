@@ -13,7 +13,7 @@ const appTheme = createTheme({
       main: red[500],
     },
     success: {
-      main: green[500], 
+      main: green[500],
     },
   },
 });
