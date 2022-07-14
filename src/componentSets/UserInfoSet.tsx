@@ -61,11 +61,10 @@ const UserInfoSet = () => {
           <Grid item xs={9}>
             <NameHeader {...content}></NameHeader>
 
-            <Stack direction = "row">
+            <Stack direction="row">
               <UserInfo {...content}></UserInfo>
               <GreenBoxesColumn {...content}></GreenBoxesColumn>
-              </Stack>
-            
+            </Stack>
           </Grid>
 
           <Grid item xs={5}>

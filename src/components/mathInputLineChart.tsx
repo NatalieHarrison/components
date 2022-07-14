@@ -28,7 +28,7 @@ const MathInputLineChart = (props) => {
     xaxis: {
       categories: xArray,
     },
-    colors:['#4caf50']
+    colors: ['#4caf50'],
   };
   const series = [
     {

@@ -7,8 +7,8 @@ import LogoBar from './LogoBar';
 
 import BoxesChecks from '../components/BoxChecks';
 import GraphBar from '../components/GraphBar';
-import SideBar from '../components/sidebar';
 import LineChart from '../components/lineChart';
+import SideBar from '../components/sidebar';
 const content: any = {
   boxChecksItems: [
     {

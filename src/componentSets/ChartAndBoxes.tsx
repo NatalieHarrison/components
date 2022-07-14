@@ -8,10 +8,8 @@ import HeaderAndBoxes from './HeaderAndBoxes';
 import LogoBar from './LogoBar';
 
 import GraphBar from '../components/GraphBar';
-
-import SideBar from '../components/sidebar';
-
 import LineChart from '../components/lineChart';
+import SideBar from '../components/sidebar';
 
 const firstSet: any = {
   header: 'Products & Services that Delight',

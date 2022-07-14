@@ -7,10 +7,10 @@ import Stack from '@mui/material/Stack';
 import LogoBar from './LogoBar';
 
 import ButtonsBar from '../components/ButtonsBar';
-import GreenBoxesRow from '../components/GreenBoxRow';
-import SideBar from '../components/sidebar';
-import LineChart from '../components/lineChart';
 import GreenBoxesColumn from '../components/GreenBoxColumn';
+import GreenBoxesRow from '../components/GreenBoxRow';
+import LineChart from '../components/lineChart';
+import SideBar from '../components/sidebar';
 const BarAndSmallBoxes: any = {
   b1Title: 'Demographics',
   b2Title: 'Channels',
@@ -27,12 +27,9 @@ const BarAndSmallBoxes: any = {
   ],
 };
 
-const ExtraBox: any ={
-  greenBoxItems: [
-    { title: 'Service Events Initiated by Secure Messafes', body: '457' },
-
-  ],
-}
+const ExtraBox: any = {
+  greenBoxItems: [{ title: 'Service Events Initiated by Secure Messafes', body: '457' }],
+};
 
 const ChartsBoxButtonsBar = () => {
   return (
