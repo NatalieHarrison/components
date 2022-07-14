@@ -182,7 +182,7 @@ export default function SearchMathInput() {
       <div {...getRootProps()}>
         <Label {...getInputLabelProps()}>Customized hook</Label>
         <InputWrapper ref={setAnchorEl} className={focused ? 'focused' : ''}>
-          {value.map((option: FilmOptionType, index: number) => (
+          {value.map((option: FilmOptionType, index: string) => (
             <StyledTag label={option.name} {...getTagProps({ index })} />
           ))}
           <input {...getInputProps()} />
@@ -204,16 +204,16 @@ export default function SearchMathInput() {
 
 interface FilmOptionType {
   name: string;
-  id: number;
+  id: string;
 }
 
-// Top 100 films as rated by IMDb users. http://www.imdb.com/chart/top
+
 const top100Films = [
-  { name: 'The Shawshank Redemption', id: 1994 },
-  { name: 'The Godfather', id: 1972 },
-  { name: 'The Godfather: Part II', id: 1974 },
-  { name: 'The Dark Knight', id: 2008 },
-  { name: '12 Angry Men', id: 1957 },
-  { name: "Schindler's List", id: 1993 },
-  { name: 'Pulp Fiction', id: 1994 },
+  { name: 'SDE1', id: '2BwwdDkMHCMXIfkCWG5z7Lm4HvO' },
+  { name: 'SDE2', id: '2Bwy9VsccgGIQk1TmTiyDFzP0Y9' },
+  { name: 'SDE3', id: '2Bwy9YZ6SVnJL6BBDQpE2j7EUBJ' },
+  { name: 'SDE4', id: '2Bwy9VPjjzrzQtqg2jYuVT7E18d' },
+  { name: 'SDE5', id: '2Bwy9W29p2gUKRLMBH1iVbv0IGE' },
+  { name: "SDE6", id: '2Bwy9XbPIw4H9JPtkI6ONpCH9r9' },
+  { name: 'SDE7', id: '2Bwy9UhruJjjUrPAZ27GzgdljMW' },
 ];
