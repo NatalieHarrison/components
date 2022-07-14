@@ -58,15 +58,14 @@ const UserInfoSet = () => {
             <Box sx={{ backgroundColor: 'black', height: 333, width: 350, ml: 1, mr: 1 }}>Avatar profile</Box>
           </Grid>
 
-          <Grid item xs={9.7}>
+          <Grid item xs={9}>
             <NameHeader {...content}></NameHeader>
 
-            <Grid item xs={9}>
+            <Stack direction = "row">
               <UserInfo {...content}></UserInfo>
-            </Grid>
-            <Grid item xs={1}>
               <GreenBoxesColumn {...content}></GreenBoxesColumn>
-            </Grid>
+              </Stack>
+            
           </Grid>
 
           <Grid item xs={5}>

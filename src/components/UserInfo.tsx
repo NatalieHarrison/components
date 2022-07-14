@@ -34,7 +34,7 @@ const UserInfo = (props: UserInfoProps) => {
           </Typography>
         </Card>
 
-        <Card sx={{ backgroundColor: 'secondary.main', maxHeight: 260 }}>
+        <Card sx={{ backgroundColor: 'secondary.main', minWidth:1200 ,minHeight: 260 }}>
           <Stack direction="row">
             <CardContent>
               <List>
