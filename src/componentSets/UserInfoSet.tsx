@@ -69,7 +69,7 @@ const UserInfoSet = () => {
             </Grid>
           </Grid>
 
-          <Grid item xs={4.5}>
+          <Grid item xs={5}>
             <FullGreenBoxes {...content}></FullGreenBoxes>
           </Grid>
         </Grid>

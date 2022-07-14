@@ -24,7 +24,7 @@ const FullGreenBox = (props: FullGreenBoxProps) => {
     <ThemeProvider theme={appTheme}>
       <Box sx={{ mr: 1, mb: 1 }}>
         <Paper elevation={4}>
-          <Card sx={{ width: 166.5, height: 130, backgroundColor: 'success.main' }}>
+          <Card sx={{ minWidth: 166.5, backgroundColor: 'success.main' }}>
             <CardContent>
               <Typography color="secondary.main" variant="h6">
                 <b>{props.title}</b>
