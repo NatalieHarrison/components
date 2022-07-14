@@ -6,8 +6,9 @@ import Stack from '@mui/material/Stack';
 import HeaderAndBoxes from './HeaderAndBoxes';
 import LogoBar from './LogoBar';
 
-import GraphBar from '../components/GraphBar';
 import LineChart from '../components/lineChart';
+import GraphBar from '../components/lineChartBar';
+import LineChartBar from '../components/lineChartBar';
 import SideBar from '../components/sidebar';
 
 const content: any = {
@@ -42,7 +43,7 @@ const HeaderBoxesAndChart = () => {
           </Grid>
 
           <Grid item xs sx={{ ml: 1 }}>
-            <GraphBar></GraphBar>
+            <LineChartBar></LineChartBar>
             <LineChart></LineChart>
           </Grid>
         </Grid>

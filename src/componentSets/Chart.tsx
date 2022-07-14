@@ -5,8 +5,9 @@ import Stack from '@mui/material/Stack';
 
 import LogoBar from './LogoBar';
 
-import GraphBar from '../components/GraphBar';
 import LineChart from '../components/lineChart';
+import GraphBar from '../components/lineChartBar';
+import LineChartBar from '../components/lineChartBar';
 import SideBar from '../components/sidebar';
 
 const Chart = () => {
@@ -17,7 +18,7 @@ const Chart = () => {
         <SideBar></SideBar>
         <Grid xs sx={{ ml: 1 }}>
           <Stack direction="column" sx={{ mt: 1, mr: 1 }}>
-            <GraphBar></GraphBar>
+            <LineChartBar></LineChartBar>
             <LineChart></LineChart>
           </Stack>
         </Grid>

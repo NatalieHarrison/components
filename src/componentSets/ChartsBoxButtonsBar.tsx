@@ -26,7 +26,6 @@ const BarAndSmallBoxes: any = {
     { title: 'Branch Visits', body: '6,712' },
   ],
 };
-
 const ExtraBox: any = {
   greenBoxItems: [{ title: 'Service Events Initiated by Secure Messafes', body: '457' }],
 };

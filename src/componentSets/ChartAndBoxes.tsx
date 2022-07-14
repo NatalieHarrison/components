@@ -7,8 +7,9 @@ import Typography from '@mui/material/Typography';
 import HeaderAndBoxes from './HeaderAndBoxes';
 import LogoBar from './LogoBar';
 
-import GraphBar from '../components/GraphBar';
 import LineChart from '../components/lineChart';
+import GraphBar from '../components/lineChartBar';
+import LineChartBar from '../components/lineChartBar';
 import SideBar from '../components/sidebar';
 
 const firstSet: any = {
@@ -61,7 +62,7 @@ const ChartAndBoxes = () => {
 
           <Grid item xs>
             <Stack direction="column" sx={{ mt: 1, mr: 1 }}>
-              <GraphBar></GraphBar>
+              <LineChartBar></LineChartBar>
               <LineChart></LineChart>
             </Stack>
           </Grid>

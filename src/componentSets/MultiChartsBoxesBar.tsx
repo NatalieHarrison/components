@@ -5,7 +5,8 @@ import Stack from '@mui/material/Stack';
 
 import LogoBar from './LogoBar';
 
-import BarGraph from '../components/barGraph';
+import BarGraph from '../components/barChart';
+import BarChart from '../components/barChart';
 import ButtonsBar from '../components/ButtonsBar';
 import GreenBoxesRow from '../components/GreenBoxRow';
 import PieChart from '../components/pieChart';
@@ -54,12 +55,12 @@ const MultiChartsBoxesBar = () => {
 
           <Grid item xs={4}>
             <Card> Members by SEG (bar graph)</Card>
-            <BarGraph></BarGraph>
+            <BarChart></BarChart>
           </Grid>
 
           <Grid item xs={4}>
             <Card> Members by FICO Score Categroy (bar graph)</Card>
-            <BarGraph></BarGraph>
+            <BarChart></BarChart>
           </Grid>
 
           <Grid item xs={4}>

@@ -12,7 +12,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 
 import appTheme from '../theme';
-const GraphBar = () => {
+const LineChartBar = () => {
   const [period, setPeriod] = React.useState('');
 
   const handleClick = (event: SelectChangeEvent) => {
@@ -59,4 +59,4 @@ const GraphBar = () => {
     </Box>
   );
 };
-export default GraphBar;
+export default LineChartBar;

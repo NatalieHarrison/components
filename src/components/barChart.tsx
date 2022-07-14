@@ -1,7 +1,7 @@
 import { ApexOptions } from 'apexcharts';
 import Chart from 'react-apexcharts';
 
-const BarGraph = () => {
+const BarChart = () => {
   const options: ApexOptions = {
     colors: ['#212121'],
     dataLabels: {
@@ -29,4 +29,4 @@ const BarGraph = () => {
   );
 };
 
-export default BarGraph;
+export default BarChart;
