@@ -3,6 +3,7 @@ import Chart from 'react-apexcharts';
 
 const BarGraph = () => {
   const options: ApexOptions = {
+    colors: ['#212121'],
     dataLabels: {
       enabled: false,
     },

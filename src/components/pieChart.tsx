@@ -3,7 +3,7 @@ import Chart from 'react-apexcharts';
 
 const PieChart = () => {
   const options: ApexOptions = {
-    colors: ['#1b5e20', '#4caf50', '#a5d6a7', '#e0e0e0', '#757575'],
+    colors: ['#1b5e20', '#4caf50', '#a5d6a7', '#e0e0e0', '#212121'],
     chart: {
       width: 380,
       type: 'pie',

@@ -3,6 +3,7 @@ import Chart from 'react-apexcharts';
 
 const LineChart = () => {
   const options: ApexOptions = {
+    colors: ['#4caf50'],
     dataLabels: {
       enabled: false,
     },
