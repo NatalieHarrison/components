@@ -10,7 +10,8 @@ import ButtonsBar from '../components/ButtonsBar';
 import GreenBoxesRow from '../components/GreenBoxRow';
 import SideBar from '../components/sidebar';
 import LineChart from '../components/lineChart';
-const content: any = {
+import GreenBoxesColumn from '../components/GreenBoxColumn';
+const BarAndSmallBoxes: any = {
   b1Title: 'Demographics',
   b2Title: 'Channels',
   b3Title: 'Products/Services',
@@ -26,6 +27,13 @@ const content: any = {
   ],
 };
 
+const ExtraBox: any ={
+  greenBoxItems: [
+    { title: 'Service Events Initiated by Secure Messafes', body: '457' },
+
+  ],
+}
+
 const ChartsBoxButtonsBar = () => {
   return (
     <Box>
@@ -34,18 +42,16 @@ const ChartsBoxButtonsBar = () => {
         <SideBar></SideBar>
         <Grid container direction="row" sx={{ mt: 1, mb: 1, mr: 1, ml: 1 }}>
           <Grid item xs={12}>
-            <ButtonsBar {...content}></ButtonsBar>
+            <ButtonsBar {...BarAndSmallBoxes}></ButtonsBar>
           </Grid>
 
           <Grid item xs={12}>
-            <GreenBoxesRow {...content}></GreenBoxesRow>
+            <GreenBoxesRow {...BarAndSmallBoxes}></GreenBoxesRow>
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item xs={6} justifyContent="center" alignItems="center">
             <Stack direction="column">
-              <Card>
-                <CardContent>Service Events Initiated by Secure Messages</CardContent>
-              </Card>
+              <GreenBoxesColumn {...ExtraBox}></GreenBoxesColumn>
 
               <Card>
                 <CardContent>Secure Messages by Day </CardContent>

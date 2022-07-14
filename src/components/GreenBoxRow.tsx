@@ -23,7 +23,7 @@ const GreenBox = (props: GreenBoxProps) => {
   return (
     <Box sx={{ mt: 1, mb: 1, mr: 2 }}>
       <Paper elevation={4}>
-        <Card sx={{ width: 166.5, height: 90 }}>
+        <Card sx={{ minWidth: 166.5 }}>
           <CardContent sx={{ backgroundColor: 'success.main', height: 10 }}>
             <Typography color="secondary.main">{props.title}</Typography>
           </CardContent>
