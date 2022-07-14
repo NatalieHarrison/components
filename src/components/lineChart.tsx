@@ -6,11 +6,9 @@ const LineChart = (props) => {
   const xArray = [];
   const yArray = [];
 
-
   props.XYarray.map(function (element) {
     const xElement = element.x;
     xArray.push(xElement);
-    
 
     const yElement = element.y;
     yArray.push(yElement);

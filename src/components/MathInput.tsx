@@ -44,8 +44,7 @@ const MathInput = () => {
       b: Data[0].value2,
     };
     setAnswer(code.evaluate(scope));
-  
-    
+
     const temp = Data.map(function (element) {
       const node = math.parse(input);
       const code = node.compile();
@@ -58,10 +57,9 @@ const MathInput = () => {
         y: code.evaluate(scope) || 0,
       };
     });
-    setArr(temp)
-  }
-    
-  
+    setArr(temp);
+  };
+
   return (
     <ThemeProvider theme={appTheme}>
       <Stack direction="row" justifyContent="center" alignItems="center" spacing={2}>
@@ -71,7 +69,7 @@ const MathInput = () => {
         </Button>
         {answer}
       </Stack>
-      <LineChart XYarray = {arr}/>
+      <LineChart XYarray={arr} />
     </ThemeProvider>
   );
 };
