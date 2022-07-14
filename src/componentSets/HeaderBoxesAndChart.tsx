@@ -7,7 +7,6 @@ import HeaderAndBoxes from './HeaderAndBoxes';
 import LogoBar from './LogoBar';
 
 import LineChart from '../components/lineChart';
-import GraphBar from '../components/lineChartBar';
 import LineChartBar from '../components/lineChartBar';
 import SideBar from '../components/sidebar';
 
