@@ -1,7 +1,7 @@
 import { ApexOptions } from 'apexcharts';
 import Chart from 'react-apexcharts';
 
-const MathInputLineChart = (props) => {
+const LineChart = (props) => {
   console.log(props);
   const xArray = [];
   const yArray = [];
@@ -28,7 +28,6 @@ const MathInputLineChart = (props) => {
     xaxis: {
       categories: xArray,
     },
-    colors:['#4caf50']
   };
   const series = [
     {
@@ -43,4 +42,4 @@ const MathInputLineChart = (props) => {
   );
 };
 
-export default MathInputLineChart;
+export default LineChart;
