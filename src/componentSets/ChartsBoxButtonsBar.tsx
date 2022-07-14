@@ -9,6 +9,7 @@ import LogoBar from './LogoBar';
 import ButtonsBar from '../components/ButtonsBar';
 import GreenBoxesRow from '../components/GreenBoxRow';
 import SideBar from '../components/sidebar';
+import LineChart from '../components/lineChart';
 const content: any = {
   b1Title: 'Demographics',
   b2Title: 'Channels',
@@ -47,18 +48,21 @@ const ChartsBoxButtonsBar = () => {
               </Card>
 
               <Card>
-                <CardContent>Secure Messages by Day (Graph)</CardContent>
+                <CardContent>Secure Messages by Day </CardContent>
+                <LineChart></LineChart>
               </Card>
 
               <Card>
                 <CardContent>Secure Messages by Time of Day</CardContent>
+                <LineChart></LineChart>
               </Card>
             </Stack>
           </Grid>
 
           <Grid item xs={6}>
             <Card>
-              <CardContent>Secure Messages by Month (Blown up graph)</CardContent>
+              <CardContent>Secure Messages by Month </CardContent>
+              <LineChart></LineChart>
             </Card>
           </Grid>
         </Grid>

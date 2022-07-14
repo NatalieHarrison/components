@@ -8,8 +8,10 @@ import HeaderAndBoxes from './HeaderAndBoxes';
 import LogoBar from './LogoBar';
 
 import GraphBar from '../components/GraphBar';
-import GreyBoxes from '../components/GreyBox';
+
 import SideBar from '../components/sidebar';
+
+import LineChart from '../components/lineChart';
 
 const firstSet: any = {
   header: 'Products & Services that Delight',
@@ -62,7 +64,7 @@ const ChartAndBoxes = () => {
           <Grid item xs>
             <Stack direction="column" sx={{ mt: 1, mr: 1 }}>
               <GraphBar></GraphBar>
-              <Card> Chart will go here</Card>
+              <LineChart></LineChart>
             </Stack>
           </Grid>
         </Stack>

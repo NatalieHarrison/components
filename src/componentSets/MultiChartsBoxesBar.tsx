@@ -8,6 +8,8 @@ import LogoBar from './LogoBar';
 import ButtonsBar from '../components/ButtonsBar';
 import GreenBoxesRow from '../components/GreenBoxRow';
 import SideBar from '../components/sidebar';
+import BarGraph from '../components/barGraph';
+import PieChart from '../components/pieChart';
 const content: any = {
   b1Title: 'Demographics',
   b2Title: 'Channels',
@@ -52,14 +54,18 @@ const MultiChartsBoxesBar = () => {
 
           <Grid item xs={4}>
             <Card> Members by SEG (bar graph)</Card>
+            <BarGraph></BarGraph>
           </Grid>
 
           <Grid item xs={4}>
             <Card> Members by FICO Score Categroy (bar graph)</Card>
+            <BarGraph></BarGraph>
           </Grid>
 
           <Grid item xs={4}>
             <Card> Members by FICO Score Category (pie chart)</Card>
+            <PieChart></PieChart>
+            
           </Grid>
         </Grid>
       </Stack>

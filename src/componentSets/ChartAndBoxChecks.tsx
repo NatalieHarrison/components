@@ -8,6 +8,7 @@ import LogoBar from './LogoBar';
 import BoxesChecks from '../components/BoxChecks';
 import GraphBar from '../components/GraphBar';
 import SideBar from '../components/sidebar';
+import LineChart from '../components/lineChart';
 const content: any = {
   boxChecksItems: [
     {
@@ -52,7 +53,7 @@ const ChartAndBoxChecks = () => {
               </Grid>
 
               <Grid item xs>
-                <Card>Chart will go here</Card>
+                <LineChart></LineChart>
               </Grid>
             </Grid>
           </Stack>

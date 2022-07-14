@@ -12,8 +12,6 @@ import UserInfoSet from './componentSets/UserInfoSet';
 function App() {
   return (
     <div className="App">
-      <b> Math input</b>
-      <MathInput></MathInput>
 
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
@@ -35,6 +33,9 @@ function App() {
 
       <b> Slide 17</b>
       <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
+
+      <b> Math input</b>
+      <MathInput></MathInput>
     </div>
   );
 }

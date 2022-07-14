@@ -8,6 +8,7 @@ import LogoBar from './LogoBar';
 
 import GraphBar from '../components/GraphBar';
 import SideBar from '../components/sidebar';
+import LineChart from '../components/lineChart';
 
 const content: any = {
   header: 'Products & Services that Delight',
@@ -42,7 +43,7 @@ const HeaderBoxesAndChart = () => {
 
           <Grid item xs sx={{ ml: 1 }}>
             <GraphBar></GraphBar>
-            <Card>Chart will go here</Card>
+            <LineChart></LineChart>
           </Grid>
         </Grid>
       </Stack>
