@@ -7,7 +7,7 @@ import Stack from '@mui/material/Stack';
 import { ThemeProvider } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 
-import LineChart from './lineChart';
+import MathInputLineChart from './mathInputLineChart';
 
 import appTheme from '../theme';
 
@@ -69,7 +69,7 @@ const MathInput = () => {
         </Button>
         {answer}
       </Stack>
-      <LineChart XYarray={arr} />
+      <MathInputLineChart XYarray={arr} />
     </ThemeProvider>
   );
 };

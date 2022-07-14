@@ -1,7 +1,7 @@
 import { ApexOptions } from 'apexcharts';
 import Chart from 'react-apexcharts';
 
-const LineChart = (props) => {
+const MathInputLineChart = (props) => {
   console.log(props);
   const xArray = [];
   const yArray = [];
@@ -42,4 +42,4 @@ const LineChart = (props) => {
   );
 };
 
-export default LineChart;
+export default MathInputLineChart;
