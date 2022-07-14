@@ -171,9 +171,9 @@ export default function SearchMathInput() {
     setAnchorEl,
   } = useAutocomplete({
     id: 'customized-hook-demo',
-    defaultValue: [top100Films[1]],
+    defaultValue: [NameAndID[1]],
     multiple: true,
-    options: top100Films,
+    options: NameAndID,
     getOptionLabel: (option) => option.name,
   });
 
@@ -182,7 +182,7 @@ export default function SearchMathInput() {
       <div {...getRootProps()}>
         <Label {...getInputLabelProps()}>Customized hook</Label>
         <InputWrapper ref={setAnchorEl} className={focused ? 'focused' : ''}>
-          {value.map((option: FilmOptionType, index: string) => (
+          {value.map((option: Types, index: number) => (
             <StyledTag label={option.name} {...getTagProps({ index })} />
           ))}
           <input {...getInputProps()} />
@@ -190,7 +190,7 @@ export default function SearchMathInput() {
       </div>
       {groupedOptions.length > 0 ? (
         <Listbox {...getListboxProps()}>
-          {(groupedOptions as typeof top100Films).map((option, index) => (
+          {(groupedOptions as typeof NameAndID).map((option, index) => (
             <li {...getOptionProps({ option, index })}>
               <span>{option.name}</span>
               <CheckIcon fontSize="small" />
@@ -202,13 +202,13 @@ export default function SearchMathInput() {
   );
 }
 
-interface FilmOptionType {
+interface Types {
   name: string;
   id: string;
 }
 
 
-const top100Films = [
+const NameAndID = [
   { name: 'SDE1', id: '2BwwdDkMHCMXIfkCWG5z7Lm4HvO' },
   { name: 'SDE2', id: '2Bwy9VsccgGIQk1TmTiyDFzP0Y9' },
   { name: 'SDE3', id: '2Bwy9YZ6SVnJL6BBDQpE2j7EUBJ' },
