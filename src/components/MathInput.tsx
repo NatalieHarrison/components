@@ -7,7 +7,10 @@ import Stack from '@mui/material/Stack';
 import { ThemeProvider } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 
+import LineChart from './lineChart';
+
 import appTheme from '../theme';
+
 const MathInput = () => {
   const Data = [
     {
@@ -31,31 +34,34 @@ const MathInput = () => {
 
   const [input, setInput] = useState('');
   const [answer, setAnswer] = useState('');
+  const [arr, setArr] = useState([]);
 
   const handleClick = () => {
     const node = math.parse(input);
     const code = node.compile();
-    const i = 0;
     const scope = {
       a: Data[0].value1,
       b: Data[0].value2,
     };
-    const bTotal = 0;
-    console.log(bTotal);
     setAnswer(code.evaluate(scope));
-
+  
+    
     const temp = Data.map(function (element) {
+      const node = math.parse(input);
+      const code = node.compile();
       const scope = {
         a: element.value1,
         b: element.value2,
       };
       return {
         x: element.date,
-        y: code.evaluate(scope),
+        y: code.evaluate(scope) || 0,
       };
     });
-    console.log(temp);
-  };
+    setArr(temp)
+  }
+    
+  
   return (
     <ThemeProvider theme={appTheme}>
       <Stack direction="row" justifyContent="center" alignItems="center" spacing={2}>
@@ -65,6 +71,7 @@ const MathInput = () => {
         </Button>
         {answer}
       </Stack>
+      <LineChart XYarray = {arr}/>
     </ThemeProvider>
   );
 };
