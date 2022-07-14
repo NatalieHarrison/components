@@ -10,6 +10,7 @@ import LogoBar from './LogoBar';
 import GraphBar from '../components/GraphBar';
 import GreyBoxes from '../components/GreyBox';
 import SideBar from '../components/sidebar';
+import MathInputLineChart from '../components/mathInputLineChart';
 
 const firstSet: any = {
   header: 'Products & Services that Delight',
@@ -62,7 +63,7 @@ const ChartAndBoxes = () => {
           <Grid item xs>
             <Stack direction="column" sx={{ mt: 1, mr: 1 }}>
               <GraphBar></GraphBar>
-              <Card> Chart will go here</Card>
+              <MathInputLineChart></MathInputLineChart>
             </Stack>
           </Grid>
         </Stack>
