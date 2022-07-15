@@ -5,11 +5,12 @@ import Autocomplete from '@mui/material/Autocomplete';
 export default function ComboBox() {
   return (
     <Autocomplete
-      disablePortal
+      multiple
       id="combo-box-demo"
       options={labelAndID}
       sx={{ width: 300 }}
-      renderInput={(params) => <TextField {...params} label="label" />}
+      renderInput={(params) => 
+      <TextField {...params} label="label" />}
     />
   );
 }
