@@ -2,6 +2,7 @@ import './App.css';
 import { ThemeProvider } from '@mui/material/styles';
 
 import MathInput from './components/MathInput';
+import SearchMathInput from './components/searchMathInput';
 import Chart from './componentSets/Chart';
 import ChartAndBoxChecks from './componentSets/ChartAndBoxChecks';
 import ChartAndBoxes from './componentSets/ChartAndBoxes';
@@ -9,12 +10,9 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
-import SearchMathInput from './components/searchMathInput';
 function App() {
   return (
     <div className="App">
-
-
       <SearchMathInput></SearchMathInput>
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
