@@ -5,6 +5,7 @@ import CheckIcon from '@mui/icons-material/Check';
 import CloseIcon from '@mui/icons-material/Close';
 import { autocompleteClasses } from '@mui/material/Autocomplete';
 import { styled } from '@mui/material/styles';
+import { Typography } from '@mui/material';
 
 const Root = styled('div')(
   ({ theme }) => `
@@ -60,11 +61,17 @@ interface TagProps extends ReturnType<AutocompleteGetTagProps> {
 
 function Tag(props: TagProps) {
   const { label, onDelete, ...other } = props;
+  Legend({label})
   return (
     <div {...other}>
       <span>{label}</span>
       <CloseIcon onClick={onDelete} />
     </div>
+  );
+}
+function Legend(chosenSDE){
+  return(
+    <Typography>{chosenSDE}</Typography>
   );
 }
 
@@ -191,6 +198,7 @@ export default function SearchMathInput() {
         </Listbox>
       ) : null}
     </Root>
+    
   );
 }
 

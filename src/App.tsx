@@ -10,10 +10,14 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
+import SearchMI from './components/searchMI';
+import ComboBox from './components/searchMI';
 function App() {
   return (
     <div className="App">
-      <SearchMathInput></SearchMathInput>
+      <ComboBox></ComboBox>
+      <b> Math input</b>
+      <MathInput></MathInput>
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
 
@@ -34,9 +38,6 @@ function App() {
 
       <b> Slide 17</b>
       <ChartsBoxButtonsBar></ChartsBoxButtonsBar>
-
-      <b> Math input</b>
-      <MathInput></MathInput>
     </div>
   );
 }
