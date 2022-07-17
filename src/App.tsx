@@ -2,7 +2,8 @@ import './App.css';
 import { ThemeProvider } from '@mui/material/styles';
 
 import MathInput from './components/MathInput';
-import SearchMathInput from './components/searchMathInput';
+import SearchMI from './components/searchMI';
+import ComboBox from './components/searchMI';
 import Chart from './componentSets/Chart';
 import ChartAndBoxChecks from './componentSets/ChartAndBoxChecks';
 import ChartAndBoxes from './componentSets/ChartAndBoxes';
@@ -10,8 +11,6 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
-import SearchMI from './components/searchMI';
-import ComboBox from './components/searchMI';
 function App() {
   return (
     <div className="App">
