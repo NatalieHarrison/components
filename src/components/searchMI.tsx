@@ -1,24 +1,16 @@
 import { useState } from 'react';
 
-import { lgamma } from 'mathjs';
-
 import { Stack, Typography } from '@mui/material';
 import Autocomplete, { AutocompleteRenderOptionState } from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { Box } from '@mui/system';
 
 export default function ComboBox() {
-  //state variable
-  // const legendArray =[]
-
   const [sde, setSde] = useState([]);
-  // const [legendArray,setLegendArray] = useState('')
 
   const handleChange = (event, value) => {
-    setSde(value); 
+    setSde(value);
   };
-  console.log(sde); 
-
   return (
     <Box>
       <Stack direction="row">
@@ -30,7 +22,6 @@ export default function ComboBox() {
           onChange={handleChange}
           renderInput={(params) => <TextField {...params} label="label" />}
         />
-
       </Stack>
       {sde.map(function (element) {
         return <Typography>{element.label}</Typography>;
