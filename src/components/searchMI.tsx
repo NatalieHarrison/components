@@ -15,12 +15,10 @@ export default function ComboBox() {
   // const [legendArray,setLegendArray] = useState('')
 
   const handleChange = (event, value) => {
-    setSde(value); //keeping track ofoptions
+    setSde(value); 
   };
-  console.log(sde); //show options in UI
+  console.log(sde); 
 
-  //on click from autocomplete
-  ///add array to state
   return (
     <Box>
       <Stack direction="row">
@@ -33,7 +31,6 @@ export default function ComboBox() {
           renderInput={(params) => <TextField {...params} label="label" />}
         />
 
-        {/* //loop over array of state variables and build a legend */}
       </Stack>
       {sde.map(function (element) {
         return <Typography>{element.label}</Typography>;
