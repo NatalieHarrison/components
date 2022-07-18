@@ -1,5 +1,7 @@
 import { useState } from 'react';
 
+import { i } from 'mathjs';
+
 import { Stack, Typography } from '@mui/material';
 import Autocomplete, { AutocompleteRenderOptionState } from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
@@ -11,6 +13,38 @@ export default function ComboBox() {
   const handleChange = (event, value) => {
     setSde(value);
   };
+
+  let counter = 0;
+  const alphabet = [
+    'a',
+    'b',
+    'c',
+    'd',
+    'e',
+    'f',
+    'g',
+    'h',
+    'i',
+    'j',
+    'k',
+    'l',
+    'm',
+    'n',
+    'o',
+    'p',
+    'q',
+    'r',
+    's',
+    't',
+    'u',
+    'v',
+    'w',
+    'x',
+    'y',
+    'z',
+  ];
+  //counter that goes through alphabet and removes first element after
+
   return (
     <Box>
       <Stack direction="row">
@@ -22,10 +56,17 @@ export default function ComboBox() {
           onChange={handleChange}
           renderInput={(params) => <TextField {...params} label="label" />}
         />
+        {sde.map(function (element) {
+          return (
+            <ul>
+              {' '}
+              <li>
+                {element.label} = {alphabet[counter++]}{' '}
+              </li>
+            </ul>
+          );
+        })}
       </Stack>
-      {sde.map(function (element) {
-        return <Typography>{element.label}</Typography>;
-      })}
     </Box>
   );
 }
