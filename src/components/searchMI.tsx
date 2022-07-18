@@ -41,6 +41,10 @@ export default function ComboBox() {
     'z',
   ];
 
+  let scope = {
+
+  }
+
   return (
     <Box>
       <Stack direction="row">
@@ -52,12 +56,12 @@ export default function ComboBox() {
           onChange={handleChange}
           renderInput={(params) => <TextField {...params} label="label" />}
         />
+        <p>Legend:</p>
         {sde.map(function (element) {
           return (
             <ul>
-              {' '}
               <li>
-                {element.label} = {alphabet[counter++]}{' '}
+                 {alphabet[counter++]} : {element.label}
               </li>
             </ul>
           );
