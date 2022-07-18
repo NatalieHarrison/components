@@ -1,9 +1,6 @@
 import { useState } from 'react';
-
-import { i } from 'mathjs';
-
-import { Stack, Typography } from '@mui/material';
-import Autocomplete, { AutocompleteRenderOptionState } from '@mui/material/Autocomplete';
+import { Stack} from '@mui/material';
+import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { Box } from '@mui/system';
 
@@ -43,7 +40,6 @@ export default function ComboBox() {
     'y',
     'z',
   ];
-  //counter that goes through alphabet and removes first element after
 
   return (
     <Box>
