@@ -1,6 +1,6 @@
-import { arrayBuffer } from 'stream/consumers';
+import { useState } from 'react';
 
-import React, { useState } from 'react';
+import { lgamma } from 'mathjs';
 
 import { Stack, Typography } from '@mui/material';
 import Autocomplete, { AutocompleteRenderOptionState } from '@mui/material/Autocomplete';
@@ -9,29 +9,39 @@ import { Box } from '@mui/system';
 
 export default function ComboBox() {
   //state variable
+  // const legendArray =[]
+
   const [sde, setSde] = useState([]);
+  // const [legendArray,setLegendArray] = useState('')
+
   const handleChange = (event, value) => {
-    console.log(value);
+    setSde(value); //keeping track ofoptions
   };
+  console.log(sde); //show options in UI
 
   //on click from autocomplete
   ///add array to state
   return (
-    <Stack direction="row">
-      <Autocomplete
-        multiple
-        id="combo-box-demo"
-        options={labelAndID}
-        sx={{ width: 300 }}
-        onChange={handleChange}
-        renderInput={(params) => <TextField {...params} label="label" />}
-      />
+    <Box>
+      <Stack direction="row">
+        <Autocomplete
+          multiple
+          id="combo-box-demo"
+          options={labelAndID}
+          sx={{ width: 300 }}
+          onChange={handleChange}
+          renderInput={(params) => <TextField {...params} label="label" />}
+        />
 
-      {/* //loop over array of state variables and build a legend */}
-    </Stack>
+        {/* //loop over array of state variables and build a legend */}
+      </Stack>
+      {sde.map(function (element) {
+        return <Typography>{element.label}</Typography>;
+      })}
+    </Box>
   );
 }
-const Legend = [];
+
 const labelAndID = [
   { label: 'SDE1', id: '2BzdflybK77cWYRapaslZJmunMa' },
   { label: 'SDE2', id: '2Bwy9VsccgGIQk1TmTiyDFzP0Y9' },
