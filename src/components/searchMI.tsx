@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { Stack} from '@mui/material';
+
+import { Stack } from '@mui/material';
 import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { Box } from '@mui/system';
@@ -41,10 +42,6 @@ export default function ComboBox() {
     'z',
   ];
 
-  let scope = {
-
-  }
-
   return (
     <Box>
       <Stack direction="row">
@@ -58,10 +55,16 @@ export default function ComboBox() {
         />
         <p>Legend:</p>
         {sde.map(function (element) {
+          const x = alphabet[counter++]; //variable
+          const y = element.label; //label ex: SDE1, SDE2
+          const z = element.id; //id
+          const assignSDE = { var: x, label: y, id: z };
+          arr.push(assignSDE);
+          console.log(arr);
           return (
             <ul>
               <li>
-                 {alphabet[counter++]} : {element.label}
+                {x} : {y}
               </li>
             </ul>
           );
@@ -70,6 +73,7 @@ export default function ComboBox() {
     </Box>
   );
 }
+const arr = [];
 
 const labelAndID = [
   { label: 'SDE1', id: '2BzdflybK77cWYRapaslZJmunMa' },
