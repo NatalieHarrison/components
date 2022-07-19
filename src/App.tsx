@@ -1,9 +1,11 @@
 import './App.css';
+import { useState } from 'react';
+
 import { ThemeProvider } from '@mui/material/styles';
 
+import SearchMI from './components/Legend';
+import Legend from './components/Legend';
 import MathInput from './components/MathInput';
-import SearchMI from './components/searchMI';
-import ComboBox from './components/searchMI';
 import Chart from './componentSets/Chart';
 import ChartAndBoxChecks from './componentSets/ChartAndBoxChecks';
 import ChartAndBoxes from './componentSets/ChartAndBoxes';
@@ -11,12 +13,31 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
+
+
+const Mock = [
+  //return data
+  {
+    SDE1: 43,
+    SDE2: 5,
+    SDE3: 6,
+    SDE4: 10,
+    SDE5: 11,
+    date: '2021-09-07T12:51:33Z',
+  },
+];
 function App() {
+  //state variable
+  const [sdes, setSdes] = useState([]); //[{}] 
+  const [data, setData] = useState([]); 
+
+
+  
   return (
     <div className="App">
-      <ComboBox></ComboBox>
+      <Legend></Legend>
       <b> Math input</b>
-      <MathInput></MathInput>
+      <MathInput></MathInput> 
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
 

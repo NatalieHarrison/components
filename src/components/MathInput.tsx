@@ -11,24 +11,24 @@ import MathInputLineChart from './mathInputLineChart';
 
 import appTheme from '../theme';
 
-const MathInput = () => {
-  const Data = [
+
+const MathInput = (passedSde) => {
+  const [sdes, setSdes] = useState([]); //[{}] 
+  // setSdes(passedSde)
+  // console.log(sdes)
+  const Mock = [
+    //return data
     {
-      value1: 43,
-      value2: 5,
+      SDE1: 43,
+      SDE2: 5,
+      SDE3: 6,
+      SDE4: 10,
+      SDE5: 11,
       date: '2021-09-07T12:51:33Z',
     },
-    {
-      value1: 33,
-      value2: 78,
-      date: '2021-08-17T06:54:51Z',
-    },
-    {
-      value1: 52,
-      value2: 76,
-      date: '2022-04-06T02:55:14Z',
-    },
   ];
+  // console.log(passedSde)
+
   const config = {};
   const math = create(all, config);
 
@@ -40,19 +40,19 @@ const MathInput = () => {
     const node = math.parse(input);
     const code = node.compile();
     const scope = {
-      a: Data[0].value1,
-      b: Data[0].value2,
+      a: Mock[0].SDE1,
+      b: Mock[0].SDE2,
     };
     setAnswer(code.evaluate(scope));
 
-    const temp = Data.map(function (element) {
+    const temp = Mock.map(function (element) {
       const node = math.parse(input);
       const code = node.compile();
-      const scope = {
-        a: element.value1,
-        b: element.value2,
+      const scope = { //variables and what they store 
+        a: element.SDE1,
+        b: element.SDE2,
       };
-      return {
+      return { // plot: x = x-axis, y = y-axis
         x: element.date,
         y: code.evaluate(scope) || 0,
       };
