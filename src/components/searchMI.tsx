@@ -48,7 +48,7 @@ export default function ComboBox() {
         <Autocomplete
           multiple
           id="combo-box-demo"
-          options={labelAndID}
+          options={data}
           sx={{ width: 300 }}
           onChange={handleChange}
           renderInput={(params) => <TextField {...params} label="label" />}
@@ -75,9 +75,9 @@ export default function ComboBox() {
 }
 const arr = [];
 
-const labelAndID = [
+const data = [
   {
-    label: 'SDE4',
+    label: 'SDE1',
     id: '3569900637734151',
     date: '7/16/2022',
     value1: 68,
@@ -91,42 +91,42 @@ const labelAndID = [
     value2: 68,
   },
   {
-    label: 'SDE8',
+    label: 'SDE3',
     id: '6767919495546354820',
     date: '3/30/2022',
     value1: 51,
     value2: 74,
   },
   {
-    label: 'SDE1',
+    label: 'SDE4',
     id: '3546042140959302',
     date: '8/10/2021',
     value1: 73,
     value2: 11,
   },
   {
-    label: 'SDE8',
+    label: 'SDE5',
     id: '56022365860200149',
     date: '7/9/2022',
     value1: 31,
     value2: 38,
   },
   {
-    label: 'SDE7',
+    label: 'SDE6',
     id: '67093173390529818',
     date: '7/24/2021',
     value1: 41,
     value2: 92,
   },
   {
-    label: 'SDE6',
+    label: 'SDE7',
     id: '36338427173226',
     date: '12/20/2021',
     value1: 99,
     value2: 35,
   },
   {
-    label: 'SDE5',
+    label: 'SDE8',
     id: '3555301689506736',
     date: '1/11/2022',
     value1: 95,
@@ -140,7 +140,7 @@ const labelAndID = [
     value2: 5,
   },
   {
-    label: 'SDE9',
+    label: 'SDE10',
     id: '630452306781254287',
     date: '11/18/2021',
     value1: 87,
