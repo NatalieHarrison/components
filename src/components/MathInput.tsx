@@ -7,11 +7,11 @@ import Stack from '@mui/material/Stack';
 import { ThemeProvider } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 
+import Legend from './Legend';
 import MathInputLineChart from './mathInputLineChart';
 
 import appTheme from '../theme';
 
-import Legend from './Legend';
 const MathInput = (selections) => {
   // const [state, setState] =useState(selections)
   // console.log(state)

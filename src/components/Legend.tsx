@@ -51,12 +51,12 @@ export default function Legend(props) {
       temp.push(assignSDE);
     });
     setSde(temp); //after each selection, an object is being added or deleted and the temp array is being updated.
-    props.sdes(temp)
+    props.sdes(temp);
   };
-  console.log(props)
-// useEffect(()=> {
-//   sdes(sde)
-// },[sde])
+  console.log(props);
+  // useEffect(()=> {
+  //   sdes(sde)
+  // },[sde])
   console.log(sde);
   return (
     <Box>

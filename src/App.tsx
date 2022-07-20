@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { ThemeProvider } from '@mui/material/styles';
 
@@ -26,38 +26,44 @@ const Mock = [
 ];
 function App() {
   //state variable
-  //need a function that runs and calls setSdes and then pass into legend 
-  const [sdes, setSdes] = useState([]); //[{}] //pass legend sde array into this state 
-  //map through Mock array/sdes and get their values and then set that to data 
+  //need a function that runs and calls setSdes and then pass into legend
+  const [sdes, setSdes] = useState([]); //[{}] //pass legend sde array into this state
+  //map through Mock array/sdes and get their values and then set that to data
   const [data, setData] = useState([]);
-  const test = (a) => { 
-    setSdes(a)
-  }
+  const test = (a) => {
+    setSdes(a);
+  };
+  useEffect(() => {
+    const temp = []; //array of objects with labels value
+    Mock.map(function (element) {
+      //element = {SDE1:43, SDE2:5...}
+      Object.keys(element).map(function (key) {
+        //key = SDE1 new line SDE2..
+        sdes.map(function (item) {
+          if (key == item.label) {
+            const variable = item.var;
+            const label = item.label;
+            const value = element[key]; //gets value of key
+            const scopeData = { var: variable, label: label, value: value };
+            temp.push(scopeData);
+            console.log(temp);
+          }
+        });
+      });
+    });
+    setData(temp);
+  }, [sdes]);
   // console.log(sdes)
 
-  Mock.map(function(element){ //element = {SDE1:43, SDE2:5...}
-    (Object.keys(element)).map(function(key){ //key = SDE1 new line SDE2..
-      sdes.map(function(item){
+  console.log(data);
+  console.log('1');
 
-      if(key == item.label){
-        console.log(true, key)
-      }
-      else{
-        console.log(false, key)
-      }
-
-      })
-
-    })
-
-    
-  })
   return (
     <div className="App">
-      <Legend sdes = {test}></Legend>
+      <Legend sdes={test}></Legend>
 
       <b> Math input</b>
-      <MathInput selections = {data}></MathInput>
+      <MathInput selections={data}></MathInput>
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
 
