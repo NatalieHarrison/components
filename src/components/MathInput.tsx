@@ -11,11 +11,7 @@ import MathInputLineChart from './mathInputLineChart';
 
 import appTheme from '../theme';
 
-
 const MathInput = (passedSde) => {
-  const [sdes, setSdes] = useState([]); //[{}] 
-  // setSdes(passedSde)
-  // console.log(sdes)
   const Mock = [
     //return data
     {
@@ -27,8 +23,6 @@ const MathInput = (passedSde) => {
       date: '2021-09-07T12:51:33Z',
     },
   ];
-  // console.log(passedSde)
-
   const config = {};
   const math = create(all, config);
 
@@ -48,11 +42,13 @@ const MathInput = (passedSde) => {
     const temp = Mock.map(function (element) {
       const node = math.parse(input);
       const code = node.compile();
-      const scope = { //variables and what they store 
+      const scope = {
+        //variables and what they store
         a: element.SDE1,
         b: element.SDE2,
       };
-      return { // plot: x = x-axis, y = y-axis
+      return {
+        // plot: x = x-axis, y = y-axis
         x: element.date,
         y: code.evaluate(scope) || 0,
       };

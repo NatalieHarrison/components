@@ -14,7 +14,6 @@ import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
 
-
 const Mock = [
   //return data
   {
@@ -28,16 +27,14 @@ const Mock = [
 ];
 function App() {
   //state variable
-  const [sdes, setSdes] = useState([]); //[{}] 
-  const [data, setData] = useState([]); 
+  const [sdes, setSdes] = useState([]); //[{}]
+  const [data, setData] = useState([]);
 
-
-  
   return (
     <div className="App">
       <Legend></Legend>
       <b> Math input</b>
-      <MathInput></MathInput> 
+      <MathInput></MathInput>
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
 

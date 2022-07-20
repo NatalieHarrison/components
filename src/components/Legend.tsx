@@ -5,59 +5,54 @@ import Autocomplete from '@mui/material/Autocomplete';
 import TextField from '@mui/material/TextField';
 import { Box } from '@mui/system';
 
-
-import App from '../App';
 import MathInput from './MathInput';
 
 export default function Legend() {
   const [sde, setSde] = useState([]);
   const handleChange = (event, value) => {
+    //value is an empty array and adds object after each selection a user makes
+    const alphabet = [
+      'a',
+      'b',
+      'c',
+      'd',
+      'e',
+      'f',
+      'g',
+      'h',
+      'i',
+      'j',
+      'k',
+      'l',
+      'm',
+      'n',
+      'o',
+      'p',
+      'q',
+      'r',
+      's',
+      't',
+      'u',
+      'v',
+      'w',
+      'x',
+      'y',
+      'z',
+    ];
+    let counter = 0;
     const temp = [];
     value.map(function (element) {
+      //assigning elements of each object to a new object called assignSDE
       const x = alphabet[counter++]; //variable
       const y = element.label; //label ex: SDE1, SDE2
       const z = element.id; //id
-      const assignSDE = { var: x, label: y, id: z };
-    
+      const assignSDE = { var: x, label: y, id: z }; //assigning a variable to the object and its ID
       temp.push(assignSDE);
     });
-
-    setSde(temp);
+    setSde(temp); //after each selection, an object is being added or deleted and the temp array is being updated.
   };
-
-
-  let counter = 0;
-  const alphabet = [
-    'a',
-    'b',
-    'c',
-    'd',
-    'e',
-    'f',
-    'g',
-    'h',
-    'i',
-    'j',
-    'k',
-    'l',
-    'm',
-    'n',
-    'o',
-    'p',
-    'q',
-    'r',
-    's',
-    't',
-    'u',
-    'v',
-    'w',
-    'x',
-    'y',
-    'z',
-  ];
+  MathInput(sde);
   console.log(sde);
-  // MathInput(sde)
-
   return (
     <Box>
       <Stack direction="row">
@@ -84,8 +79,6 @@ export default function Legend() {
     </Box>
   );
 }
-
-const arr = [];
 const data = [
   {
     label: 'SDE1',
