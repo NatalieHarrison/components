@@ -3,7 +3,6 @@ import { useState } from 'react';
 
 import { ThemeProvider } from '@mui/material/styles';
 
-import SearchMI from './components/Legend';
 import Legend from './components/Legend';
 import MathInput from './components/MathInput';
 import Chart from './componentSets/Chart';
@@ -27,14 +26,38 @@ const Mock = [
 ];
 function App() {
   //state variable
-  const [sdes, setSdes] = useState([]); //[{}]
+  //need a function that runs and calls setSdes and then pass into legend 
+  const [sdes, setSdes] = useState([]); //[{}] //pass legend sde array into this state 
+  //map through Mock array/sdes and get their values and then set that to data 
   const [data, setData] = useState([]);
+  const test = (a) => { 
+    setSdes(a)
+  }
+  // console.log(sdes)
 
+  Mock.map(function(element){ //element = {SDE1:43, SDE2:5...}
+    (Object.keys(element)).map(function(key){ //key = SDE1 new line SDE2..
+      sdes.map(function(item){
+
+      if(key == item.label){
+        console.log(true, key)
+      }
+      else{
+        console.log(false, key)
+      }
+
+      })
+
+    })
+
+    
+  })
   return (
     <div className="App">
-      <Legend></Legend>
+      <Legend sdes = {test}></Legend>
+
       <b> Math input</b>
-      <MathInput></MathInput>
+      <MathInput selections = {data}></MathInput>
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
 

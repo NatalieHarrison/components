@@ -11,7 +11,14 @@ import MathInputLineChart from './mathInputLineChart';
 
 import appTheme from '../theme';
 
-const MathInput = (passedSde) => {
+import Legend from './Legend';
+const MathInput = (selections) => {
+  // const [state, setState] =useState(selections)
+  // console.log(state)
+  // console.log(selections)
+  // selections.map(function(element){
+  //   console.log(element)
+  // })
   const Mock = [
     //return data
     {

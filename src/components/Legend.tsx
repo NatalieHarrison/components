@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { Stack } from '@mui/material';
 import Autocomplete from '@mui/material/Autocomplete';
@@ -7,8 +7,9 @@ import { Box } from '@mui/system';
 
 import MathInput from './MathInput';
 
-export default function Legend() {
+export default function Legend(props) {
   const [sde, setSde] = useState([]);
+  MathInput(sde);
   const handleChange = (event, value) => {
     //value is an empty array and adds object after each selection a user makes
     const alphabet = [
@@ -50,8 +51,12 @@ export default function Legend() {
       temp.push(assignSDE);
     });
     setSde(temp); //after each selection, an object is being added or deleted and the temp array is being updated.
+    props.sdes(temp)
   };
-  MathInput(sde);
+  console.log(props)
+// useEffect(()=> {
+//   sdes(sde)
+// },[sde])
   console.log(sde);
   return (
     <Box>
