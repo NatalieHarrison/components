@@ -74,8 +74,9 @@ function App() {
         });
       });
       console.log(indivKeyValue);
+      secondScopeData.push(indivKeyValue);
     });
-    secondScopeData.push(indivKeyValue);
+
     // setData(temp);
     setData(firstScopeData);
     setData2(secondScopeData);
