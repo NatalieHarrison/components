@@ -13,7 +13,7 @@ import MathInputLineChart from './mathInputLineChart';
 import appTheme from '../theme';
 
 const MathInput = ({ selections }) => {
-  console.log(selections);
+  // console.log(selections);
 
   const arrOfValues = []; //used to take into account values that are undefined since they weren't selected
   selections.map(function (element) {
@@ -23,7 +23,7 @@ const MathInput = ({ selections }) => {
       arrOfValues.push(0);
     }
   });
-  console.log(arrOfValues);
+  // console.log(arrOfValues);
 
   const config = {};
   const math = create(all, config);

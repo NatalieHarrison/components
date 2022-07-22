@@ -7,7 +7,8 @@ import { Box } from '@mui/system';
 
 import MathInput from './MathInput';
 
-export default function Legend(props) {
+export default function Legend(props, Mock) {
+  console.log(Mock)
   const [sde, setSde] = useState([]);
   const handleChange = (event, value) => {
     //value is an empty array and adds object after each selection a user makes
