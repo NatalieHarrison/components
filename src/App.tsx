@@ -51,17 +51,17 @@ function App() {
   };
   useEffect(() => {
     const temp = []; //array of objects with labels value
+    const firstScopeData = [];
 
     Mock.map(function (element) {
       //element = {SDE1:43, SDE2:5...}
-      // console.log(element[0])
     Object.keys(Mock[0]).map(function(key){  //line 57-66 is for the first scope 
       sdes.map(function (item) {
         if (key == item.label) {
           console.log(Mock[0][key])
           const firstScopeValue = Mock[0][key]
-          
-          temp.push(firstScopeValue)
+          firstScopeData.push(firstScopeValue)
+          // temp.push(firstScopeValue)
         }
       })
     })
@@ -74,12 +74,14 @@ function App() {
             // const value = element[key]; //gets value of key
             // const scopeData = value;
             // temp.push(scopeData);
-            // // console.log(temp);
+            // console.log(temp);
           }
         });
       });
     });
-    setData(temp);
+    // setData(temp);
+    setData(firstScopeData)
+    
   }, [sdes]);
 
   // console.log(data);
