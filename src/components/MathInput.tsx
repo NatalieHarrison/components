@@ -12,7 +12,7 @@ import MathInputLineChart from './mathInputLineChart';
 
 import appTheme from '../theme';
 
-const MathInput = ({ selections }) => {
+const MathInput = ({ selections }, {secondScope}) => {
   // console.log(selections);
 
   const arrOfValues = []; //used to take into account values that are undefined since they weren't selected

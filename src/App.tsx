@@ -1,8 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 
-import { ThemeProvider } from '@mui/material/styles';
-
 import Legend from './components/Legend';
 import MathInput from './components/MathInput';
 import Chart from './componentSets/Chart';
@@ -46,45 +44,43 @@ function App() {
   const [sdes, setSdes] = useState([]); //[{}] //pass legend sde array into this state
   //map through Mock array/sdes and get their values and then set that to data
   const [data, setData] = useState([]);
+  const [data2,setData2] = useState([]);
   const test = (a) => {
     setSdes(a);
   };
   useEffect(() => {
     const temp = []; //array of objects with labels value
     const firstScopeData = [];
-
+    let indivKeyValue = 0;
+    const secondScopeData = []
     Mock.map(function (element) {
       //element = {SDE1:43, SDE2:5...}
-    Object.keys(Mock[0]).map(function(key){  //line 57-66 is for the first scope 
-      sdes.map(function (item) {
-        if (key == item.label) {
-          console.log(Mock[0][key])
-          const firstScopeValue = Mock[0][key]
-          firstScopeData.push(firstScopeValue)
-          // temp.push(firstScopeValue)
-        }
-      })
-    })
+      Object.keys(Mock[0]).map(function (key) {
+        //line 57-66 is for the first scope
+        sdes.map(function (item) {
+          if (key == item.label) {
+            const firstScopeValue = Mock[0][key];
+            firstScopeData.push(firstScopeValue);
+            // temp.push(firstScopeValue)
+          }
+        });
+      });
       Object.keys(element).map(function (key) {
         //key = SDE1 new line SDE2..
         sdes.map(function (item) {
           if (key == item.label) {
-            // const variable = item.var;
-            // const label = item.label;
-            // const value = element[key]; //gets value of key
-            // const scopeData = value;
-            // temp.push(scopeData);
-            // console.log(temp);
+            indivKeyValue = indivKeyValue + element[key]; //adding up all SDEx keys from all objects 
           }
         });
       });
+      console.log(indivKeyValue);
     });
+    secondScopeData.push(indivKeyValue)
     // setData(temp);
-    setData(firstScopeData)
-    
+    setData(firstScopeData); setData2(secondScopeData)
   }, [sdes]);
 
-  // console.log(data);
+  console.log(data2);
   return (
     <div className="App">
       <Legend sdes={test}></Legend>
