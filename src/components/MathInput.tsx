@@ -16,15 +16,14 @@ const MathInput = ({ selections }) => {
   console.log(selections);
 
   const arrOfValues = []; //used to take into account values that are undefined since they weren't selected
-    selections.map(function(element){
-      if (element != undefined){
-        arrOfValues.push(element)
-      }
-      else{
-        arrOfValues.push(0)
-      }
-  })
-  console.log(arrOfValues)
+  selections.map(function (element) {
+    if (element != undefined) {
+      arrOfValues.push(element);
+    } else {
+      arrOfValues.push(0);
+    }
+  });
+  console.log(arrOfValues);
 
   const config = {};
   const math = create(all, config);
@@ -36,7 +35,7 @@ const MathInput = ({ selections }) => {
   const handleClick = () => {
     const node = math.parse(input);
     const code = node.compile();
-    
+
     const scope = {
       a: arrOfValues[0],
       b: arrOfValues[1],
@@ -63,7 +62,7 @@ const MathInput = ({ selections }) => {
       x: arrOfValues[22],
       y: arrOfValues[23],
       z: arrOfValues[24],
-    }; 
+    };
     setAnswer(code.evaluate(scope));
 
     const temp = data.map(function (element) {

@@ -46,7 +46,7 @@ function App() {
             const variable = item.var;
             const label = item.label;
             const value = element[key]; //gets value of key
-            const scopeData = value ;
+            const scopeData = value;
             temp.push(scopeData);
             // console.log(temp);
           }
