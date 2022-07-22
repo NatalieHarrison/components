@@ -44,7 +44,7 @@ function App() {
   const [sdes, setSdes] = useState([]); //[{}] //pass legend sde array into this state
   //map through Mock array/sdes and get their values and then set that to data
   const [data, setData] = useState([]);
-  const [data2,setData2] = useState([]);
+  const [data2, setData2] = useState([]);
   const test = (a) => {
     setSdes(a);
   };
@@ -52,7 +52,7 @@ function App() {
     const temp = []; //array of objects with labels value
     const firstScopeData = [];
     let indivKeyValue = 0;
-    const secondScopeData = []
+    const secondScopeData = [];
     Mock.map(function (element) {
       //element = {SDE1:43, SDE2:5...}
       Object.keys(Mock[0]).map(function (key) {
@@ -69,15 +69,16 @@ function App() {
         //key = SDE1 new line SDE2..
         sdes.map(function (item) {
           if (key == item.label) {
-            indivKeyValue = indivKeyValue + element[key]; //adding up all SDEx keys from all objects 
+            indivKeyValue = indivKeyValue + element[key]; //adding up all SDEx keys from all objects
           }
         });
       });
       console.log(indivKeyValue);
     });
-    secondScopeData.push(indivKeyValue)
+    secondScopeData.push(indivKeyValue);
     // setData(temp);
-    setData(firstScopeData); setData2(secondScopeData)
+    setData(firstScopeData);
+    setData2(secondScopeData);
   }, [sdes]);
 
   console.log(data2);
