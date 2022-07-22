@@ -14,11 +14,17 @@ import appTheme from '../theme';
 
 const MathInput = ({ selections }) => {
   console.log(selections);
-  // selections.map(function(element){
-  //   console.log(element)
-  //   console.log(element.value)
-  //   console.log(selections.indexOf)
-  // })
+
+  const arrOfValues = []; //used to take into account values that are undefined since they weren't selected
+    selections.map(function(element){
+      if (element != undefined){
+        arrOfValues.push(element)
+      }
+      else{
+        arrOfValues.push(0)
+      }
+  })
+  console.log(arrOfValues)
 
   const config = {};
   const math = create(all, config);
@@ -32,13 +38,32 @@ const MathInput = ({ selections }) => {
     const code = node.compile();
     
     const scope = {
-      a: selections[0],
-      b: selections[1],
-      c: selections[2],
-      d: selections[3],
-    };
-  
-    
+      a: arrOfValues[0],
+      b: arrOfValues[1],
+      c: arrOfValues[2],
+      d: arrOfValues[3],
+      e: arrOfValues[4],
+      f: arrOfValues[5],
+      g: arrOfValues[6],
+      h: arrOfValues[7],
+      i: arrOfValues[8],
+      j: arrOfValues[9],
+      k: arrOfValues[10],
+      l: arrOfValues[11],
+      m: arrOfValues[12],
+      n: arrOfValues[13],
+      o: arrOfValues[14],
+      p: arrOfValues[15],
+      q: arrOfValues[16],
+      r: arrOfValues[17],
+      s: arrOfValues[18],
+      t: arrOfValues[19],
+      u: arrOfValues[20],
+      v: arrOfValues[21],
+      x: arrOfValues[22],
+      y: arrOfValues[23],
+      z: arrOfValues[24],
+    }; 
     setAnswer(code.evaluate(scope));
 
     const temp = data.map(function (element) {
