@@ -14,19 +14,21 @@ import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
 
 const Mock = [
-  //return data
   {
     SDE1: 43,
     SDE2: 5,
     SDE3: 6,
     SDE4: 10,
     SDE5: 11,
+    SDE6: 22,
+    SDE7: 19,
+    SDE8: 2,
+    SDE9: 99,
+    SDE10: 67,
     date: '2021-09-07T12:51:33Z',
   },
 ];
 function App() {
-  //state variable
-  //need a function that runs and calls setSdes and then pass into legend
   const [sdes, setSdes] = useState([]); //[{}] //pass legend sde array into this state
   //map through Mock array/sdes and get their values and then set that to data
   const [data, setData] = useState([]);
@@ -44,20 +46,17 @@ function App() {
             const variable = item.var;
             const label = item.label;
             const value = element[key]; //gets value of key
-            const scopeData = { var: variable, label: label, value: value };
+            const scopeData = value ;
             temp.push(scopeData);
-            console.log(temp);
+            // console.log(temp);
           }
         });
       });
     });
     setData(temp);
   }, [sdes]);
-  // console.log(sdes)
 
-  console.log(data);
-  console.log('1');
-
+  // console.log(data);
   return (
     <div className="App">
       <Legend sdes={test}></Legend>

@@ -12,24 +12,14 @@ import MathInputLineChart from './mathInputLineChart';
 
 import appTheme from '../theme';
 
-const MathInput = (selections) => {
-  // const [state, setState] =useState(selections)
-  // console.log(state)
-  // console.log(selections)
+const MathInput = ({ selections }) => {
+  console.log(selections);
   // selections.map(function(element){
   //   console.log(element)
+  //   console.log(element.value)
+  //   console.log(selections.indexOf)
   // })
-  const Mock = [
-    //return data
-    {
-      SDE1: 43,
-      SDE2: 5,
-      SDE3: 6,
-      SDE4: 10,
-      SDE5: 11,
-      date: '2021-09-07T12:51:33Z',
-    },
-  ];
+
   const config = {};
   const math = create(all, config);
 
@@ -40,13 +30,18 @@ const MathInput = (selections) => {
   const handleClick = () => {
     const node = math.parse(input);
     const code = node.compile();
+    
     const scope = {
-      a: Mock[0].SDE1,
-      b: Mock[0].SDE2,
+      a: selections[0],
+      b: selections[1],
+      c: selections[2],
+      d: selections[3],
     };
+  
+    
     setAnswer(code.evaluate(scope));
 
-    const temp = Mock.map(function (element) {
+    const temp = data.map(function (element) {
       const node = math.parse(input);
       const code = node.compile();
       const scope = {

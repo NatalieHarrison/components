@@ -2,7 +2,7 @@ import { ApexOptions } from 'apexcharts';
 import Chart from 'react-apexcharts';
 
 const MathInputLineChart = (props) => {
-  console.log(props);
+  // console.log(props);
   const xArray = [];
   const yArray = [];
 
@@ -13,8 +13,8 @@ const MathInputLineChart = (props) => {
     const yElement = element.y;
     yArray.push(yElement);
   });
-  console.log(xArray);
-  console.log(yArray);
+  // console.log(xArray);
+  // console.log(yArray);
 
   const options: ApexOptions = {
     dataLabels: {
