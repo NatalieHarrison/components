@@ -41,13 +41,15 @@ export default function Legend(props, Mock) {
       'z',
     ];
     let counter = 0;
-    const temp = [];
+    let temp = [];
     const assignSDE = {};
     value.map(function (element) {
       //assigning elements of each object to a new object called assignSDE
       const x = alphabet[counter++]; //variable
       const y = element.label; //label ex: SDE1, SDE2
       const z = element.id; //id
+      const legendDisplay = {var: x, label: y}
+      temp.push(legendDisplay)
       // assignSDE = { var:y}; //assigning a variable to the object and its ID
       // assignSDE[x] = assignSDE['var']
       // delete assignSDE['var']
@@ -60,9 +62,6 @@ export default function Legend(props, Mock) {
     props.sdes(assignSDE);
   };
 
-  // useEffect(()=> {
-  //   sdes(sde)
-  // },[sde])
 
   return (
     <Box>
