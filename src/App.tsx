@@ -40,6 +40,32 @@ const Mock = [
     SDE10: 3,
     date: '2021-02-06T11:21:33Z',
   },
+  {
+    SDE1: 16,
+    SDE2: 50,
+    SDE3: 44,
+    SDE4: 2,
+    SDE5: 20,
+    SDE6: 88,
+    SDE7: 13,
+    SDE8: 20,
+    SDE9: 23,
+    SDE10: 42,
+    date: '2020-01-09T12:51:33Z',
+  },
+  {
+    SDE1: 10,
+    SDE2: 90,
+    SDE3: 63,
+    SDE4: 54,
+    SDE5: 1,
+    SDE6: 89,
+    SDE7: 61,
+    SDE8: 24,
+    SDE9: 78,
+    SDE10: 30,
+    date: '2019-12-14T11:21:33Z',
+  },
 ];
 
 function App() {
@@ -53,14 +79,11 @@ function App() {
   useEffect(() => {
     let temp = 0; //array of objects with labels value
     const sdesKeys = Object.keys(sdes);
-
     const secondScopeData = Mock.map((item) => {
       temp = Object.fromEntries(sdesKeys.map((key) => [sdes[key], item[key], item.date]));
       temp['date'] = item.date;
       return temp;
     });
-    console.log(secondScopeData);
-
     setData2(secondScopeData);
   }, [sdes]);
 
