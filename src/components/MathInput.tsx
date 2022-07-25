@@ -12,8 +12,8 @@ import MathInputLineChart from './mathInputLineChart';
 import appTheme from '../theme';
 
 const MathInput = ({ selections }) => {
-  console.log(selections)
-   const config = {};
+  console.log(selections);
+  const config = {};
   const math = create(all, config);
 
   const [input, setInput] = useState('');
@@ -23,7 +23,8 @@ const MathInput = ({ selections }) => {
   const handleClick = () => {
     const node = math.parse(input);
     const code = node.compile();
-    const scope = { //
+    const scope = {
+      //
       a: selections[0].a,
       b: selections[0].b,
       c: selections[0].c,
@@ -49,25 +50,24 @@ const MathInput = ({ selections }) => {
       w: selections[0].w,
       x: selections[0].x,
       y: selections[0].y,
-      z: selections[0].z
+      z: selections[0].z,
     };
     setAnswer(code.evaluate(scope));
 
-
-    const chartArray = []
-    for (let i = 0; i < selections.length; i++){
+    const chartArray = [];
+    for (let i = 0; i < selections.length; i++) {
       const node = math.parse(input);
       const code = node.compile();
-      let scope2 = {
+      const scope2 = {
         a: selections[i].a,
         b: selections[i].b,
-      }
+      };
       chartArray.push({
         x: selections[i].date,
-        y: code.evaluate(scope2)
-      })
+        y: code.evaluate(scope2),
+      });
     }
-    setArr(chartArray)
+    setArr(chartArray);
   };
 
   return (

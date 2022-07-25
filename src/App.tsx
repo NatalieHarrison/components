@@ -1,4 +1,6 @@
 import './App.css';
+import { tmpdir } from 'os';
+
 import { useEffect, useState } from 'react';
 
 import Legend from './components/Legend';
@@ -10,7 +12,6 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
-import { tmpdir } from 'os';
 
 const Mock = [
   {
@@ -51,17 +52,16 @@ function App() {
   };
   useEffect(() => {
     let temp = 0; //array of objects with labels value
-      const sdesKeys = Object.keys(sdes)
+    const sdesKeys = Object.keys(sdes);
 
-      const secondScopeData = Mock.map(item =>{
-        temp = Object.fromEntries(sdesKeys.map(key => [sdes[key], item[key], item.date]))
-        temp['date'] = item.date
-        return temp
-      })  
-      console.log(secondScopeData)
+    const secondScopeData = Mock.map((item) => {
+      temp = Object.fromEntries(sdesKeys.map((key) => [sdes[key], item[key], item.date]));
+      temp['date'] = item.date;
+      return temp;
+    });
+    console.log(secondScopeData);
 
-      setData2(secondScopeData);
- 
+    setData2(secondScopeData);
   }, [sdes]);
 
   return (
@@ -69,7 +69,7 @@ function App() {
       <Legend sdes={test}></Legend>
 
       <b> Math input</b>
-      <MathInput selections={data2}  ></MathInput>
+      <MathInput selections={data2}></MathInput>
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
 
