@@ -7,23 +7,13 @@ import Stack from '@mui/material/Stack';
 import { ThemeProvider } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 
-import Legend from './Legend';
 import MathInputLineChart from './mathInputLineChart';
 
 import appTheme from '../theme';
 
-const MathInput = ({ selections, secondScope }) => {
-  const arrOfValues = []; //used to take into account values that are undefined since they weren't selected
-  selections.map(function (element) {
-    if (element != undefined) {
-      arrOfValues.push(element);
-    } else {
-      arrOfValues.push(0);
-    }
-  });
-  // console.log(arrOfValues);
-
-  const config = {};
+const MathInput = ({ selections }) => {
+  console.log(selections)
+   const config = {};
   const math = create(all, config);
 
   const [input, setInput] = useState('');
@@ -33,72 +23,51 @@ const MathInput = ({ selections, secondScope }) => {
   const handleClick = () => {
     const node = math.parse(input);
     const code = node.compile();
-
-    const scope = {
-      a: arrOfValues[0],
-      b: arrOfValues[1],
-      c: arrOfValues[2],
-      d: arrOfValues[3],
-      e: arrOfValues[4],
-      f: arrOfValues[5],
-      g: arrOfValues[6],
-      h: arrOfValues[7],
-      i: arrOfValues[8],
-      j: arrOfValues[9],
-      k: arrOfValues[10],
-      l: arrOfValues[11],
-      m: arrOfValues[12],
-      n: arrOfValues[13],
-      o: arrOfValues[14],
-      p: arrOfValues[15],
-      q: arrOfValues[16],
-      r: arrOfValues[17],
-      s: arrOfValues[18],
-      t: arrOfValues[19],
-      u: arrOfValues[20],
-      v: arrOfValues[21],
-      x: arrOfValues[22],
-      y: arrOfValues[23],
-      z: arrOfValues[24],
+    const scope = { //
+      a: selections[0].a,
+      b: selections[0].b,
+      c: selections[0].c,
+      d: selections[0].d,
+      e: selections[0].e,
+      f: selections[0].f,
+      g: selections[0].g,
+      h: selections[0].h,
+      i: selections[0].i,
+      j: selections[0].j,
+      k: selections[0].k,
+      l: selections[0].l,
+      m: selections[0].m,
+      n: selections[0].n,
+      o: selections[0].o,
+      p: selections[0].p,
+      q: selections[0].q,
+      r: selections[0].r,
+      s: selections[0].s,
+      t: selections[0].t,
+      u: selections[0].u,
+      v: selections[0].v,
+      w: selections[0].w,
+      x: selections[0].x,
+      y: selections[0].y,
+      z: selections[0].z
     };
     setAnswer(code.evaluate(scope));
-    console.log(secondScope)
-    let temp2= secondScope.map(function(element){
-      console.log(element)
-      console.log(element.a)
-      console.log(element.b)
-    
-      // console.log(Object.values(element.SDE1))
 
+
+    const chartArray = []
+    for (let i = 0; i < selections.length; i++){
       const node = math.parse(input);
       const code = node.compile();
-      const scope2 = {
-        a: element.a,
-        b: element.b
+      let scope2 = {
+        a: selections[i].a,
+        b: selections[i].b,
       }
-      return{
-        x: element.date,
+      chartArray.push({
+        x: selections[i].date,
         y: code.evaluate(scope2)
-      }
-    })
-    setArr(temp2)
-
-
-    //   const temp = secondScope.map(function (element) {
-    //   const node = math.parse(input);
-    //   const code = node.compile();
-    //   const scope = {
-    //     //variables and what they store
-    //     a: element.SDE1,
-    //     b: element.SDE2,
-    //   };
-    //   return {
-    //     // plot: x = x-axis, y = y-axis
-    //     x: element.date,
-    //     y: code.evaluate(scope) || 0,
-    //   };
-    // });
-    // setArr(temp);
+      })
+    }
+    setArr(chartArray)
   };
 
   return (

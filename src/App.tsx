@@ -10,6 +10,7 @@ import ChartsBoxButtonsBar from './componentSets/ChartsBoxButtonsBar';
 import HeaderBoxesAndChart from './componentSets/HeaderBoxesAndChart';
 import MultiChartsBoxesBar from './componentSets/MultiChartsBoxesBar';
 import UserInfoSet from './componentSets/UserInfoSet';
+import { tmpdir } from 'os';
 
 const Mock = [
   {
@@ -39,7 +40,7 @@ const Mock = [
     date: '2021-02-06T11:21:33Z',
   },
 ];
-// console.log(Mock[0].SDE1)
+
 function App() {
   const [sdes, setSdes] = useState([]); //[{}] //pass legend sde array into this state
   //map through Mock array/sdes and get their values and then set that to data
@@ -49,37 +50,18 @@ function App() {
     setSdes(a);
   };
   useEffect(() => {
-    const temp = []; //array of objects with labels value
-    const firstScopeData = [];
-    const secondScopeData = [];
-    Mock.map(function (element) {
-      //element = {SDE1:43, SDE2:5...}
-      Object.keys(Mock[0]).map(function (key) {
-        //line 57-66 is for the first scope
-        sdes.map(function (item) {
-          if (key == item.label) {
-            const firstScopeValue = Mock[0][key];
-            firstScopeData.push(firstScopeValue);
-          }
-        });
-      });
-      for (let i = 0; i < Mock.length; i++){
-        Object.keys(Mock[i]).map(function (key) {
-          //line 57-66 is for the first scope
-          sdes.map(function (item) {
-            if (key == item.label) {
-              let secondScope = { var: element[key], date: element.date} 
-              secondScope[item.var] = secondScope['var']
-              delete secondScope['var']
-              secondScopeData.push(secondScope)
-            }
-          });
-        });
-      }
-    });
-    // setData(temp);
-    setData(firstScopeData);
-    setData2(secondScopeData);
+    let temp = 0; //array of objects with labels value
+      const sdesKeys = Object.keys(sdes)
+
+      const secondScopeData = Mock.map(item =>{
+        temp = Object.fromEntries(sdesKeys.map(key => [sdes[key], item[key], item.date]))
+        temp['date'] = item.date
+        return temp
+      })  
+      console.log(secondScopeData)
+
+      setData2(secondScopeData);
+ 
   }, [sdes]);
 
   return (
@@ -87,7 +69,7 @@ function App() {
       <Legend sdes={test}></Legend>
 
       <b> Math input</b>
-      <MathInput selections={data} secondScope={data2} ></MathInput>
+      <MathInput selections={data2}  ></MathInput>
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
 

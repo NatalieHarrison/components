@@ -42,17 +42,24 @@ export default function Legend(props, Mock) {
     ];
     let counter = 0;
     const temp = [];
+    let assignSDE= {}
     value.map(function (element) {
       //assigning elements of each object to a new object called assignSDE
       const x = alphabet[counter++]; //variable
       const y = element.label; //label ex: SDE1, SDE2
       const z = element.id; //id
-      const assignSDE = { var: x, label: y, id: z }; //assigning a variable to the object and its ID
-      temp.push(assignSDE);
+      // assignSDE = { var:y}; //assigning a variable to the object and its ID
+      // assignSDE[x] = assignSDE['var']
+      // delete assignSDE['var']
+      assignSDE[y]=x
+
+      // temp.push(assignSDE);
     });
+    console.log(assignSDE)
     setSde(temp); //after each selection, an object is being added or deleted and the temp array is being updated.
-    props.sdes(temp);
+    props.sdes(assignSDE);
   };
+  
 
   // useEffect(()=> {
   //   sdes(sde)
