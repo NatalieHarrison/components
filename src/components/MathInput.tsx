@@ -12,9 +12,7 @@ import MathInputLineChart from './mathInputLineChart';
 
 import appTheme from '../theme';
 
-const MathInput = ({ selections }, { secondScope }) => {
-  // console.log(selections);
-
+const MathInput = ({ selections, secondScope }) => {
   const arrOfValues = []; //used to take into account values that are undefined since they weren't selected
   selections.map(function (element) {
     if (element != undefined) {
@@ -64,22 +62,43 @@ const MathInput = ({ selections }, { secondScope }) => {
       z: arrOfValues[24],
     };
     setAnswer(code.evaluate(scope));
+    console.log(secondScope)
+    let temp2= secondScope.map(function(element){
+      console.log(element)
+      console.log(element.a)
+      console.log(element.b)
+    
+      // console.log(Object.values(element.SDE1))
 
-    const temp = data.map(function (element) {
       const node = math.parse(input);
       const code = node.compile();
-      const scope = {
-        //variables and what they store
-        a: element.SDE1,
-        b: element.SDE2,
-      };
-      return {
-        // plot: x = x-axis, y = y-axis
+      const scope2 = {
+        a: element.a,
+        b: element.b
+      }
+      return{
         x: element.date,
-        y: code.evaluate(scope) || 0,
-      };
-    });
-    setArr(temp);
+        y: code.evaluate(scope2)
+      }
+    })
+    setArr(temp2)
+
+
+    //   const temp = secondScope.map(function (element) {
+    //   const node = math.parse(input);
+    //   const code = node.compile();
+    //   const scope = {
+    //     //variables and what they store
+    //     a: element.SDE1,
+    //     b: element.SDE2,
+    //   };
+    //   return {
+    //     // plot: x = x-axis, y = y-axis
+    //     x: element.date,
+    //     y: code.evaluate(scope) || 0,
+    //   };
+    // });
+    // setArr(temp);
   };
 
   return (

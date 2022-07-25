@@ -51,7 +51,6 @@ function App() {
   useEffect(() => {
     const temp = []; //array of objects with labels value
     const firstScopeData = [];
-    let indivKeyValue = 0;
     const secondScopeData = [];
     Mock.map(function (element) {
       //element = {SDE1:43, SDE2:5...}
@@ -61,34 +60,34 @@ function App() {
           if (key == item.label) {
             const firstScopeValue = Mock[0][key];
             firstScopeData.push(firstScopeValue);
-            // temp.push(firstScopeValue)
           }
         });
       });
-      Object.keys(element).map(function (key) {
-        //key = SDE1 new line SDE2..
-        sdes.map(function (item) {
-          if (key == item.label) {
-            indivKeyValue = indivKeyValue + element[key]; //adding up all SDEx keys from all objects
-          }
+      for (let i = 0; i < Mock.length; i++){
+        Object.keys(Mock[i]).map(function (key) {
+          //line 57-66 is for the first scope
+          sdes.map(function (item) {
+            if (key == item.label) {
+              let secondScope = { var: element[key], date: element.date} 
+              secondScope[item.var] = secondScope['var']
+              delete secondScope['var']
+              secondScopeData.push(secondScope)
+            }
+          });
         });
-      });
-      console.log(indivKeyValue);
-      secondScopeData.push(indivKeyValue);
+      }
     });
-
     // setData(temp);
     setData(firstScopeData);
     setData2(secondScopeData);
   }, [sdes]);
 
-  console.log(data2);
   return (
     <div className="App">
       <Legend sdes={test}></Legend>
 
       <b> Math input</b>
-      <MathInput selections={data}></MathInput>
+      <MathInput selections={data} secondScope={data2} ></MathInput>
       <b>Slide 1</b>
       <ChartAndBoxes></ChartAndBoxes>
 
