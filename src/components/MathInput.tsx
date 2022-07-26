@@ -61,6 +61,31 @@ const MathInput = ({ selections }) => {
       const scope2 = {
         a: selections[i].a,
         b: selections[i].b,
+        c: selections[i].c,
+        d: selections[i].d,
+        e: selections[i].e,
+        f: selections[i].f,
+        g: selections[i].g,
+        h: selections[i].h,
+        i: selections[i].i,
+        j: selections[i].j,
+        k: selections[i].k,
+        l: selections[i].l,
+        m: selections[i].m,
+        n: selections[i].n,
+        o: selections[i].o,
+        p: selections[i].p,
+        q: selections[i].q,
+        r: selections[i].r,
+        s: selections[i].s,
+        t: selections[i].t,
+        u: selections[i].u,
+        v: selections[i].v,
+        w: selections[i].w,
+        x: selections[i].x,
+        y: selections[i].y,
+        z: selections[i].z
+
       };
       chartArray.push({
         x: selections[i].date,
