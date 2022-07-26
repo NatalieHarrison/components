@@ -23,7 +23,7 @@ const Mock = [
     SDE6: 22,
     SDE7: 19,
     SDE8: 2,
-    SDE9: 99, 
+    SDE9: 99,
     SDE10: 67,
     date: '2021-09-07T12:51:33Z',
   },

@@ -84,8 +84,7 @@ const MathInput = ({ selections }) => {
         w: selections[i].w,
         x: selections[i].x,
         y: selections[i].y,
-        z: selections[i].z
-
+        z: selections[i].z,
       };
       chartArray.push({
         x: selections[i].date,
