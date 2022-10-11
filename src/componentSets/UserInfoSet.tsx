@@ -13,17 +13,17 @@ import UserInfo from '../components/UserInfo';
 
 const content: any = {
   greenBoxItems: [
-    { title: 'Member Tenure', body: '14 Years', num: '' },
-    { title: 'Member Economic Participation', body: '$72,716', num: '' },
-    { title: 'Member FICO Score', body: '756', num: '' },
+    { title: 'gb title 1', body: '14 Years', num: '' },
+    { title: 'gb title 2', body: '$72,716', num: '' },
+    { title: 'gb title 3', body: '756', num: '' },
   ],
   fullGreenBoxItems: [
-    { title: 'Direct Deposit', body: 'Active', num: '' },
-    { title: 'Go Green Checking', body: '$9,826.24', num: '' },
-    { title: '30 Year Fixed Mortgage', body: '($156,057.46)', num: '' },
-    { title: 'Bill Pay', body: 'Active', num: '' },
-    { title: '60 Month Auto Loan', body: '($13,216.90)', num: '' },
-    { title: 'Signature Rewards', body: '($748.44)', num: '' },
+    { title: 'fgb title 1', body: 'Active', num: '' },
+    { title: 'fgb title 2', body: '$9,826.24', num: '' },
+    { title: 'fgb title 3', body: '($156,057.46)', num: '' },
+    { title: 'fgb title 4', body: 'Active', num: '' },
+    { title: 'fgb title 5', body: '($13,216.90)', num: '' },
+    { title: 'fgb title 6', body: '($748.44)', num: '' },
   ],
 
   //name header
@@ -32,11 +32,11 @@ const content: any = {
   //user info
   openDate: '05/31/2007',
   activeStatus: 'True',
-  qualificationReason: 'SEG (IBM)',
+  qualificationReason: 'qualification reason ',
   location: 'Chapel Hill, NC',
   generation: 'Y',
   gender: 'Male',
-  memberType: 'Hybrid (Branch + Digital',
+  memberType: 'member type',
   preferredBranch: 'St. Albans',
   preferredATM: 'St. Albans',
   totLTProducts: '7',

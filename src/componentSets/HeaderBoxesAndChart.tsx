@@ -21,10 +21,10 @@ const content: any = {
 
 const secondSetOfBoxes: any = {
   greyBoxItems: [
-    { title: 'Total Lifetime Member Economic Participation ', body: '$129,653,723', num: '+$373,858' },
-    { title: 'Product Applications Submitted This Period', body: '15,914', num: '+2,910' },
-    { title: 'Active Direct Deposit Users This Period', body: '67,001', num: '+1,952' },
-    { title: 'First Mortgages Opened This Period', body: '2,616', num: '+271' },
+    { title: 'gb title 1 ', body: '$129,653,723', num: '+$373,858' },
+    { title: 'gb title 2', body: '15,914', num: '+2,910' },
+    { title: 'gb title 3', body: '67,001', num: '+1,952' },
+    { title: 'gb title 4', body: '2,616', num: '+271' },
   ],
 };
 

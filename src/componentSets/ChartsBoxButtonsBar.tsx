@@ -12,22 +12,22 @@ import GreenBoxesRow from '../components/GreenBoxRow';
 import LineChart from '../components/lineChart';
 import SideBar from '../components/sidebar';
 const BarAndSmallBoxes: any = {
-  b1Title: 'Demographics',
-  b2Title: 'Channels',
-  b3Title: 'Products/Services',
-  b4Title: 'Money',
-  b5Title: 'Loyalty',
+  b1Title: 'b title 1',
+  b2Title: 'b title 2',
+  b3Title: 'b title 3',
+  b4Title: 'b title 4',
+  b5Title: 'b title 5',
   greenBoxItems: [
-    { title: 'Secure Messages', body: '1,187' },
-    { title: 'Call Center Calls', body: '3,891' },
-    { title: 'Chat Bot Sessions', body: '1,353' },
-    { title: 'ATM Visits', body: '9,102' },
-    { title: 'PTM Visits', body: '3,441' },
-    { title: 'Branch Visits', body: '6,712' },
+    { title: 'gb title 1', body: '1,187' },
+    { title: 'gb title 2', body: '3,891' },
+    { title: 'gb title 3', body: '1,353' },
+    { title: 'gb title 4', body: '9,102' },
+    { title: 'gb title 5', body: '3,441' },
+    { title: 'gb title 6', body: '6,712' },
   ],
 };
 const ExtraBox: any = {
-  greenBoxItems: [{ title: 'Service Events Initiated by Secure Messafes', body: '457' }],
+  greenBoxItems: [{ title: 'gb title ', body: '457' }],
 };
 
 const ChartsBoxButtonsBar = () => {
@@ -50,12 +50,12 @@ const ChartsBoxButtonsBar = () => {
               <GreenBoxesColumn {...ExtraBox}></GreenBoxesColumn>
 
               <Card>
-                <CardContent>Secure Messages by Day </CardContent>
+                <CardContent>Card title 1</CardContent>
                 <LineChart></LineChart>
               </Card>
 
               <Card>
-                <CardContent>Secure Messages by Time of Day</CardContent>
+                <CardContent>Card title 2</CardContent>
                 <LineChart></LineChart>
               </Card>
             </Stack>
@@ -63,7 +63,7 @@ const ChartsBoxButtonsBar = () => {
 
           <Grid item xs={6}>
             <Card>
-              <CardContent>Secure Messages by Month </CardContent>
+              <CardContent>Card title 3 </CardContent>
               <LineChart></LineChart>
             </Card>
           </Grid>

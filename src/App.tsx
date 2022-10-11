@@ -3,6 +3,7 @@ import { tmpdir } from 'os';
 
 import { useEffect, useState } from 'react';
 
+import Dialogg from './components/dialog';
 import Legend from './components/Legend';
 import MathInput from './components/MathInput';
 import Chart from './componentSets/Chart';

@@ -12,18 +12,18 @@ import GreenBoxesRow from '../components/GreenBoxRow';
 import PieChart from '../components/pieChart';
 import SideBar from '../components/sidebar';
 const content: any = {
-  b1Title: 'Demographics',
-  b2Title: 'Channels',
-  b3Title: 'Products/Services',
-  b4Title: 'Money',
-  b5Title: 'Loyalty',
+  b1Title: 'b1 title ',
+  b2Title: 'b2 title ',
+  b3Title: 'b3 title',
+  b4Title: 'b4 title',
+  b5Title: 'b5 title',
   greenBoxItems: [
-    { title: 'Total Members', body: '230,827' },
-    { title: 'Active Members', body: '135,982' },
-    { title: 'New Members', body: '2,722' },
-    { title: '% Members in 16 Counties', body: '76%' },
-    { title: 'Total Households', body: '146,110' },
-    { title: 'New Households', body: '824' },
+    { title: 'gb title 1', body: '230,827' },
+    { title: 'gb title 2', body: '135,982' },
+    { title: 'gb title 3', body: '2,722' },
+    { title: 'gb title 4', body: '76%' },
+    { title: 'gb title 5', body: '146,110' },
+    { title: 'gb title 6', body: '824' },
   ],
 };
 
@@ -46,7 +46,7 @@ const MultiChartsBoxesBar = () => {
           </Grid>
 
           <Grid item xs={7}>
-            <Card> Member Locations (picture with state)</Card>
+            <Card> Card content can go here</Card>
           </Grid>
 
           <Grid item xs={5}>
@@ -54,17 +54,17 @@ const MultiChartsBoxesBar = () => {
           </Grid>
 
           <Grid item xs={4}>
-            <Card> Members by SEG (bar graph)</Card>
+            <Card> Card content can go here</Card>
             <BarChart></BarChart>
           </Grid>
 
           <Grid item xs={4}>
-            <Card> Members by FICO Score Categroy (bar graph)</Card>
+            <Card> Card content can go here</Card>
             <BarChart></BarChart>
           </Grid>
 
           <Grid item xs={4}>
-            <Card> Members by FICO Score Category (pie chart)</Card>
+            <Card> Card content can go here</Card>
             <PieChart></PieChart>
           </Grid>
         </Grid>

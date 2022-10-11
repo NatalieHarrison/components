@@ -10,36 +10,36 @@ import LineChartBar from '../components/lineChartBar';
 import SideBar from '../components/sidebar';
 
 const firstSet: any = {
-  header: 'Products & Services that Delight',
+  header: 'Header',
   greyBoxItems: [
-    { title: 'Total Open Problems ', body: '329,778', num: '+5,690' },
-    { title: 'Member Churn This Period', body: '1,291', num: '+421' },
-    { title: 'Acquisition to Churn Ratio', body: '3.78', num: '+0.37' },
+    { title: 'Item 1', body: '329,778', num: '+5,690' },
+    { title: 'Item 2', body: '1,291', num: '+421' },
+    { title: 'Item 3', body: '3.78', num: '+0.37' },
   ],
 };
 const secondSet: any = {
-  header: 'Intentional Culture',
+  header: 'Header 2',
   greyBoxItems: [
-    { title: 'Average Relationship NPS ', body: '8.03', num: '-0.07' },
-    { title: 'Total Lives Impacted', body: '178,030', num: '+5,981' },
-    { title: 'Low Income First Home Mortgages', body: '7,614', num: '+321' },
+    { title: 'Item 4', body: '8.03', num: '-0.07' },
+    { title: 'Item 5', body: '178,030', num: '+5,981' },
+    { title: 'Item 6', body: '7,614', num: '+321' },
   ],
 };
 
 const thirdSet: any = {
-  header: 'Innovations That Differentiate',
+  header: 'Header 3',
   greyBoxItems: [
-    { title: 'Digital Banking Users This Period', body: '98,611', num: '-1,529' },
-    { title: 'Self-Service Functions Available', body: '511', num: '+22' },
-    { title: 'Self-Service Users This Period', body: '43,797', num: '+882' },
+    { title: 'Item 7', body: '98,611', num: '-1,529' },
+    { title: 'Item 8', body: '511', num: '+22' },
+    { title: 'Item 9', body: '43,797', num: '+882' },
   ],
 };
 const fourthSet: any = {
-  header: 'Frictionless Operations',
+  header: 'Header 4',
   greyBoxItems: [
-    { title: 'Service Requests This Period', body: '1,610', num: '+401' },
-    { title: 'Live Agent Transfers This Period', body: '793', num: '-142' },
-    { title: 'Backend Processes Automated', body: '97', num: '+4' },
+    { title: 'Item 10', body: '1,610', num: '+401' },
+    { title: 'Item 11', body: '793', num: '-142' },
+    { title: 'Item 12', body: '97', num: '+4' },
   ],
 };
 

@@ -5,9 +5,9 @@ import GreenBoxesRow from '../components/GreenBoxRow';
 
 const content: any = {
   greenBoxItems: [
-    { title: 'Total Members', body: '230,827', num: '' },
-    { title: 'Average Lifetime Member Economic Participiation', body: '$1,419', num: '' },
-    { title: 'Average Customer Experience Score', body: '8.57', num: '' },
+    { title: 'gb title 1', body: '230,827', num: '' },
+    { title: 'gb title 2', body: '$1,419', num: '' },
+    { title: 'gb title 3', body: '8.57', num: '' },
   ],
 };
 
